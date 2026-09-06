@@ -1,0 +1,7 @@
+# Telegram message templates — Obstruction Ledger
+# RUNBOOK §6 protocol
+
+HB: 'HB P{phase} d{day}/{total_days} spend {total_spend}/1000 ok'
+PHASE: 'PHASE {phase}: {verdict} | {key_numbers} | packet {hash} | next: {next_action}'
+ESC: 'ESC: {cause} | options: {options} | default on 48h: HOLD'
+PILL: 'PILL: {cause} | state preserved at {commit_hash} | awaiting reply'

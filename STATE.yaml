@@ -1,0 +1,21 @@
+phase: BOOTSTRAP
+subtask: null
+intent: null
+next_step: checklist-4.7
+spend:
+  total: 0
+  phase: 0
+  openrouter: 0
+  gpu: 0
+versions:
+  spec: "1.3"
+  runbook: "1.1"
+  checklist: "1.1"
+  anchors: "2026-09-06"
+  env_manifest: 09cb8b93afb3500e51d44ab8ad71726c1c49031f00187b4eda7af99e8a873529
+launch_utc: 2026-09-06T19:12:00Z
+bundle_hash: 92bbcc04984cac1fb3fa333f497da003dd2357883aa0cb54c4b32b24f3287536
+gist_url: https://gist.github.com/bendale1-collab/6874753d84c84de30c791656ab7c700a
+open_escalations: []
+g1_variant: null
+holdout_status: null

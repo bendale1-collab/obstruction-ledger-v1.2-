@@ -1,0 +1,27 @@
+# Env manifest — Obstruction Ledger
+# Created at BOOTSTRAP scaffold (§4.5)
+# Dependencies: Python env, system packages, lockfiles
+
+python_version: 3.11.15
+python_env: ~/qenv  # existing quant research venv
+
+packages:
+  numpy: latest
+  scipy: latest
+  mpmath: ">=1.3"
+  matplotlib: latest
+
+Julia:
+  status: deferred_to_U1c_spike  # BifurcationKit/Julia only if hand-roll fails
+
+GPU:
+  status: deferred_to_P3  # ~$250 spot A100/4090-class at P2→P3
+
+OpenRouter:
+  key_location: .env (600 perm, gitignored)
+  extractor_model: TBD  # pinned frontier at P3
+
+git_remote: TBD  # founder creates private remote at T0
+
+hash_created: 2026-09-06T19:12:00Z
+hash: null  # filled below

@@ -1,7 +1,10 @@
-env/
+env/.env
+env/.env.*
+ledger/
 scratch/
 .env
 *.log
-ledger/
 __pycache__/
 *.pyc
+.venv/
+venv/

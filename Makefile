@@ -19,7 +19,7 @@ resume:
 	@echo "NOT IMPLEMENTED: BOOTSTRAP — scaffolding in progress"
 
 ledger-verify:
-	@echo "NOT IMPLEMENTED: BOOTSTRAP — scaffolding in progress"
+	bash env/ledger-verify.sh
 
 seal-prepare:
 	@echo "NOT IMPLEMENTED: P6"

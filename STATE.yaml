@@ -1,7 +1,7 @@
 phase: BOOTSTRAP
-subtask: null
-intent: null
-next_step: checklist-4.7
+subtask: smoke
+intent: Execute SMOKE S1-S6 acceptance tests per HANDOFF-CHECKLIST §5
+next_step: smoke-s1
 spend:
   total: 0
   phase: 0

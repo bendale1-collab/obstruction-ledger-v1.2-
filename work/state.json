@@ -1,1 +1,1 @@
-{"phase":"BOOTSTRAP","subtask":"smoke","next_step":"smoke-s1","spend":{"total":0,"phase":0,"openrouter":0,"gpu":0},"utc":"2026-09-06T19:12:00Z"}
+{"phase":"BOOTSTRAP","subtask":"pill-sim","next_step":"PILL-SIM","spend":{"total":21,"phase":21,"openrouter":21,"gpu":0},"utc":"2026-09-06T19:12:00Z"}

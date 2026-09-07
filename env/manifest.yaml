@@ -24,4 +24,4 @@ OpenRouter:
 git_remote: TBD  # founder creates private remote at T0
 
 hash_created: 2026-09-06T19:12:00Z
-hash: null  # filled below
+hash: "3f77e71a5ea0d981350cfa73023c88e95d02a326188ee69c71b817c7357cdafe"

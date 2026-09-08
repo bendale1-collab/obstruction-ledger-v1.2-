@@ -1,7 +1,7 @@
 phase: P0
-subtask: seal-prepared
-intent: "v1.5 seal: leg-split, precision correction, referent-resolution control, P1 pre-registration. MANIFEST.sha256 covers 14 files."
-next_step: await-founder-gate-2  # founder publishes v1.5 hash + P1 AUTHORIZED
+subtask: p1-engine-red
+intent: "P1 F-4 FAILED: engine cannot distinguish realizations (28 in-zone eig both naive+clean at N=1024; naive 28->60 under doubling). Terminal ENGINE-RED per pre-reg. F-1/2/3/5 not scored."
+next_step: founder-adjudicate-engine-red
 spend:
   total: 2
   phase: 1
@@ -15,10 +15,10 @@ versions:
   env_manifest: "3f77e71a5ea0d981350cfa73023c88e95d02a326188ee69c71b817c7357cdafe"
   engine: f1.py
 launch_utc: 2026-09-06T19:12:00Z
-bundle_hash: 40c7a1056ed98f2c4fd68c7d87c9f48df032c121659cd46adf32ce098c74cae8
-gist_url: PENDING — founder publishes freeze hash to gist
+bundle_hash: c6a73ae82f2e8bda1cdac2f348d6a2342ce5c07e5d43ae97516db05d178c00a4
+gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
 open_escalations:
-  - "GATE 1 complete: SEAL-PREPARED. Awaiting GATE 2: founder publishes freeze hash to gist + issues P1 AUTHORIZED."
-  - "LEG B (CCF TRANSPORT) scope and cap UNQUOTED — separate adjudication needed. Not in P1 scope."
+  - "P1 ENGINE-RED: F-4 positive control failed (realizations indistinguishable at P1 tolerance; count unstable under doubling). Awaiting founder adjudication. F-1/2/3/5 not scored per pre-reg."
+  - "LEG B (CCF TRANSPORT) scope and cap UNQUOTED — separate adjudication needed."
 g1_variant: null
 holdout_status: null

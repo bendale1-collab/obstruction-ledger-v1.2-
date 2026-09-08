@@ -1,0 +1,13 @@
+id: OL-EQ-001
+name: gCLM family equation
+kind: equation
+source:
+  authors: [Constantin, Lax, Majda]
+  year: 1985
+  venue: "Comm. Pure Appl. Math. 38, 715"
+  locator: "Eqs 2.1-2.3"
+  artifact: sources/clm85.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

@@ -1,0 +1,13 @@
+id: OL-VL-002
+name: CLM a=0 exact c_l = 1
+kind: value
+source:
+  authors: [Constantin, Lax, Majda]
+  year: 1985
+  venue: "Comm. Pure Appl. Math. 38, 715"
+  locator: "Eq 2.1"
+  artifact: sources/clm85.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

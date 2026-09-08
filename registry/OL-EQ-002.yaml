@@ -1,0 +1,13 @@
+id: OL-EQ-002
+name: CLM equation a=0
+kind: equation
+source:
+  authors: [Constantin, Lax, Majda]
+  year: 1985
+  venue: "Comm. Pure Appl. Math. 38, 715"
+  locator: "Eq. 2.1, a=0"
+  artifact: sources/clm85.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

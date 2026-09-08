@@ -1,0 +1,13 @@
+id: OL-TH-001
+name: Point spectrum = {0,1} at a=0
+kind: theorem
+source:
+  authors: [Xu]
+  year: 2026
+  venue: "arXiv 2607.19762"
+  locator: "Theorem 2"
+  artifact: sources/xu2607.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

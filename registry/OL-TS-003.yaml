@@ -1,0 +1,13 @@
+id: OL-TS-003
+name: F-4 positive control test
+kind: test
+source:
+  authors: [PROSECUTOR program]
+  year: 2026
+  venue: "OL v1.5 pre-registration, Task 2 F-4"
+  locator: "F-4 positive control"
+  artifact: null
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

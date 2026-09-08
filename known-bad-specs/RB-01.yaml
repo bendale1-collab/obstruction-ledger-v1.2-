@@ -1,0 +1,13 @@
+# RB-01: equation named, no body — planted defect
+# Expected: UNRESOLVED by arbiter alone (no extractions to check)
+name: "Missing equation body"
+defect: "equation OL-EQ-001 has no executable definition in registry; extractions list empty"
+spec_fragment:
+  registry:
+    - id: OL-EQ-001
+      name: CLM equation a=0
+      kind: equation
+      executable: null
+      status: UNRESOLVED
+      extractions: []
+pre_registered: "arbiter alone returns UNRESOLVED — no extractions to check"

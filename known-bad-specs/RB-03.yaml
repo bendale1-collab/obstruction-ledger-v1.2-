@@ -1,0 +1,23 @@
+# RB-03: test asserts count_clean < count_naive; theorem says == 0
+# Planted defect: the H-B test criterion is "strip reduced" (count_clean < count_naive)
+# but the theorem specifies "strip absent" (count_clean == 0)
+# Expected: NOT CAUGHT by arbiter alone — requires stage 3 adversary
+name: "Test criterion weaker than theorem"
+defect: "test specification count_clean < count_naive fails to enforce count_clean == 0"
+spec_fragment:
+  registry:
+    - id: OL-TH-003
+      name: Realization dichotomy (strip absent in origin-H²)
+      kind: theorem
+      executable: null
+      status: UNRESOLVED
+      extractions: []
+    - id: OL-TS-003
+      name: F-4 positive control
+      kind: test
+      executable: null
+      status: UNRESOLVED
+      extractions:
+        - extractor: {family: "faux-A", model: "gpt-fake", variant: "latex"}
+          test_spec: "count_clean < count_naive"  # weaker than theorem
+pre_registered: "arbiter alone does not catch — test is deferred to stage 3. NOT CAUGHT."

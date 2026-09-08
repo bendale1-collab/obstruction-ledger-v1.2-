@@ -1,0 +1,17 @@
+# RB-04: count zone bounded on Re only
+# Planted defect: strip detection uses Re-only bounding zone,
+# ignoring imaginary parts (which the theorem requires for full spectral window)
+# Expected: NOT CAUGHT by arbiter alone — requires stage 3 adversary
+name: "Strip zone bounded on Re only"
+defect: "count zone uses Re ∈ (lo, hi) only, ignores |Im| condition or full 2D spectral window"
+spec_fragment:
+  registry:
+    - id: OL-TS-003
+      name: F-4 positive control
+      kind: test
+      executable: null
+      status: UNRESOLVED
+      extractions:
+        - extractor: {family: "faux-A", model: "gpt-fake", variant: "latex"}
+          test_spec: "Re ∈ (FLOOR, -DELTA)"  # missing Im filter — weaker
+pre_registered: "arbiter alone does not catch — test spec is syntactic, not semantic. NOT CAUGHT."

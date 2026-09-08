@@ -1,0 +1,13 @@
+id: OL-MD-001
+name: Scaling mode lambda=0
+kind: mode
+source:
+  authors: [Xu]
+  year: 2026
+  venue: "arXiv 2607.19762"
+  locator: "Sec 3.2"
+  artifact: sources/xu2607.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

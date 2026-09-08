@@ -1,0 +1,13 @@
+id: OL-EQ-004
+name: Linearized operator L_0 at a=0
+kind: equation
+source:
+  authors: [Xu]
+  year: 2026
+  venue: "arXiv 2607.19762"
+  locator: "Eq 3.1, a=0"
+  artifact: sources/xu2607.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

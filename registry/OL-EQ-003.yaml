@@ -1,0 +1,13 @@
+id: OL-EQ-003
+name: gCLM self-similar profile ODE
+kind: equation
+source:
+  authors: [Lushnikov, Silantyev, Siegel]
+  year: 2021
+  venue: "J. Nonlinear Sci. 31(5), 82"
+  locator: "Sec 2, Eq 2.1"
+  artifact: sources/lss2021.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

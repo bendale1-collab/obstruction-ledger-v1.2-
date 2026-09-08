@@ -1,0 +1,13 @@
+id: OL-TS-001
+name: H-A golden test
+kind: test
+source:
+  authors: [PROSECUTOR program]
+  year: 2026
+  venue: "OL v1.5 SPEC.md §14-u"
+  locator: "H-A acceptance"
+  artifact: null
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

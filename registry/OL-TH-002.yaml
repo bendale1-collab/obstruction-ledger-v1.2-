@@ -1,0 +1,13 @@
+id: OL-TH-002
+name: Essential spectrum = line Re λ = −½
+kind: theorem
+source:
+  authors: [Xu]
+  year: 2026
+  venue: "arXiv 2607.19762"
+  locator: "Theorem 1"
+  artifact: sources/xu2607.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

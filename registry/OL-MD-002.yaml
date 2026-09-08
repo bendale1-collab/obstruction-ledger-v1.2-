@@ -1,0 +1,13 @@
+id: OL-MD-002
+name: Time-shift mode lambda=1
+kind: mode
+source:
+  authors: [Xu]
+  year: 2026
+  venue: "arXiv 2607.19762"
+  locator: "Sec 3.2, Eq 3.7; φ = Ω'"
+  artifact: sources/xu2607.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

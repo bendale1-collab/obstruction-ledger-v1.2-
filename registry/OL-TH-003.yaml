@@ -1,0 +1,13 @@
+id: OL-TH-003
+name: Realization dichotomy (strip in max-L², absent in origin-H²)
+kind: theorem
+source:
+  authors: [Xu]
+  year: 2026
+  venue: "arXiv 2607.19762"
+  locator: "Proposition 2, Sec 3.2"
+  artifact: sources/xu2607.pdf
+  artifact_sha256: null
+executable: null
+status: UNRESOLVED
+extractions: []

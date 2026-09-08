@@ -1,0 +1,26 @@
+# RB-02: CCF body = CLM equation, source = Cordoba 2005
+# Planted defect: extractions return TWO DIFFERENT equations — 
+# one correctly CCF, two hallucinate CLM.
+# Pairwise extraction disagreement -> HALT-REFERENT
+name: "CCF equation has mixed CLM/CCF extractions"
+defect: "three extractions: one CCF (correct), two hallucinate CLM"
+spec_fragment:
+  registry:
+    - id: OL-EQ-005
+      name: CCF inviscid equation
+      kind: equation
+      source:
+        authors: [Córdoba, Córdoba, Fontelos]
+        year: 2005
+        venue: "Ann. Math. 162, 1377–1389"
+        locator: "Eq 1.1"
+      executable: null
+      status: UNRESOLVED
+      extractions:
+        - extractor: {family: "faux-A", model: "gpt-fake", variant: "latex"}
+          body: "theta_t - H[theta] * theta_x"  # CORRECT CCF
+        - extractor: {family: "faux-B", model: "claude-fake", variant: "pdf"}
+          body: "omega_t = H[omega] * omega"  # WRONG — CLM hallucination
+        - extractor: {family: "faux-C", model: "gemini-fake", variant: "image"}
+          body: "ω_t = H(ω) ω"  # WRONG — CLM hallucination
+pre_registered: "arbiter returns HALT-REFERENT — extractions disagree (1 CCF vs 2 CLM)"

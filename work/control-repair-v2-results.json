@@ -1,0 +1,16 @@
+{
+  "lam0_residual": 0.0,
+  "lam0_is_zero": true,
+  "lam1_nearest": {
+    "real": 0.0,
+    "imag": 0.0,
+    "dist": 1.0
+  },
+  "lam1_acceptance": false,
+  "phi0_overlap": 0.0,
+  "error_spatial": {
+    "lam1_m_in": 3.03045477945155e-08,
+    "lam1_m_out": 0.9999156114991322,
+    "lam1_odd": 1.4142135623730945
+  }
+}

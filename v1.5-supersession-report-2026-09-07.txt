@@ -1,0 +1,229 @@
+OL v1.4 → v1.5 SUPERSESSION — CCF MISIDENTIFICATION
+===================================================
+2026-09-07 | CAP: $0 of $15 | NO hash published yet
+
+TASK 1 — CORRECT CCF EQUATION (verified from primary sources)
+--------------------------------------------------------------
+CCF = Córdoba-Córdoba-Fontelos (2005), Ann. Math. 162, 1377–1389,
+"Formation of singularities for a transport equation with nonlocal
+velocity." Verified from PDF of Annals paper (Córdoba-Córdoba-Fontelos):
+
+  θ_t − H[θ]·θ_x = 0              (inviscid, Eq 1.1)
+  θ_t − H[θ]·θ_x = −νΛ^α θ        (viscous, Eq 1.1)
+
+where H is the Hilbert transform and Λ = (−∂_xx)^{1/2}.
+
+No stretching term (u_x·ω) appears. The nonlinearity is advective:
+the scalar θ is transported by its own Hilbert transform as velocity.
+Córdoba et al. explicitly distinguish this from CLM (Eq 1.3 in their
+paper): "ω_t + v·ω_x = ωHω; this is the Constantin–Lax–Majda model."
+CCF ≠ CLM.
+
+Wang 2509.14185 uses the SAME CCF equation. Verified from PDF:
+  Inviscid CCF: θ_t − H[θ]·θ_x = 0 (same as Córdoba)
+  Self-similar ansatz with λ: φ(x,t) = (1−t)^{kA(λ)} Φ_A(y)
+    y = (1−t)^{-(1+λ)} x
+  The self-similar parameter λ is the BLOW-UP SCALING RATE
+  (not an eigenvalue of any linearized operator).
+  λ governs how quickly the singularity's spatial support shrinks.
+
+Lambda values in Wang 2509.14185 table (verified from PDF):
+  Stable:   λ₀ = 1.1807776628998    (13-digit, EXACT match to ANCHORS)
+  1st:      λ₁ = 0.6057337012032    (13-digit, EXACT match to ANCHORS)
+  2nd:      λ₂ = 0.4713248638620    (table value; text says 0.4703)
+  3rd:      λ₃ = 0.2415604743989    (not in ANCHORS)
+  4th:      not reported for CCF
+
+Lambda values in Wang 2511.22819 (refinement):
+  2nd unstable: λₛ = 0.47132422      (8-digit, gradient-normalized)
+  Comparison shows λ = 0.4713241 with |λ−λₛ| ~ 10⁻⁷
+
+The 0.4713242245 in our ANCHORS matches neither the 2509 table value
+(0.4713248638620, differing at 7th digit) nor the 2511.22819 refined
+value (0.47132422). It appears to be a conflation or truncation — the
+source is unclear.
+
+Is CCF a member of gCLM/OSW?
+  NO. The gCLM/OSW family is:
+    ω_t + a·u·ω_x = u_x·ω,  u_x = Hω
+  CCF: θ_t = H[θ]·θ_x  (transport of θ, no stretching term ω·u_x)
+  Structural difference: CCF nonlinearity involves θ_x (derivative);
+  gCLM nonlinearity involves ω (multiplicative). Different PDE classes.
+
+Consequence: the gCLM a=0 (= CLM, Constantin-Lax-Majda) is a
+DIFFERENT equation from CCF. Our F1 engine was built for gCLM a=0,
+which matches the CLM spectral theory (Xu 2607.19762) and the
+Elgindi-Jeong exact profiles, but does NOT match CCF. The λ values
+in ANCHORS are CCF blow-up scaling rates, not gCLM eigenvalues.
+
+TASK 2 — LEDGER ENTRY: MISIDENTIFICATION-BY-ACRONYM-COLLISION
+---------------------------------------------------------------
+Type: MISIDENTIFICATION-BY-ACRONYM-COLLISION
+
+The acronym "CCF" was resolved to "Constantin-Lax-Majda" instead of
+the correct "Córdoba-Córdoba-Fontelos." Both are:
+  - 1D scalar PDEs on ℝ with Hilbert transform nonlocality
+  - Describing singularity formation in finite time
+  - Adjacent citation neighborhoods in the fluid-singularity literature
+  - Both producing self-similar profiles with discrete admissible λ
+
+The identical-if-different-target control (introduced in v1.4:
+rejection rationale must be writable without reference to the targets)
+PASSED and did not catch this error. As designed, the control tests
+for circular justification (target-fitting), not referent resolution.
+The error persisted because:
+  1. "CCF" resolves to two distinct PDEs in adjacent subfields
+  2. Both produce "λ values" (different quantities: one eigenvalue,
+     one blow-up scaling rate)
+  3. The λ values happen to share similar magnitude ranges (~0.4-1.2)
+  4. The ANCHORS value 1.1807776628998 appears in Wang 2509.14185's
+     table labeled "CCF Stable" — but that IS the correct CCF stable
+     λ, just under the wrong equation attribution
+
+The lambda-provenance sentence deleted from rejection #1 ("the published
+lambda values are from CCF literature...") was circular as justification
+(for a control that tests self-consistency) but CORRECT as evidence.
+Deletion removed the only in-bundle pointer to the correct referent.
+
+GENERALIZED CONTROL (to pre-register):
+  Every named equation in the bundle must carry a resolved referent:
+  (full author names, year, journal, equation number) verified against
+  the primary source, not secondary literature or acronym convention.
+  Referent resolution is its own gate, distinct from derivation-path
+  verification.
+
+TASK 3 — REFERENT RESOLUTION AUDIT (all named equations/anchors)
+-----------------------------------------------------------------
+Name used          | Referent claimed  | Primary source verified Y/N | Acronym risk
+-------------------|-------------------|-----------------------------|-------------
+CCF                | Córdoba-Córdoba-  | Y (Annals PDF, 2005)        | HIGH
+                   | Fontelos          | Eq 1.1: θ_t − Hθ·θ_x = 0  | (collides CLM)
+CLM                | Constantin-Lax-   | Y (CLM 1985, cited in      | MEDIUM
+                   | Majda             | Córdoba paper Eq 1.3)       |
+                   | (gCLM a=0)        | ω_t + v·ω_x = ω·Hω         |
+gCLM               | generalized CLM   | Y (Huang-Qin-Wang-Wei       | LOW
+                   | (OSW: Okamoto-    | 2024, ANCHORS line 12)      |
+                   | Sakajo-Wunsch)    | ω_t + a·u·ω_x = u_x·ω      |
+De Gregorio        | De Gregorio       | Y (cited in ANCHORS)        | LOW
+                   | (gCLM a=1)        | α = −1, compact support     |
+OSW                | Okamoto-Sakajo-   | Y (same as gCLM)            | LOW
+                   | Wunsch            |                              |
+LSS                | Lushnikov-        | N (not verified)            | MEDIUM
+                   | Silantyev-Siegel  | soft anchors α(2/3), α(0.8) |
+Xu                 | Xu 2607.19762     | Y (extracted HTML abstract)  | LOW
+                   |                   | CLM spectral analysis       |
+Wang               | Wang 2509.14185,  | Y (PDFs extracted)          | LOW
+                   | 2511.22819        | CCF PINN discovery           |
+Elgindi-Jeong      | EJ20              | Y (verified from 2401.14615)| LOW
+                   |                   | Ω = −2ξ/(1+ξ²), c_ω=−1,cl=1|
+Huang-Qin-         | ARMA 248:22,      | Y (title only, arXiv        | LOW
+Wang-Wei           | arXiv 2305.05895  | abstract seen)              |
+Eggers-Fontelos    | Eggers-Fontelos   | N (referenced by Wang       | LOW
+                   | 2019              | as λ₁ ≈ 0.6057 discoverer)  |
+
+Lambda_2 discrepancy: 0.4703 vs 0.4713242245
+  From 2509.14185:
+    - Prose says "λ₂ = 0.4703 with residuals O(10⁻⁷)" (L240)
+    - Table says "2nd unstable: 0.4713248638620" (line 194)
+  Within the SAME paper, these are two DIFFERENT values for the same
+  quantity. The prose value (0.4703) is lower precision and rounded;
+  the table value (0.4713248638620) is the actual computed result.
+
+  From 2511.22819:
+    - Refined to λₛ = 0.47132422 by gradient-normalized training,
+      with |λ−λₛ| ~ 10⁻⁷ sensitivity.
+
+  Our ANCHORS value 0.4713242245:
+    - Agrees with 2511.22819's 0.47132422 to 8 digits
+    - Disagrees with 2509.14185's table value 0.4713248638620
+      (difference at 8th decimal)
+    - Resolving: the 2511 paper is a REFINEMENT of the 2509 result.
+      Our ANCHORS value is a claimed extension (13-digit) of the
+      8-digit refined value. The 0.4713242245 is not independently
+      verified from any source to 13 digits.
+
+  VERDICT: two different stages of the same computation, not two
+  different quantities. The higher precision (10⁻¹³ digits) in
+  ANCHORS exceeds any stated precision in either source. The 0.4703
+  is a prose-rounding artifact, not a distinct quantity.
+
+TASK 4 — P1 SCOPE — RESCOPE RECOMMENDATION (founder gate)
+-----------------------------------------------------------
+a. What CCF (correct) requires that F1 engine lacks:
+   The F1 engine solves the gCLM self-similar profile ODE:
+     c_l·Ω + α·ξ·Ω' − HΩ·Ω = 0    (with stretching term −HΩ·Ω)
+   CCF's self-similar equation (from Wang 2511.22819 Eq 3):
+     Ω + ((1+λ)y − U)∂_yΩ − Ω∂_yU = 0
+   where U is antiderivative of Ω (Ω = H[θ] in self-similar coords).
+   Structural differences:
+   - No stretching term (contrast CLM's −HΩ·Ω vs CCF's −Ω∂_yU)
+   - The advection term ((1+λ)y − U)∂_yΩ involves U, not HΩ
+   - λ appears as a nonlinear parameter in the operator
+   - The ansatz for θ (scalar) vs ω (vorticity) differs
+   CCF's self-similar equation is structurally distinct from CLM's.
+   F1 engine cannot be repurposed for CCF without rewriting the
+   self-similar equation and the linearized operator.
+
+b. Does gCLM a=0 work survive?
+   YES — retain as an independent leg, not as CCF. The gCLM a=0
+   (= CLM = Constantin-Lax-Majda) work of F1:
+     - H-A goldens (a=0 profile, c_l=1, α=1) — VALID
+     - H-B realization pair (strip/clean dichotomy) — VALID
+     - Elgindi-Jeong profile reproduction — VALID
+     - Modulation rows — VALID
+   This is the SPECTRAL theory of CLM, confirmed by Xu 2607.19762.
+   Recategorize as: "CLM focal-plane (spectral) — outcome-independent"
+   Do NOT discard. The CLM spectral leg is self-contained and
+   passes all P0 goldens. It was the CCF λ identification claim
+   (P1 deflation/eigenvalue targeting) that was misattributed.
+
+c. Revised P1 scope under correct CCF equation:
+   P1 was: "PALC+deflation → CCF 1st (0.6057) + 2nd (0.4713)"
+   Revised: CCF P1 requires implementing the CCF self-similar
+   equation (not the gCLM one), solving for the profile via
+   continuation in λ (not deflation from a known eigenvalue),
+   and reproducing the λ values as self-similar scaling parameters.
+   This is a fundamentally different numerical problem:
+     - CCF's λ is found by solving the self-similar PDE + smoothness
+       condition at origin (Eggers-Fontelos selector mechanism),
+       not by eigenvalue computation
+     - The critical control is the ORIGIN SMOOTHNESS condition,
+       not the essential-spectrum line
+   Recommended cap: $40 (was $40, no change) but with CCP/CCP-only
+   boundary: classify as CCF transport leg.
+
+d. Whether Xu 2607.19762 spectral results apply to CCF:
+   NO — they apply only to CLM/gCLM a=0. The paper's abstract
+   explicitly states: "We give a spectral description of the
+   self-similar collapse profile of the Constantin-Lax-Majda (CLM)
+   equation, the a=0 anchor of the generalized family." CCF is a
+   different equation entirely. Therefore:
+     - Essential spectrum line Re λ = −½ does NOT transfer
+     - Point spectrum {0,1} does NOT transfer
+     - Gap 1/2 does NOT transfer
+     - Realization dichotomy (strip/clean) does NOT transfer
+     - Non-normality caveat does NOT transfer
+   The P1-SCOPE-OK adjudication is VOID. A new P1 scope
+   adjudication must be performed for the CCF leg.
+
+PRE-REGISTRATION suspended:
+   N=512, L=20.0 were registered for the WRONG operator (gCLM
+   eigenvalue computation). Re-registration deferred to new P1
+   scope adjudication for the CCF transport leg.
+
+TERMINAL: V1.5-READY
+   Correct CCF equation verified from primary source (Córdoba-
+   Córdoba-Fontelos 2005 Annals paper). Lambda values verified
+   from Wang 2509.14185 and 2511.22819 PDFs. Referent audit
+   attaches verified status to all named equations (1 untracked:
+   LSS, 1 low-risk: Eggers-Fontelos). Misidentification filed
+   as ledger asset. P1-SCOPE-OK rescinded. Rescope recommendation
+   attached.
+
+Founder gates remaining:
+  1. Adjudicate CCF rescope. Question: run CCF transport leg
+     (self-similar PDE, origin smoothness selector, λ as scaling
+     parameter) as P1, or defer to later spec after current
+     gCLM/CLM spectral leg completes independently?
+  2. Approve referent-audit control for v1.5.
+  3. Publish v1.5 freeze hash.

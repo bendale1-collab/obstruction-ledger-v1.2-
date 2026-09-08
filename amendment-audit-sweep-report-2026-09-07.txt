@@ -40,15 +40,21 @@ SELECTION RATIONALE (verifiable-before-any-number):
   of the published lambda values.
 
 REJECTED ALTERNATIVE FORMS:
-  1. gCLM with a != 0 (e.g. a=1/2, a=1, a<0):
-     Rejected because the published lambda values are from CCF
-     literature (Constantin-Lax-Majda, Wang), not from De Gregorio
-     or mixed-family profiles. Attributing CCF lambda to a!=0 would
-     be a misattribution of the source.
-  2. Dissipative/viscous CCF (with nu.omega_xx term):
-     Rejected because Wang (2509.14185, 2511.22819) and
-     Constantin-Lax-Majda (1985) study the inviscid equation.
-     The lambda values are eigenvalues of the inviscid operator.
+  1. gCLM with a ≠ 0 (e.g. a=1/2, a=1, a<0):
+     Rejected because the CCF equation is defined as the a=0 member
+     of the gCLM hierarchy (Huang-Qin-Wang-Wei, ARMA 248:22, 2024,
+     arXiv 2305.05895; Huang et al., arXiv 2401.14615 Eq 1.1).
+     The CCF (Constantin-Lax-Majda 1985, Eq 2.1-2.3) has no
+     advection term — ω_t = (Hω)·ω — while any a≠0 introduces
+     the term a·u·ω_x which fundamentally changes the operator.
+     The choice is determined by which PDE the literature refers
+     to by the name "CCF" or "CLM", before any eigenvalue is
+     consulted.
+  2. Dissipative/viscous CCF (with ν·ω_xx term):
+     Rejected because Constantin-Lax-Majda (1985) and all CLM
+     spectral literature study the inviscid equation. The
+     Hilbert-transform closure u_x = Hω is the inviscid model's
+     signature.
   3. 2D/3D surface quasi-geostrophic form:
      Rejected because project scope is 1D (SPEC sec 1).
 

@@ -1,0 +1,171 @@
+OL v1.4 AMENDMENT SHIP + P1 SCOPE — TERMINAL STATE
+===================================================
+2026-09-07 | $0 of $15 cap | v1.4 freeze hash: ee189ec4...
+
+TASK 1 — SHIP v1.4 COMPLETE
+-----------------------------
+Re-filed rejection #1:
+  PASSES identical-if-different-target test. Rejection based on
+  family-hierarchy identification (CCF = gCLM a=0: no advection
+  term ω_t = (Hω)·ω vs ω_t + a·u·ω_x for a≠0). No λ-provenance
+  sentence remains. Sources: Huang-Qin-Wang-Wei (ARMA 248:22, 2024,
+  arXiv 2305.05895), Huang et al. (arXiv 2401.14615 Eq 1.1).
+
+Corroboration added to ANCHORS:
+  CLM = gCLM a=0 per cited sources; Elgindi-Jeong exact profile
+  Ω(ξ) = -2ξ/(1+ξ²) (≡ -ξ/(ξ²+¼) by ξ→2ξ), c_ω = -1, c_l = 1.
+  c_l = 1.0000 at a=0 now DERIVABLE (F1 engine reproduces).
+
+Gaps tagged (8 ASSERTED-UNDERIVABLE, 1 ASSERTED-UNSOURCED):
+  See ANCHORS.md per-class gap table.
+
+Amendment entries #5-#7 written to amendment-log-v1.4.txt.
+ANCHORS.md hash updated; MANIFEST.sha256 regenerated.
+  NEW FREEZE HASH: ee189ec49945fde81e18c842996a7ddd265c32d0dbfe3d22557f134ff034ebb2
+FOUNDER: verify and publish to gist.
+
+TASK 2 — LITERATURE PRE-READ COMPLETE
+----------------------------------------
+arXiv 2607.19762 — "The spectral picture of self-similar collapse
+in the Constantin-Lax-Majda equation" (Xu, July 2026):
+
+a. Stated properties of L_0 at a=0:
+   - Essential spectrum = vertical line Re λ = -1/2 (proved by
+     log-widening Weyl sequence + explicit Hardy-Mellin resolvent
+     bound). Constructor: the half-plane {Re λ ≥ -1/2} meets the
+     essential spectrum in only this line.
+   - Full point spectrum on the odd (origin-H²) realization =
+     EXACTLY {0,1} (scaling and time-shift symmetry modes). No
+     embedded eigenvalues.
+   - Modulation removes {0,1}, leaving spectral gap of 1/2.
+   - L_0 is non-normal: spectral gap does NOT give decay rate in
+     the X norm (requires a weighted space reached by bounded
+     transfer map).
+   - Fourier-reducibility: the Hilbert transform is diagonalized
+     by Fourier series; the linearized operator's "potential term"
+     splits exactly. The paper uses block-diagonalization of the
+     eigenvalue equation (its §5.3).
+
+b. Discretization: the paper does not run a numerical
+   eigenvalue computation for the unstable branches. It uses
+   Weyl sequences and Hardy-Mellin resolvent bounds as pure
+   analysis. It mentions "high-precision computation" to locate
+   a_c but does not compute λ values via any discretization.
+   The method is analytic, not numerical.
+
+c. Published λ values: NONE found in 2607.19762. The paper
+   recomputes the c_l(a) branch of Lushnikov-Silantyev-Siegel
+   (LSS) as a cross-check, and reports solution accuracy
+   "∼ 3×10⁻⁴ at the a=0 floor" for those c_l values — about
+   3-4 digit accuracy. The unstable λ values (0.6057, 0.4713)
+   are NOT computed or cited in this paper.
+
+d. Relation to P1: ORTHOGONAL, not subsuming. P1's objective
+   is computing eigenvalues of the linearized operator at
+   continuation steps (stable→1st→2nd CCF via deflated Newton).
+   The Xu paper provides the essential spectrum line as the
+   baseline (the noise floor below Re λ = -1/2 must be ignored)
+   and proves that {0,1} are the only point spectrum on the
+   correct realization — meaning any eigenvalue we find at Re λ
+   ∈ (-1/2, 0)\{0,1} is an embedded eigenvalue of the
+   continuation branch, which is exactly what P1 seeks.
+   Crucially: the paper confirms that the strip (eigenvalues
+   with Re λ > -1/2 that are NOT 0,1) is the faithful spectrum
+   of the WRONG (maximal L²) realization — so if we choose the
+   wrong realization, we get spurious eigenvalues. Our F1
+   already passes H-B (correct realization). This supports P1.
+
+Lambda value verification:
+  2509.14185 (Wang "Discovery of Unstable Singularities"):
+    - λ₁ ≈ 0.6057 — FOUND in HTML body: "Wang et al. [16] with
+      λ₁ ≈ 0.6057". Precision: ≈ (4 digits). Our ANCHORS value
+      0.6057337012032 extends to 13 digits beyond stated paper
+      precision.
+    - Stable λ = 1.180777... — NOT FOUND in extracted HTML text.
+      The full paper text could not be accessed (no pdftotext).
+    - The CCF equation appears as "Córdoba-Córdoba-Fontelos (CCF)
+      stable and 1st unstable solutions" with double-float machine
+      precision claimed.
+
+  2511.22819 (Wang "Resolving Sharp Gradients..."):
+    - λₛ = 0.47132422 — FOUND in HTML body: the 2nd unstable
+      solution with "λₛ = 0.47132422" (8-digit precision) by
+      gradient-normalized PINN. Our ANCHORS 0.4713242245 extends
+      to 13 digits.
+    - The paper explicitly says 2nd unstable was resolved "to
+      machine precision" by the gradient-normalized method.
+
+  Summary: stable λ NOT-VERIFIED (full text inaccessible),
+  1st λ FOUND at ≈0.6057, 2nd λ FOUND at 0.47132422.
+  All three exceed paper-stated precision.
+
+TASK 3 — P1 SCOPE ADJUDICATION
+--------------------------------
+Recommended: P1-SCOPE-OK with the following pre-registered constraints:
+
+Q1: Is Fourier spectral on [-L,L] adequate to resolve the
+    spectrum of L_0?
+    YES, with caveats:
+    - Xu (2607.19762) proves the essential spectrum is Re λ = -1/2
+      line. Our Fourier discretization on [-L, L] will approximate
+      this as a cluster near -0.5. The essential spectrum is
+      continuous — any finite discretization produces a discrete
+      approximation, and eigenvalues near the essential spectrum
+      may be artifacts.
+    - The Hilbert transform is exact under Fourier (multiplier
+      -i·sgn(k)). The remaining operations (differentiation,
+      multiplication by the potential) are also exact under Fourier.
+      No Fourier-series reduction is blocked — the operator L_0 is
+      Fourier-diagonalizable in its principal part.
+    - WHAT OUR DISCRETIZATION COMPUTES: the eigenvalues of the
+      matrix L_N approximating L_0 on the subspace of Fourier modes
+      |k| ≤ N. The essential spectrum is approximated by the
+      eigenvalues near Re λ = -0.5; eigenvalues with Re λ > -0.5
+      (excluding 0,1) that survive resolution doubling are candidate
+      unstable eigenvalues of the continuation branch.
+
+Q2: Can deflation distinguish a true unstable mode from a
+    discretization artifact in the presence of continuous essential
+    spectrum?
+    NOT by itself. Deflation removes a known root from Newton's
+    method but does not distinguish eigenvalue types. The required
+    diagnostic is:
+    - The eigenvalue must have Re λ > -0.5 + δ (δ = some margin
+      above the essential spectrum line). Eigenvalues with Re λ
+      within 0.01 of -0.5 are ESSENTIAL-SPECTRUM ARTIFACTS and
+      must be rejected.
+    - The eigenmode must be square-integrable (decay at infinity).
+    - Resolution doubling: λ(N) vs λ(2N) must agree to at least
+      4 digits.
+    - The mode must not be 0 or 1 (symmetry modes; removed by
+      modulation).
+
+Q3: Under strong non-normality, conditioning of a 13-digit
+    eigenvalue match?
+    Xu (2607.19762) explicitly flags non-normality: L_0 has
+    pseudospectra that can make eigenvalue counts misleading.
+    A 13-digit match to a published value is NOT trustworthy
+    without a pseudospectral check:
+    - Pre-registered precondition: for any eigenvalue λ claimed
+      as a P1 hit, compute the resolvent norm ||(L - λI)^{-1}||
+      or the ε-pseudospectrum. If the resolvent is large
+      (> 10^3) within ε < 10^{-3} of λ, the eigenvalue is
+      non-normal and its accuracy cannot be trusted to more
+      than ~3 digits regardless of the discrete residual.
+    - The ε-pseudospectrum can be estimated via the singular
+      value decomposition of (L - λI) at points near λ.
+
+PRE-REGISTRATION (to be filed before any P1 compute):
+  N = 512 (Fourier modes, M = 1025 grid points)
+  L = 20.0  (domain half-width)
+  Convergence criterion: resolved eigenvalue λ stable to 4 digits
+    under N → 2N doubling, AND resolvent check passes (norm < 10^3
+    at ε = 10^{-3}).
+  Any post-hoc adjustment of N or L that moves a computed λ toward
+  a published target is a ledger entry of type TUNING, filed
+  regardless of outcome.
+
+TERMINAL: P1-SCOPE-OK
+  Discretization defensible. Pre-registration filed. No P1
+  continuation runs until founder adjudicates this scope
+  recommendation and publishes v1.4 freeze hash.

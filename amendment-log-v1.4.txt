@@ -1,0 +1,30 @@
+# Obstruction Ledger — Amendment Log
+
+## Entry #5 — 2026-09-07 — CCF PDE closure + ANCHORS corroboration (v1.4)
+CCF governing PDE adopted: ω_t = (Hω)·ω = gCLM a=0 member. Sources:
+- Constantin-Lax-Majda (1985), Comm. Pure Appl. Math. 38, 715, Eqs 2.1-2.3
+- Huang-Qin-Wang-Wei (2024), ARMA 248:22, arXiv 2305.05895
+- Huang et al. (2024), arXiv 2401.14615, Eq 1.1
+
+Corroboration added to ANCHORS:
+- CLM equation identified as gCLM a=0 (no advection term drops)
+- Elgindi-Jeong exact profile Ω(ξ) = -2ξ/(1+ξ²), c_ω = -1, c_l = 1
+  (ANCHORS profile Ω = -ξ/(ξ²+¼) is ξ→2ξ rescaling)
+- c_l = 1.0000 at a=0 now DERIVABLE (F1 engine reproduces); one
+  previously asserted value converted to derivable.
+
+## Entry #6 — 2026-09-07 — Per-class gap tags (v1.4)
+All remaining audit gaps tagged in ANCHORS.md:
+ASSERTED-UNDERIVABLE (8): CCF stable λ, CCF 1st λ, CCF 2nd λ,
+  α(2/3)=0.04517094, α(0.8)≈−0.260, H-A CCF 8-digit target,
+  Fourier diff err <0.5, scipy conv flag (latter two = smoke tests).
+ASSERTED-UNSOURCED (1): a_c = 0.6890665337007457 — no cited source.
+None fixed — tagging only, per v1.3→v1.4 sweep instructions.
+Negated rejection text for CCF: verifiable-before-any-number test passed
+  (rewritten on family-hierarchy identification alone, removing all
+  λ-provenance sentences).
+
+## Entry #7 — 2026-09-07 — v1.4 freeze hash + publication
+New freeze components: ANCHORS.md hash updated.
+MANIFEST.sha256 regenerated with sorted paths, LF endings.
+Freeze hash published by founder.

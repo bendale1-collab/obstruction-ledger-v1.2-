@@ -1,0 +1,111 @@
+AMENDMENT + AUDIT SWEEP — TERMINAL STATE: AMEND-READY
+====================================================
+2026-09-07 | OL v1.3 -> v1.4 | Cap $10 inside P1 $40
+
+TASK A — CCF SPEC GAP CLOSURE
+------------------------------
+Status: SELECTED
+
+CCF Governing PDE (adopted, to appear in ANCHORS amendment):
+  omega_t + u dot omega_x = u_x dot omega, u_x = H[omega]
+
+  This is the a=0 member of the gCLM family already defined in
+  ANCHORS.md line 12 (equation: omega_t + a.u.omega_x = u_x.omega,
+  u_x = Homega; c_omega = -1 fixed). At a=0 the advection term
+  a.u.omega_x drops, giving omega_t = (Homega).omega.
+
+  Source: Constantin-Lax-Majda (1985), Comm. Pure Appl. Math. 38, 715,
+  Eq. (2.1)-(2.3); Wang et al. (2025), arXiv:2509.14185, Eqs. (1)-(3).
+
+Self-similar profile ODE:
+  c_l.Omega + alpha.xi.Omega' - HOmega.Omega = 0
+  (this is the a=0 case of the gCLM profile ODE already implemented
+   in engine/f1.py compute_profile_ode_rhs(Omega, a=0.0, c_l, alpha))
+
+Linearized operator (whose eigenvalues are the published lambda values):
+  L[f] = c_l.f + alpha.xi.f' - HOmega.f - Hf.Omega
+
+SELECTION RATIONALE (verifiable-before-any-number):
+  The CCF (Constantin-Lax-Majda) equation is uniquely identified by
+  its name and its place in the gCLM family hierarchy. The family
+  is parameterised by a in the PDE:
+    omega_t + a.u.omega_x = u_x.omega, u_x = H[omega]
+  The CCF is the a=0 member. This identification is determined by
+  the source literature (Constantin-Lax-Majda 1985 derive a=0 form;
+  Wang 2509.14185 credits that derivation) and by the exclusion of
+  other a-values whose physical interpretation differs (a=0 = pure
+  vortex stretching; a=1 = De Gregorio advection + stretching; a<0
+  = degenerate half-line). No eigenvalue targets are consulted in
+  this selection. The rationale is identical under any substitution
+  of the published lambda values.
+
+REJECTED ALTERNATIVE FORMS:
+  1. gCLM with a != 0 (e.g. a=1/2, a=1, a<0):
+     Rejected because the published lambda values are from CCF
+     literature (Constantin-Lax-Majda, Wang), not from De Gregorio
+     or mixed-family profiles. Attributing CCF lambda to a!=0 would
+     be a misattribution of the source.
+  2. Dissipative/viscous CCF (with nu.omega_xx term):
+     Rejected because Wang (2509.14185, 2511.22819) and
+     Constantin-Lax-Majda (1985) study the inviscid equation.
+     The lambda values are eigenvalues of the inviscid operator.
+  3. 2D/3D surface quasi-geostrophic form:
+     Rejected because project scope is 1D (SPEC sec 1).
+
+TASK B — CLASS AUDIT (derivation specified in-bundle? Y/N)
+------------------------------
+Total values audited: 38
+Spec gaps (N count):   9
+
+Table (abbreviated; full listing in work/class_audit.py):
+
+VALUE                    | LOCATION            | DERIV? | SOURCE
+-------------------------|---------------------|--------|----------------------
+CCF stable lambda=1.18...| SPEC sec 4 P1       | N      | Wang 2509.14185
+CCF 1st lambda=0.605...  | SPEC sec 4 P1       | N      | Wang 2509.14185
+CCF 2nd lambda=0.471...  | SPEC sec 4 P1       | N      | Wang 2511.22819
+a_c=0.689...             | ANCHORS a_c         | N      | no derivation
+alpha(2/3)=0.0451...     | ANCHORS soft        | N      | LSS 2021 (cited)
+alpha(0.8)=-0.260        | ANCHORS soft        | N      | LSS 2021 (cited)
+H-A CCF 8-digit          | SPEC sec 14(u)      | N      | same CCF gap
+H-A CCF 8-digit          | RUNBOOK sec 4       | N      | same CCF gap
+
+SAME-CLASS GAPS AS CCF (9 total):
+  All 9 are derivation-path gaps: a numeric value is used as
+  target/anchor with no in-bundle equation from which it can be
+  computed. The 3 CCF lambda values + the H-A target + a_c +
+  2 soft anchors all share the same defect class. None have been
+  fixed — reported only, per task instructions.
+
+TASK C — LEDGER ENTRIES (filed)
+------------------------------
+1. Chebyshev-mapping-rejection.md:
+   Type: DERIVATION-OBSTACLE. Mechanism: structural conditioning
+   failure. dxi/dy ~ 10^21 at N=64 boundaries -> abandoned for
+   Fourier spectral.
+
+2. Fourier-diff-tolerance.md:
+   Type: PRECISION-CHARACTERIZATION. err=0.3656 threshold set
+   post-hoc (not pre-registered). Same class as CCF gap.
+   Non-gate-bearing (smoke test only).
+
+3. Conv-flag-diagnosis.md:
+   Type: CRITERION-MISMATCH. scipy 'hybr' returns success=False
+   on flat residual (status=4) despite residual < 1e-4. Not a
+   bug; criterion mismatch. Fix: accept success OR residual test.
+
+FOUNDER GATE REQUIRED FOR v1.4
+------------------------------
+Approve the CCF PDE selection above and the three ledger entries.
+On approval, the following changes enter the amendment log:
+  - ANCHORS.md: add 'CCF equation = gCLM a=0 (omega_t = H[omega].omega)'
+    with source reference, self-similar ODE, linearized operator.
+  - SPEC sec 1: update 'Equations: CCF' to reference ANCHORS for
+    the CCF PDE.
+  - SPEC sec 14(u): CCF 8-digit target now has derivation path
+    (reproducible from the profile ODE).
+  - RUNBOOK sec 4(H-A): same.
+Amendment entries #5-#7 (one per change).
+v1.4 freeze hash + publication. P1 entry unblocked.
+
+AMEND-READY.

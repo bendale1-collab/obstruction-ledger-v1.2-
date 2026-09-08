@@ -1,0 +1,24 @@
+Ledger Entry — Chebyshev Algebraic Mapping Rejection
+Filed: 2026-09-07
+Type: DERIVATION-OBSTACLE
+Mechanism: structural conditioning failure
+
+The algebraic mapping xi = L.y/sqrt(1-y^2) from Chebyshev nodes
+y in [-1,1] to the real line was tested as the F1 spatial
+discretisation. At the outermost Chebyshev nodes (y approx +/- 1-eps),
+dxi/dy = L/(1-y^2)^{3/2} approx L/eps^{3/2}. For N=64,
+eps ~ 10^{-15} producing dxi/dy ~ 10^{21}. This factor appears in
+the differentiation chain rule D_xi = diag(dy/dxi).D_cheb, producing
+matrix entries of order 10^{21} and catastrophic conditioning at
+any N >= 64.
+
+The mapping was abandoned in favour of a Fourier spectral method on
+the bounded domain [-L, L] which avoids the conditioning cliff entirely.
+The Fourier method correctly reproduces all gCLM goldens at N=256, L=20.
+
+Alternative mappings considered: (1) tanh stretching, (2) rational
+Chebyshev (TB). Fourier was selected for its exact Hilbert transform
+(via FFT multiplier -i.sgn(k)) which is the project's highest-frequency
+operation and which the mapped-Chebyshev approach could not reproduce
+accurately due to interpolation error between Chebyshev and equispaced
+grids.

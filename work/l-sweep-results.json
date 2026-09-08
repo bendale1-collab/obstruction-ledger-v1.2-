@@ -1,0 +1,8 @@
+{
+  "method": "origin-H2 at N=1024, L-sweep {10,20,40,80}",
+  "split_threshold": "|dRe/dlogL| > 1e-2 => L-dependent",
+  "classification": {
+    "L_dependent": 20,
+    "L_independent": 0
+  }
+}

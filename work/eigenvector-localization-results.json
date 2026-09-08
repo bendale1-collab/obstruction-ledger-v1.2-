@@ -1,0 +1,18 @@
+{
+  "P1_odd_residuals_H2": {
+    "n": 20,
+    "m_in_mean": 0.7036701455651737,
+    "m_out_mean": 0.006169133799646752
+  },
+  "P2_pos_Re_naive_strip": {
+    "n": 22,
+    "m_in_mean": 0.13778917675719302,
+    "m_out_mean": 0.24854688578974013
+  },
+  "P4_essential_controls": {
+    "n": 0,
+    "m_in_mean": NaN,
+    "m_out_mean": NaN
+  },
+  "verdict": "INCONCLUSIVE \u2014 distributions not clearly separated"
+}

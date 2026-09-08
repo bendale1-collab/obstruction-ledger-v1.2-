@@ -367,33 +367,28 @@ class RealizationPair:
                     + a * (U * vp + Uv * Op) - HO * v - Hv * Omega)
 
         if odd_basis:
-            # Restrict to right half (x > 0) with odd extension enforced
+            # Build full naive operator first
+            L_full = np.zeros((M, M))
+            eps = 1e-5
+            for j in range(M):
+                v = np.zeros(M)
+                v[j] = eps
+                L_full[:, j] = apply_L(v) / eps
+
+            # Symmetry projection onto odd subspace
+            # Reflection operator R: (Rf)(x) = f(-x)
+            R = np.zeros((M, M))
+            for i in range(M):
+                R[i, M - 1 - i] = 1.0
+            # Projector onto odd functions: P = (I - R) / 2
+            P = (np.eye(M) - R) / 2.0
+            # Projected operator: L_odd = P @ L @ P
+            L_odd = P @ L_full @ P
+
+            # Restrict to right-half independent degrees of freedom
             center = M // 2
             right_ix = np.arange(center, M)
-            n_sub = len(right_ix)
-
-            def apply_L_odd(v_sub: np.ndarray) -> np.ndarray:
-                # Odd extension
-                v_full = np.zeros(M)
-                v_full[right_ix] = v_sub
-                for i_r, ix in enumerate(right_ix):
-                    j = M - 1 - ix
-                    if j < center:
-                        v_full[j] = -v_sub[i_r]
-                # Enforce origin-H² vanishing at x=0
-                idx0 = np.argmin(np.abs(x))
-                v_full[idx0] = 0.0
-                # Compute L
-                Lv = apply_L(v_full)
-                return Lv[right_ix]
-
-            L_mat = np.zeros((n_sub, n_sub))
-            eps = 1e-5
-            for j in range(n_sub):
-                v = np.zeros(n_sub)
-                v[j] = eps
-                L_mat[:, j] = apply_L_odd(v) / eps
-            return L_mat
+            return L_odd[np.ix_(right_ix, right_ix)]
 
         # Naive (full domain, no restrictions)
         L_mat = np.zeros((M, M))

@@ -1,0 +1,41 @@
+{
+  "M1": {
+    "L_naive_shape": [
+      2049,
+      2049
+    ],
+    "L_h2_shape": [
+      1025,
+      1025
+    ],
+    "Frob_norm_diff": 444.3287946058948,
+    "Frob_norm_naive_sub": 34220.38132694389,
+    "Frob_ratio": 0.01298433206692663,
+    "top_eig_diffs_mean": 0.11650299644312671,
+    "top_eig_diffs_max": 0.1627480291415542
+  },
+  "M2": {
+    "import_path": "from f1 import RealizationPair, gCLMSolver",
+    "call_site_F4_spectrum_of": "rp._build_operator(a=0.0, odd_basis=odd_basis)",
+    "reimplements_engine": false
+  },
+  "M3": {
+    "p0_at_N256": {
+      "N": 256,
+      "naive_strip_present": true,
+      "naive_n_strip": 35,
+      "clean_n_strip": 17,
+      "strip_reduced": true,
+      "hb_passed": true
+    },
+    "at_N1024": {
+      "N": 1024,
+      "naive_strip_present": true,
+      "naive_n_strip": 42,
+      "clean_n_strip": 20,
+      "strip_reduced": true,
+      "hb_passed": true
+    }
+  },
+  "hypothesis": "H2: Operators differ structurally (Frob=444.3288) but spectra nearly coincide (max top eig diff=1.6275e-01). Runner uses sealed code. Engine construction issue."
+}

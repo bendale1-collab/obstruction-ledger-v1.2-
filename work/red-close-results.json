@@ -1,0 +1,26 @@
+{
+  "N1024_four_counts": {
+    "naive_F4_zone": 28,
+    "h2_F4_zone": 28,
+    "naive_P0_zone": 2046,
+    "h2_P0_zone": 1022
+  },
+  "reconciliation": {
+    "F4_28equals28": true,
+    "reason": "Narrower strip zone (FLOOR=-0.497 vs P0=-0.499) and different {0,1} exclusion produce coincidental equality; runner code is correct for its own zone.",
+    "modes_in_strip_gap": 2
+  },
+  "N2048_strip_counts_P0_zone": {
+    "naive": 4090,
+    "h2": 2042
+  },
+  "residual_modes": {
+    "total_P0_zone_N1024": 1022,
+    "subset_of_naive": "1022/1022",
+    "persist_at_2048": "0/1022"
+  },
+  "eig1": {
+    "N1024_naive_nearest_1": "(0.3753164711238339+0j)",
+    "N1024_h2_nearest_1": "0j"
+  }
+}

@@ -22,7 +22,7 @@ ledger-verify:
 	bash env/ledger-verify.sh
 
 seal-prepare:
-	@echo "NOT IMPLEMENTED: P6"
+	bash env/seal-prepare.sh
 
 determinism:
 	@echo "NOT IMPLEMENTED: P0"

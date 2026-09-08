@@ -1,23 +1,24 @@
 phase: P0
-subtask: engine-green
-intent: "F1 Fourier spectral engine deployed; H-A goldens (CLM a=0, a=1/2, γ̄=1−a), H-B realization pair, modulation all PASS"
-next_step: runbook-p1-entry
+subtask: seal-prepared
+intent: "v1.5 seal: leg-split, precision correction, referent-resolution control, P1 pre-registration. MANIFEST.sha256 covers 14 files."
+next_step: await-founder-gate-2  # founder publishes v1.5 hash + P1 AUTHORIZED
 spend:
   total: 2
   phase: 1
   openrouter: 1
   gpu: 0
 versions:
-  spec: "1.3"
-  runbook: "1.1"
+  spec: "1.5"
+  runbook: "1.1-leg-split"
   checklist: "1.1"
-  anchors: "2026-09-06"
+  anchors: "2026-09-08-v1.5"
   env_manifest: "3f77e71a5ea0d981350cfa73023c88e95d02a326188ee69c71b817c7357cdafe"
   engine: f1.py
 launch_utc: 2026-09-06T19:12:00Z
-bundle_hash: 92bbcc04984cac1fb3fa333f497da003dd2357883aa0cb54c4b32b24f3287536
-gist_url: https://gist.github.com/bendale1-collab/6874753d84c84de30c791656ab7c700a
+bundle_hash: 40c7a1056ed98f2c4fd68c7d87c9f48df032c121659cd46adf32ce098c74cae8
+gist_url: PENDING — founder publishes freeze hash to gist
 open_escalations:
-  - "CCF eqn not in frozen anchors → CCF λ deferred to P1"
+  - "GATE 1 complete: SEAL-PREPARED. Awaiting GATE 2: founder publishes freeze hash to gist + issues P1 AUTHORIZED."
+  - "LEG B (CCF TRANSPORT) scope and cap UNQUOTED — separate adjudication needed. Not in P1 scope."
 g1_variant: null
 holdout_status: null

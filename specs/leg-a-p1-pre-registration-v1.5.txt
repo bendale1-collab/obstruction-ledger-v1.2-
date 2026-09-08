@@ -1,0 +1,262 @@
+LEG A P1 — FINAL PRE-REGISTRATION (v1.5, corrections applied)
+===============================================================
+2026-09-08 | Report only, NO COMPUTE | P1 remains unauthorized until v1.5 hash published
+
+⚠ THIS IS NOT A LAUNCH. Authorizer must publish v1.5 freeze hash before any compute begins.
+
+---
+
+## TASK 1 — ANCHOR LOSS: NO EXTERNAL NUMERIC TARGETS
+
+**LEG A P1 has NO external numeric targets. None.**
+
+All lambda anchors moved to LEG B with the CCF referent correction:
+- λ₀ = 1.1807776628998  (CCF stable scaling rate — NOT a gCLM eigenvalue)
+- λ₁ = 0.6057337012032   (CCF 1st unstable — NOT a gCLM eigenvalue)
+- λ₂ = 0.4713248638620   (CCF 2nd unstable — NOT a gCLM eigenvalue)
+- λ₃ = 0.2415604743989   (CCF 3rd unstable — NOT a gCLM eigenvalue)
+
+None of these are computable by the F1 engine. None are eigenvalues of the gCLM linearized operator. They exist only as LEG B targets in ANCHORS.md, referenced for the separate CCF transport leg.
+
+Xu 2607.19762 proves structural theorems (essential spectrum, point spectrum, gap) but computes NO eigenvalues. LSS (2021) gives c_l(a) at ~3 sig figs for gCLM — that is the only numeric cross-check, and it is an aggregate rate, not a spectral eigenvalue.
+
+No published gCLM eigenvalue exists for any a > 0.
+
+**Consequence stated plainly:** There is no "hit" in this phase. No value to match against. Success = reproduction of the proved structure at a=0 plus internal two-grid consistency at a>0. A phase with no external anchor is where a self-confirming result can hide — the only constraint is self-consistency, which a convergent solver always satisfies by construction. This risk is named here in the pre-registration, not deferred to a later post-mortem. The falsification battery (TASK 2) is the only defense against it.
+
+**Prior-prompt confirmation (all DONE before v1.5 hash):**
+- Lambda anchors truncated to source-stated precision: ✅ DONE
+- UNSOURCED-PRECISION filed (excess digits above source-stated): ✅ DONE
+- λ₂ filed as UNRESOLVED-SOURCE-DISCREPANCY (0.4703 prose vs 0.4713248638620 table): ✅ DONE
+- λ₃ = 0.2415604743989 inclusion recorded (SELECTION-UNRECORDED): ✅ DONE
+- LSS (Lushnikov-Silantyev-Siegel 2021, J. Nonlinear Sci. 31:82) referent resolved from primary source: ✅ DONE
+- Eggers-Fontelos (Eggers-Fontelos 2019, Nonlinearity 33:325) referent resolved from primary source: ✅ DONE
+
+---
+
+## TASK 2 — a=0 FALSIFICATION BATTERY (hard PASS/FAIL, pre-registered)
+
+Five tests. Execution order: **F-4 first** (at the beginning of every run session, before F1 through F5 are evaluated). A confirmation battery that runs before its own negative control proves nothing. All tolerances stated before any compute.
+
+### Resolution standard (reconciled — single pair everywhere)
+
+| Parameter | Value | Rationale |
+|-----------|-------|-----------|
+| Primary grid N₁ | 1024 modes | Matches P0 engine default, H-B test resolution |
+| Doubling grid N₂ | 2048 modes | Standard resolution doubling for stability checks |
+| Domain half-length L | 20.0 | Matches P0 engine default |
+| Two-grid pair | {1024, 2048} | Used for: F-1 stability check, two-grid verification in TASK 3 cap, deliverable floor computation |
+| Battery resolution | N=1024 (all F tests) | F-1 doubling stability: N₂=2048 |
+
+All five tests run at N=1024. F-1 additionally checks eigenvalue count stability at N=2048. Two-grid pair {1024, 2048} is the single stated pair inside this pre-registration — no other resolution pair is referenced.
+
+---
+
+### ⚠ SPECTRAL FLOOR: FLOOR = −½ + 3×10⁻³
+
+FLOOR = −½ + 3×10⁻³ is the single spectral boundary used throughout the battery. It separates the essential spectrum cluster (below FLOOR) from the point-spectrum region (above FLOOR). The value 3×10⁻³ is set above the F-2 essential spectrum band (±2×10⁻³) to ensure the two regimes do not overlap.
+
+δ = 5×10⁻⁴ survives only as **BORROWED-TOLERANCE** for two specific uses:
+- F-3(a): complex-distance threshold for {0,1} removal (|λ−0| < 5×10⁻⁴, |λ−1| < 5×10⁻⁴)
+- Two-grid floor report: the observed eigenvalue difference replaces this borrowed value at the next re-registration
+
+**Original source:** Xu §7's |c_l(1024)−c_l(2048)| ≲ 5e-4 — the two-grid self-consistency floor for the aggregate deformation rate c_l. NOT a spectral quantity. It is the best available proxy but measures a different operator feature.
+
+**Add to the a=0 deliverable:** Compute the observed two-grid eigenvalue difference Δλ = |λ(N₁) − λ(N₂)| for every resolved point eigenvalue (including {0,1}) and the essential spectrum cluster mean. This observed floor replaces the borrowed value at any future re-registration. Report: "{observed floor} vs borrowed δ=5e-4 — {agrees / deviates by factor X}."
+
+---
+
+### F-4 POSITIVE CONTROL (run first — before any other F test)
+
+**Test:** Run the SAME eigenvalue computation on the **maximal-L²** realization (no origin-H² vanishing enforced). It MUST produce an extra strip of eigenvalues in Re λ > -½ that the origin-H² realization does not.
+
+**Definition of δ_max:** The strip search zone is Re λ ∈ (FLOOR, δ_max), where δ_max = −5×10⁻⁴ (−δ in BORROWED-TOLERANCE notation). This excludes both the essential spectrum cluster (below FLOOR) and the genuine eigenvalue at 0 (above δ_max). FLOOR = −½ + 3×10⁻³.
+
+**Pass condition:**
+1. Maximal-L² eigensolve returns ≥2 eigenvalues in Re λ ∈ (FLOOR, −5×10⁻⁴) that are NOT 0 or 1. Count stable under resolution doubling (N₂=2048).
+2. None of these strip eigenvalues appear in the origin-H² solve at the same discretization.
+
+(Resolvent norms for strip eigenvalues are reported as part of the F-5 diagnostic. They are NOT part of the F-4 pass condition — the strip is genuine spectrum of the wrong realization and may resolve cleanly.)
+
+**Fail condition:** Both realizations agree (neither has extra eigenvalues, or both have the same extra eigenvalues). If the engine cannot distinguish realizations, every other a=0 result is uninterpretable. F-4 failure = **engine RED** regardless of F-1 through F-3 and F-5 outcomes. No pass-through.
+
+**Rationale:** H-B (realization pair) is already GREEN in P0. F-4 is a stricter, quantified re-verification at the P1 resolution (N=1024) with a stability-under-doubling condition.
+
+---
+
+### F-1 POINT SPECTRUM
+
+**Test:** On the origin-H² realization, compute the point spectrum above Re λ = FLOOR.
+
+**Pass condition:** The set of eigenvalues with Re λ > FLOOR must be exactly {0, 1}. No additional eigenvalues. Count stable under resolution doubling (N₂=2048).
+
+**Fail condition:** Any eigenvalue with Re λ > FLOOR that is NOT 0 or 1 → **FAIL**. Not a discovery, not a candidate for classification. The proof is exact; a numerical eigenvalue outside {0,1} above the essential spectrum is an implementation error or discretization artifact, not physics.
+
+**Tolerance justification:** FLOOR = −½ + 3×10⁻³ is set above the F-2 essential spectrum band (±2×10⁻³), ensuring the point-spectrum floor and the essential-spectrum band do not overlap. Any eigenvalue found below this floor is within the essential spectrum cluster and is not a resolved point eigenvalue.
+
+---
+
+### F-2 ESSENTIAL SPECTRUM
+
+**Test:** Compute the discretized essential spectrum — all eigenvalues with Re λ < FLOOR. Measure the cluster's mean Re λ.
+
+**Pass condition:** Cluster mean Re λ ∈ -½ ± 2×10⁻³. Additionally, **no individual cluster member** has Re λ ≥ FLOOR — cluster mean alone is insufficient. Cluster variance consistent across realization variant and resolution doubling.
+
+**Measurement method:** Collect all eigenvalues with Re λ < FLOOR. Compute the mean of their real parts. The cluster mean is the essential spectrum location estimate.
+
+**Fail condition:** Cluster mean Re λ outside -½ ± 2×10⁻³, or any cluster member has Re λ ≥ FLOOR, or cluster disperses into multiple resolvable clusters separated by ≥5×10⁻⁴ (would indicate misclassified point eigenvalues).
+
+---
+
+### F-3 MODULATION ROWS (rewritten — tests the modulation itself, not a nonexistent gap)
+
+**Test:** Apply the modulation constraints (N1: Ω_x(0)=const, N2: U(1)+c_l=0) and recompute the spectrum.
+
+**Pass condition (two-part):**
+1. **(a) Removal of {0,1}:** No eigenvalue has complex distance |λ − 0| < 5×10⁻⁴ or |λ − 1| < 5×10⁻⁴ in the modulated spectrum. Both are absent. Count stable under resolution doubling.
+2. **(b) Spectral abscissa after removal:** The spectral abscissa (max Re λ over all eigenvalues) of the modulated operator ≤ FLOOR. The essential spectrum is now the rightmost spectral feature.
+
+**Fail condition:**
+- Any eigenvalue within tolerance of 0 or 1 survives modulation → modulation implementation error → FAIL
+- Spectral abscissa > FLOOR after removal → a leftover eigenvalue beyond the essential spectrum exists → FAIL
+
+**Why rewritten:** The prior F-3 ("modulation gap") measured the distance between the next-lowest point eigenvalue and the essential spectrum. When F-1 passes (point spectrum = {0,1} exactly), there are no eigenvalues below 0 and above -½ — the essential spectrum starts immediately at -½. The "gap" is undefined in that case. The correct test verifies the modulation removed the correct modes (0 and 1) and that after removal, only the essential spectrum remains as the rightmost structure.
+
+---
+
+### F-5 RESOLVENT-NORM / PSEUDOSPECTRAL CHECK (new — validates every reported eigenvalue)
+
+**Test:** For every eigenvalue reported in F-1 (point spectrum eigenvalues 0 and 1), compute the resolvent norm ∥(z − ε − L)⁻¹∥ at distances ε = 10⁻³ and ε = 10⁻⁴.
+
+**Threshold:** If ε · ∥(z − ε − L)⁻¹∥ > 10² at ε = 10⁻³ for any reported eigenvalue, that eigenvalue is **UNTRUSTED** — it is a pseudospectral artifact, not a genuine eigenvalue. Tag it accordingly.
+
+(Note: the normal-operator baseline is ε · ∥(z − ε − L)⁻¹∥ = 1. The 10² threshold is an **ORDER-OF-MAGNITUDE-CHOICE** — a two-order departure from the normal baseline. It is not borrowed from any other quantity.)
+
+---
+
+### Acceptance logic (pre-registered)
+
+| Test | Pass | Fail consequence |
+|------|------|-----------------|
+| **F-4** (run FIRST) | Strip eigenvalues in max-L² zone, absent in origin-H², stable under doubling | **engine RED** — do not proceed to F-1/2/3/5 |
+| F-1 | {0,1} only above FLOOR, stable under doubling | GOLD-MISS — eigenvalue implementation error |
+| F-2 | Cluster mean at -½ ± 2e-3, no member ≥ FLOOR | GOLD-MISS — essential spectrum misreproduction |
+| F-3 | (a) No 0/1 remain after modulation (complex distance < 5e-4); (b) spectral abscissa ≤ FLOOR | GOLD-MISS — modulation or removal incorrect |
+| F-5 | F-1 eigenvalues have ε·‖(z−ε−L)⁻¹‖ ≤ 10² at ε=10⁻³ | UNTRUSTED tag on failing eigenvalues; report as diagnostic (not a GOLD-MISS/engine RED independent gate) |
+
+F-4 must pass FIRST. If F-4 fails, report engine RED and do not evaluate F-1 through F-3 (they are uninterpretable without a working negative control). F-1 through F-3 can report individually on an engine RED — they are computed but not scored for the gate.
+
+F-5 is a diagnostic gate: failing eigenvalues are tagged UNTRUSTED but the overall phase result is evaluated from F-1/F-2/F-3 with the caveat that any reported eigenvalue may be pseudospectral. A phase with all F-1/F-2/F-3 green but F-5 showing UNTRUSTED eigenvalues is a capped result: everything ships with a "(pseudospectral caveat — no eigenvalue trustable beyond ε=10⁻³)" note.
+
+---
+
+## TASK 3 — CAP DERIVATION ($15/5d adopted)
+
+The $40/5d figure was inherited from v1.4 P1, which was scoped for a different equation (CCF eigenvalue computation). The previous justification was a plausibility argument, not an estimate. That defect class is what the ASSERTED-UNDERIVABLE audit exists to catch. **$15/5d is adopted.**
+
+### Marginal-cost derivation
+
+What must be built or run for LEG A P1 (gCLM spectral continuation):
+
+**Implementation work (OpenRouter API cost — engine build uses frontier assistance for debugging complex numerics):**
+
+| Item | Description | Estimated API spend | CPU compute |
+|------|------------|-------------------|-------------|
+| PALC continuation | Pseudo-arclength continuation in α for eigenvalue branch tracing. Code addition to engine/f1.py. Hand-rolled or via SciPy continuation utilities. | $3 (2-3 debugging sessions for convergence tuning) | $0 (local CPU) |
+| Deflation (Farrell–Birkisson–Funke) | Post-Newton deflation to recover successive unstable branches. Orthogonalize against previously found solutions. | $3 (2-3 sessions for deflation initialization and stability) | $0 |
+| Two-grid verification automation | Run a=0 results at N=1024 and N=2048, compute eigenvalue difference. Plumbing only. | $1 (one debugging session) | $0 |
+| Quad re-evaluation | mpmath path for critical branches. Verify critical eigenvalue digits at 80-bit precision. | $1 (one session for mpmath integration) | $0 (CPU only, mpmath is Python) |
+| Continuation step at a=0.1 | Execute the continuation from a=0 to a=0.1. Convergence diagnostics, branch recording. | $2 (tuning step-size selection) | $0 |
+| **Subtotal** | | **$10** | **$0** |
+| Contingency (50%) | Numerical solver tuning overflow, pathological cases, edge cases in PALC | $5 | — |
+
+**Estimated marginal cost: $15**
+
+The drawdown profile is: PALC ($3, day 1), deflation ($3, day 1-2), two-grid + quad ($2, day 2), a=0.1 continuation ($2, day 2-3), contingency ($5, day 3-4). Total: ~4 days active, ~5 days wall.
+
+**SPEC.md §4 and RUNBOOK.md §3 are updated to $15 / 5d** with this text (see file patches below).
+
+---
+
+## TASK 4 — THE AMBIGUOUS MIDDLE
+
+The rejection band covers engine RED (F-4 failure), GOLD-MISS (F-1/2/3 failure), and cap exceedance. It does NOT cover the most likely real outcome: a=0 reproduces Xu correctly (F-1 through F-5 all pass), but the a=0.1 continuation step yields a branch that neither converges nor cleanly fails.
+
+### Definition of the ambiguous middle
+
+**Diagnostic:** At a=0.1, with PALC step size = 0.05 (default), the Newton residual:
+- Starts at ~10⁻¹ (reasonable for a parameter step)
+- Falls to 10⁻³ — 10⁻² within 8-12 iterations
+- Then **stabilizes**: residual oscillates between 10⁻⁴ and 10⁻² for ≥20 consecutive iterations with no monotonic trend
+- Step-size halving (from 0.05 to 0.025 to 0.0125) produces the same stabilization at the same residual band
+
+(Operator condition number at terminal branch point is reported as a diagnostic. It is NOT part of the ambiguous-middle definition. If >10⁶, it is noted but does not change the classification.)
+
+**This is AMBIGUOUS.** The solver has found a nearby "almost-fixed-point" of the Newton iteration — a spurious solution of the discretized system that does not correspond to a genuine branch of the continuous problem. This is the most common failure mode for continuation into uncharted territory.
+
+### Disposition
+
+**Status:** AMBIGUOUS — park the branch attempt.
+
+**Action:**
+1. Write a full ledger entry: convergence trace (residual vs iteration for all attempt records), step-sizes tried, condition number history, and the terminal residual diagnostics.
+2. The branch at a=0.1 is marked PARKED — no claim attaches to either existence or nonexistence of an eigenvalue branch at a=0.1.
+3. No further compute on this branch during P1. The parked status is terminal for this phase.
+
+This is NOT a debug cycle invitation. The ambiguous middle is the normal outcome of pushing a continuation beyond known territory, and it is recorded, not fixed.
+
+### Continuation retry limit
+
+| Condition | Retry count | Limit rationale |
+|-----------|------------|-----------------|
+| PALC step size too large (residual monotonic climb) | 2 additional retries at halved step sizes | Step-size sensitivity is expected; 3 attempts (1 default + 2 halved) exhaust the reasonable range |
+| Initial guess variation from a=0 endpoint | 1 additional retry with a different branch tracer (e.g., natural parameter continuation instead of PALC) | A distinct continuation method distinguishes method failure from branch absence |
+| **Total retry cap** | **3 attempts** | Exhausted → AMBIGUOUS terminal state |
+
+### Hard stop
+
+After 3 continuation attempts at a=0.1, all producing the ambiguous-middle pattern: **AMBIGUOUS is terminal.** No further retries inside P1 cap. The ledger entry ships with the P1 deliverable. P1's deliverable is: a=0 results (PASS/FAIL per battery) + a=0.1 continuation report (AMBIGUOUS or GOLD-PASS). This is not a failure to produce a GOLD-PASS — AMBIGUOUS is a valid P1 terminal state for the continuation branch, distinguished from GOLD-MISS (where the battery failed) and GOLD-PASS (where both a=0 and a=0.1 converged cleanly).
+
+### Edge case: "success" at a=0.1 despite the unanchored risk
+
+If a=0.1 converges cleanly to a branch with a well-defined eigenvalue, record the result but tag it **UNANCHORED**. The same caveat that applies to the whole phase applies doubly here: without an external target, a convergent solver that reports an eigenvalue at a=0.1 cannot be distinguished from a discretization artifact that happens to satisfy the Newton tolerance. The UNANCHORED tag means:
+- The eigenvalue at a=0.1 is reported with its two-grid self-consistency gap and its quad re-evaluation
+- It is explicitly stated as "no external target exists — this is a numerical result awaiting either analytic confirmation or independent reproduction"
+- It does not enter any future α(a)-law fit as a "confirmed" knot
+
+---
+
+## Summary: LEG A P1 final pre-registration
+
+| Item | Value |
+|------|-------|
+| Phase | P1 (LEG A only) |
+| Equation | gCLM a=0 (CLM spectral) — NOT CCF |
+| External numeric targets | **NONE** — all lambda anchors moved to LEG B |
+| Success definition | Reproduction of Xu-proved structure at a=0 (F-1 to F-5) + internal two-grid consistency at a>0 |
+| a=0 battery (pre-registered) | F-4 first (positive control), then F-1, F-2, F-3, F-5 |
+| Tolerance status | FLOOR = −½ + 3×10⁻³ single spectral boundary; δ = 5×10⁻⁴ is BORROWED-TOLERANCE for F-3(a) complex distance only, replaced by observed eigenvalue floor at next re-registration |
+| Resolution | {1024, 2048} — single two-grid pair, used everywhere |
+| Proposed cap | **$15 / 5d** (adopted from marginal-cost derivation) |
+| Ambiguous middle | AMBIGUOUS terminal state after 3 retries, ledger entry, no claim; condition number excluded from definition |
+| Unanchored-success tag | UNANCHORED — reported but not confirmed |
+| a_c crossing, a<0 branch | Not in scope; belong to later phases |
+| CCF λ targets, CCF transport | Not in scope; belong to LEG B |
+
+---
+
+## FILE UPDATES (applied below)
+
+SPEC.md §4: P1 cap changed from $40/5d to **$15/5d**.
+RUNBOOK.md §3: P1 cap changed from $40/5d to **$15/5d**.
+
+---
+
+## PRE-REGISTRATION — NOT AUTHORIZED FOR LAUNCH
+
+Awaits:
+1. v1.5 freeze hash publication (founder)
+2. Founder authorization to proceed with LEG A P1
+3. Files updated (SPEC §4 and RUNBOOK §3)
+
+Any compute before these gates is out-of-spec.

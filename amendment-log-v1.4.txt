@@ -28,3 +28,26 @@ Negated rejection text for CCF: verifiable-before-any-number test passed
 New freeze components: ANCHORS.md hash updated.
 MANIFEST.sha256 regenerated with sorted paths, LF endings.
 Freeze hash published by founder.
+
+## Entry #8 — 2026-09-08 — v1.5 leg-split + precision correction
+CCF misidentification corrected: CCF = Córdoba-Córdoba-Fontelos (2005), NOT Constantin-Lax-Majda.
+LEG SPLIT: bundle split into LEG A (CLM SPECTRAL, gCLM a=0, P0 GREEN) and LEG B (CCF TRANSPORT, NOT STARTED).
+  - Lambda anchors moved to LEG B
+  - H-A/H-B/Elgindi-Jeong goldens stay in LEG A
+  - Inherited $40/5d cap from v1.4 P1 VOID — scoped for wrong problem
+  - LEG B cap and scope UNQUOTED pending its own adjudication
+Precision correction:
+  - λ₂ ANCHORS value 0.4713242245 replaced with source-stated 0.4713248638620 (2509.14185 table) and 0.47132422 (2511.22819 refined)
+  - 0.4713242245 excess digits filed as UNSOURCED-PRECISION
+  - λ₂ prose/table conflict (0.4703 vs 0.4713248638620) filed as UNRESOLVED-SOURCE-DISCREPANCY
+  - λ₃ = 0.2415604743989 added to ANCHORS (was silently excluded — filed SELECTION-UNRECORDED)
+  - λ₀ = 1.1807776628998, λ₁ = 0.6057337012032 — confirmed at source-stated precision
+Referent resolution:
+  - LSS referent verified from primary source (Lushnikov-Silantyev-Siegel 2021, J. Nonlinear Sci. 31:82)
+  - Eggers-Fontelos referent verified from primary source (Eggers-Fontelos 2019, Nonlinearity 33:325)
+  - Referent-resolution control adopted as §2.7 standing gate (distinct from identical-if-different-target)
+  - Control-design lesson: "demote, never delete" — a citation may be invalid as justification while decisive as evidence
+SPEC.md updated §0 (claims leg-tagged), §1 (scope split), §4 (phase plan split, LEG B caps voided), §2.7 (RRC added), §6.1 (ground truth leg-tagged), §14-u (H-A acceptance corrected).
+RUNBOOK.md §2, §3 updated with leg structure.
+ANCHORS.md fully restructured with LEG A / LEG B sections, UNSOURCED-PRECISION registry, and UNRESOLVED-SOURCE-DISCREPANCY registry.
+LEG A next-step proposal appended (TASK 4).

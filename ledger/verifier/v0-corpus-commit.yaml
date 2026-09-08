@@ -1,0 +1,11 @@
+event: CORPUS-COMMITTED
+type: CORPUS
+spec_version: v0.1
+phase: V0
+datetime_utc: 2026-09-08T??:??:??Z
+commit_hash: cc88716
+detail: |
+  Corpus committed before kill test run. 5 known-bad-specs (RB-01 through RB-05).
+  Files: known-bad-specs/RB-01.yaml through RB-05.yaml
+  Registry: 14 objects (4 equations, 2 modes, 3 theorems, 3 tests, 2 values)
+  Arbiter: arbiter/__init__.py (sympy + numpy, no network)

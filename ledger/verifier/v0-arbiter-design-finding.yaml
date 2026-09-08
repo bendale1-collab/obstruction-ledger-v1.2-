@@ -1,0 +1,19 @@
+type: MONOCULTURE-MISS
+phase: V0
+datetime_utc: 2026-09-08
+detail: |
+  Arbiter design finding: V0 arbiter catches extraction agreement (pairwise)
+  and parity computation, but cannot catch semantic referent-body mismatches
+  (RB-02-type defect where three agreeing extractions all return the
+  wrong referent) or test-theorem strength mismatches (RB-03/04).
+  
+  This is in-scope for V0 (§1 extractors, §3 adversary deferred).
+  A monoculture of agreeing-but-wrong extractions would pass V0 arbiter
+  and require stage 3 adversary to catch. This is a known V0 limitation,
+  not a defect at this phase.
+
+arbiter_design_findings:
+  - "Extraction agreement alone is insufficient: three agreeing wrong extractions pass V0 arbiter"
+  - "Parity computation is correct for known expressions but has no mode-space compatibility check"
+  - "Test semantic validation deferred to stage 3 (out of V0 scope)"
+  - "Referent-to-body matching requires canonical form not present in V0 registry"

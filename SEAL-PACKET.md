@@ -8,12 +8,13 @@
 
 ## Freeze hash
 
-`40c7a1056ed98f2c4fd68c7d87c9f48df032c121659cd46adf32ce098c74cae8`
+`c6a73ae82f2e8bda1cdac2f348d6a2342ce5c07e5d43ae97516db05d178c00a4`
 
-## Manifest (      14 files)
+## Manifest (      15 files)
 
 - `amendment-log-v1.4.txt`: `693ee708303a245bdca997f6b16b3aee3106d80f73cfd34268975bf276e2dddf`
 - `anchors/ANCHORS.md`: `c45d5dfdb741267964bed72c62b077e47d0d6cbb247c2cb82bba929d82af3e50`
+- `engine/f1.py`: `78f0abd6660f53dcc0b4f0c19cd1d1f3493e1118a1c8989c52d178f0167fd2b6`
 - `HANDOFF-CHECKLIST.md`: `7ca4fcfe7ebc9dc2143a0829c6e7008d6774bd6f57b190e1eeff2e52f2e6f9a1`
 - `ledger/chebyshev-mapping-rejection-2026-09-07.yaml`: `7f031e147dc0693221a5dfb2fd0b8035d0b2c7cee549df7f3979c3f4ae49113a`
 - `ledger/chebyshev-mapping-rejection.md`: `5c89483a40f6adc5fee6d0e783b46e37b91777146e788024f0362ef9eda2f99f`
@@ -38,7 +39,7 @@
 ```
 OL v1.5 seal — Leg split, precision correction, referent-resolution control, P1 pre-registration
 
-Freeze hash: 40c7a1056ed98f2c4fd68c7d87c9f48df032c121659cd46adf32ce098c74cae8
+Freeze hash: c6a73ae82f2e8bda1cdac2f348d6a2342ce5c07e5d43ae97516db05d178c00a4
 Contains:
 - LEG A (CLM Spectral, gCLM a=0) — P0 GREEN, P1 pre-registered
 - LEG B (CCF Transport) — NOT STARTED, cap and scope UNQUOTED

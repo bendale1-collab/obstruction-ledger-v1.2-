@@ -1,37 +1,45 @@
-# RB-05: lambda=1 mode — extractions DISAGREE on the eigenfunction.
-# Two extractions return the EVEN translation mode (dΩ/dξ, from Xu 2607.19762 Eq 3.7),
-# one returns the ODD time-shift mode expression.
-# The λ=1 mode in the odd-basis origin-H² space is the ODD time-shift mode,
-# not the EVEN translation mode. The three extractions disagree -> HALT-REFERENT.
-name: "Lambda=1 mode — mixed extraction eigenfunctions"
-defect: "two extractions return even translation mode dΩ/dξ (Xu Eq 3.7), one returns odd time-shift mode; pairwise disagreement"
+defect: "two extractions return even translation mode d\u03A9/d\u03BE (Xu Eq 3.7),\
+  \ one returns odd time-shift mode; pairwise disagreement"
+name: "Lambda=1 mode \u2014 mixed extraction eigenfunctions"
+pre_registered: "arbiter returns HALT-REFERENT: all three extractions now ODD but\
+  \ \u03BB=1 vs \u03BB=0 conflict remains (phi0=\u03BB=+1, not \u03BB=0 mode)"
 spec_fragment:
   registry:
-    - id: OL-MD-002
-      name: Time-shift mode lambda=1
-      kind: mode
-      source:
-        authors: [Xu]
-        year: 2026
-        venue: "arXiv 2607.19762"
-        locator: "Sec 3.2, Eq 3.7"
-      executable: null
-      status: UNRESOLVED
-      extractions:
-        - extractor: {family: "faux-A", model: "gpt-fake", variant: "latex"}
-          body: "-2*xi/(1 + xi**2)"
-          mode_expr: "diff(-2*xi/(1+xi**2), xi)"
-          mode_expression: "(-2 + 2*xi**2)/(1 + xi**2)**2"
-          parity: even
-          source_eq: "Xu 2607.19762 Eq 3.7"
-        - extractor: {family: "faux-B", model: "claude-fake", variant: "pdf"}
-          body: "Omega = -2*y/(1+y^2); phi = dOmega/dy"
-          mode_expression: "(-2 + 2*y**2)/(1 + y**2)**2"
-          parity: even
-          source_eq: "Xu Eq 3.7 — translation mode"
-        - extractor: {family: "faux-C", model: "gemini-fake", variant: "image"}
-          body: "time-shift odd mode at lambda=1"
-          mode_expression: "-xi / (1 + xi**2) + xi**3 / (1 + xi**2)**2"
-          parity: odd
-          source_eq: "Xu Sec 3.2 — time-shift mode"
-pre_registered: "arbiter returns HALT-REFERENT — extractions disagree on parity/mode expression (2 even, 1 odd)"
+  - executable: null
+    extractions:
+    - body: -2*xi/(1 + xi**2)
+      extractor:
+        family: faux-A
+        model: gpt-fake
+        variant: latex
+      mode_expr: diff(-2*xi/(1+xi**2), xi)
+      mode_expression: (-2 + 2*xi**2)/(1 + xi**2)**2
+      parity: even
+      source_eq: Xu 2607.19762 Eq 3.7
+    - body: Omega = -2*y/(1+y^2); phi = dOmega/dy
+      extractor:
+        family: faux-B
+        model: claude-fake
+        variant: pdf
+      mode_expression: (-2 + 2*y**2)/(1 + y**2)**2
+      parity: even
+      source_eq: "Xu Eq 3.7 \u2014 translation mode"
+    - body: phi0 = Omega + y*Omega_p = -y/(2*(y^2+1/4)^2)
+      extractor:
+        family: arbiter
+        model: sympy
+        variant: derived
+      mode_expression: -y/(2*(y**2 + 1/4)**2)
+      parity: odd
+      source_eq: "derived: phi0 = Omega + y*Omega' (scaling mode, \u03BB=+1 under\
+        \ Xu L_Xu)"
+    id: OL-MD-002
+    kind: mode
+    name: Time-shift mode lambda=1
+    source:
+      authors:
+      - Xu
+      locator: Sec 3.2, Eq 3.7
+      venue: arXiv 2607.19762
+      year: 2026
+    status: UNRESOLVED

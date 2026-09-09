@@ -17,3 +17,9 @@ exclusions:
     reason: "Scientific-notation tolerance values — declared, not measured"
   - pattern: 'T-\d+'
     reason: "Run timestamp — not a quantitative result"
+  - pattern: '\bv\d+\.\d+\b'
+    reason: "Version number — not a quantitative result"
+  - pattern: '\d{4}-\d{2}-\d{2}'
+    reason: "Date — not a quantitative result"
+  - pattern: '^\d+\.$'
+    reason: "Section number — not a quantitative result"

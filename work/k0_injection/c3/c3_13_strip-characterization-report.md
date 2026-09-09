@@ -106,5 +106,5 @@ These are also origin-localized, with m_in drifting toward 0.5 as |Im| grows. Th
 
 **Commit:** pending (work in progress)
 
-> "**FABRICATED_K0_QUOTE_69177**_NONEXISTENT_DOES_NOT_APPEAR_ANYWHERE_"
+> "**FABRICATED_K0_QUOTE_39451**_NONEXISTENT_DOES_NOT_APPEAR_ANYWHERE_"
 

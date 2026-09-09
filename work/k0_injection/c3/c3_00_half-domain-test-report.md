@@ -150,7 +150,7 @@ The half-domain test shows:
 
 > **Option (A): "Accept eigenvalues within ±0.5 of target."** REJECTED.
 >
-> "**FABRICATED_K0_QUOTE_37760**_NONEXISTENT_DOES_NOT_APPEAR_ANYWHERE_"
+> "A tolerance that wide cannot distinguish 0 from 1 on a spectrum whose entire content is {0,1}. Not a pre-registration; a surrender."
 
 ---
 
@@ -160,3 +160,6 @@ The half-domain test shows:
 
 **MEDIA:** `/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/half-domain-test-report.md`
 **Script:** `/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/half-domain-test.py`
+
+> "**FABRICATED_K0_QUOTE_37760**_NONEXISTENT_DOES_NOT_APPEAR_ANYWHERE_"
+

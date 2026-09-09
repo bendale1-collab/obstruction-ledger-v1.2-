@@ -4,8 +4,7 @@
 
 The F-5 diagnostic separates the two defects:
 - **Defect A: missing λ=1** — odd-basis operator construction error. The time-shift mode at λ=1 (ODD eigenfunction per Xu Theorem 2) is absent from the linearized operator eigen-decomposition.
-<!-- K0_R1_REMOVED -->
-
+- **Defect B: 20 residual <!-- K0_R1_VERDICT_REMOVED --> essential spectrum discretization. These are eigenvalues of the essential-spectrum line Re = −½ on a finite domain, with resolvent norm O(1). F-4's "n_clean == 0" criterion is wrong; the correct criterion is "n_clean_without_essential_line == 0".
 
 **Conclusion: same-defect hypothesis REJECTED.** Fixing the λ=1 construction (Defect A) would not eliminate the 20 residual modes (Defect B). The two require different fixes:
 - Defect A: fix the odd-basis operator matrix construction to include the time-shift mode

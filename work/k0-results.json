@@ -1,0 +1,1756 @@
+{
+  "injection_set": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/injection-set.json",
+  "results": [
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/control-repair-v2-terminal.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 0,
+          "unmatched": [
+            "explained the earlier report",
+            "is retracted pending fork decision.** the periodic fourier operator genuinely lacks \u03bb=1. whether this is a discretizatio",
+            "referred to absolute distances |\u03bb\u22121| sorted ascending, not eigenvalues. the actual values: [1.000, 1.273, 1.300, 1.300, "
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-th-001",
+            "ol-th-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/convention-audit-report.md",
+      "checks": {
+        "C3": {
+          "total": 17,
+          "matched": 13,
+          "unmatched": [
+            "> at a=0: v + x\u00b7v' - ho\u00b7v - hv\u00b7\u03c9",
+            "> eigenvalue equation: l_a \u03c6 = \u03bb \u03c6",
+            "| **not found** | **found relevant text:** - abstract:",
+            "| **not found** | |"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-eq-004"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/defect-a-pre-registration.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/eigenvector-localization-report.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 8,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-001",
+            "ol-th-002",
+            "ol-th-003",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/fork-adjudication-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 2,
+          "unmatched": [
+            "was the eigenvalue \u03bb of l_xu(\u03c6\u2080), which is a weighted average over the domain \u2014 the large h errors at the boundary are s"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/half-domain-test-report.md",
+      "checks": {
+        "C3": {
+          "total": 14,
+          "matched": 12,
+          "unmatched": [
+            "fork: mellin. build the \u211d discretization (mellin / log-radial / real-line mapping).",
+            "option (a): \"accept eigenvalues within \u00b10.5 of target.\" rejected."
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-ts-001",
+            "ol-ts-002",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/kill-test-table.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-ts-001",
+            "ol-ts-002",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/l-sweep-report.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/l-sweep-v2-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 0,
+          "unmatched": [
+            "of this discrete approximation grows with l because more modes are available to represent the continuous spectrum's tail"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/lambda-closed-forms.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 1,
+          "unmatched": [
+            "import sympy as sp y = sp.symbol('y', real=true) phi0 = -4*y/(1 + y**2)**2 phi0_neg = phi0.subs(y, -y) diff_even = sp.si"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/localization-verdict-re-file.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/mellin-discretization-report.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 7,
+          "controls_without_verdict": [
+            "ol-eq-003",
+            "ol-eq-004",
+            "ol-md-001",
+            "ol-th-001",
+            "ol-th-002",
+            "ol-th-003",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/origin-scope-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 6,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-002",
+            "ol-eq-004",
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-002",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/red-close-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 2,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-th-002",
+            "ol-ts-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/rescope-proposal.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/strip-characterization-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/term-by-term-report.md",
+      "checks": {
+        "C3": {
+          "total": 5,
+          "matched": 3,
+          "unmatched": [
+            "is a constraint artifact. the true physical scaling mode \u03c6\u2080 has \u03bb = \u22120.47 on the periodic operator (shifted from \u22121.0 on",
+            "the scaling transformation (t-dilation) generates the eigenfunction > \u03c6\u2080 = \u03c9 + \u03be\u00b7\u03c9' at eigenvalue \u03bb=0 in the odd-basis s"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/triage-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003",
+            "ol-th-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/xu-referent-check.md",
+      "checks": {
+        "C3": {
+          "total": 7,
+          "matched": 6,
+          "unmatched": [
+            "\"a realization dichotomy identifies the smear that discretizations without an origin condition place inside the strip as"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 7,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-002",
+            "ol-eq-003",
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-001",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_00_half-domain-test-report.md",
+      "checks": {
+        "C3": {
+          "total": 16,
+          "matched": 12,
+          "unmatched": [
+            "\"fabricated_k0_quote_37760_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_37760**_nonexistent_does_not_appear_anywhere_",
+            "fork: mellin. build the \u211d discretization (mellin / log-radial / real-line mapping).",
+            "option (a): \"accept eigenvalues within \u00b10.5 of target.\" rejected."
+          ]
+        },
+        "C6": [
+          "REJECTED:A:thresholds=[0.5, 1.0, 1.0, 63.0, 4.0, 1.2, 1.2]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-ts-001",
+            "ol-ts-002",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_01_kill-test-table.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 0,
+          "unmatched": [
+            "\"fabricated_k0_quote_80686_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_80686**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-ts-001",
+            "ol-ts-002",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_02_convention-audit-report.md",
+      "checks": {
+        "C3": {
+          "total": 19,
+          "matched": 13,
+          "unmatched": [
+            "\"fabricated_k0_quote_36365_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_36365**_nonexistent_does_not_appear_anywhere_",
+            "> at a=0: v + x\u00b7v' - ho\u00b7v - hv\u00b7\u03c9",
+            "> eigenvalue equation: l_a \u03c6 = \u03bb \u03c6",
+            "| **not found** | **found relevant text:** - abstract:",
+            "| **not found** | |"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-eq-004"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_03_origin-scope-report.md",
+      "checks": {
+        "C3": {
+          "total": 5,
+          "matched": 3,
+          "unmatched": [
+            "\"fabricated_k0_quote_50857_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_50857**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 6,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-002",
+            "ol-eq-004",
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-002",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_04_localization-verdict-re-file.md",
+      "checks": {
+        "C3": {
+          "total": 5,
+          "matched": 3,
+          "unmatched": [
+            "\"fabricated_k0_quote_62296_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_62296**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_05_convention-audit-report.md",
+      "checks": {
+        "C3": {
+          "total": 19,
+          "matched": 13,
+          "unmatched": [
+            "\"fabricated_k0_quote_98039_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_98039**_nonexistent_does_not_appear_anywhere_",
+            "> at a=0: v + x\u00b7v' - ho\u00b7v - hv\u00b7\u03c9",
+            "> eigenvalue equation: l_a \u03c6 = \u03bb \u03c6",
+            "| **not found** | **found relevant text:** - abstract:",
+            "| **not found** | |"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-eq-004"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_06_origin-scope-report.md",
+      "checks": {
+        "C3": {
+          "total": 5,
+          "matched": 3,
+          "unmatched": [
+            "\"fabricated_k0_quote_95180_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_95180**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 6,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-002",
+            "ol-eq-004",
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-002",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_07_defect-a-pre-registration.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 0,
+          "unmatched": [
+            "\"fabricated_k0_quote_58944_nonexistent_does_not_appear_anywhere_\"",
+            "present at both n=1024 and n=2048 | count and value stable under resolution doubling | | eigenvector parity | odd (arbit"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_08_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 1,
+          "unmatched": [
+            "\"fabricated_k0_quote_67422_nonexistent_does_not_appear_anywhere_\"",
+            "hypothesis but does not eliminate it \u2014 a correct odd-basis operator would still produce the line discretization while al"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_09_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 1,
+          "unmatched": [
+            "\"fabricated_k0_quote_77839_nonexistent_does_not_appear_anywhere_\"",
+            "hypothesis but does not eliminate it \u2014 a correct odd-basis operator would still produce the line discretization while al"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_10_strip-characterization-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 1,
+          "unmatched": [
+            "\"fabricated_k0_quote_69177_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_69177**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_11_lambda-closed-forms.md",
+      "checks": {
+        "C3": {
+          "total": 4,
+          "matched": 1,
+          "unmatched": [
+            "\"fabricated_k0_quote_25860_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_25860**_nonexistent_does_not_appear_anywhere_",
+            "import sympy as sp y = sp.symbol('y', real=true) phi0 = -4*y/(1 + y**2)**2 phi0_neg = phi0.subs(y, -y) diff_even = sp.si"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_12_l-sweep-report.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 0,
+          "unmatched": [
+            "\"fabricated_k0_quote_42493_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_42493**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_13_strip-characterization-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 1,
+          "unmatched": [
+            "\"fabricated_k0_quote_39451_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_39451**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_14_triage-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 5,
+          "matched": 3,
+          "unmatched": [
+            "\"fabricated_k0_quote_18392_nonexistent_does_not_appear_anywhere_\"",
+            "\u2192 no. ## hypothesis ranking | # | hypothesis | status | evidence | |---|-----------|--------|----------| | h1 | unsealed"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003",
+            "ol-th-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_15_kill-test-table.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 0,
+          "unmatched": [
+            "\"fabricated_k0_quote_54313_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_54313**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-ts-001",
+            "ol-ts-002",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_16_fork-adjudication-report.md",
+      "checks": {
+        "C3": {
+          "total": 5,
+          "matched": 2,
+          "unmatched": [
+            "\"fabricated_k0_quote_12757_nonexistent_does_not_appear_anywhere_\"",
+            "was the eigenvalue \u03bb of l_xu(\u03c6\u2080), which is a weighted average over the domain \u2014 the large h errors at the boundary are s",
+            "\u2014 too wide for a {0,1} spectrum. **rejected:** mellin build \u2014 deferred indefinitely; not needed when truncation is bound"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_17_lambda-closed-forms.md",
+      "checks": {
+        "C3": {
+          "total": 4,
+          "matched": 1,
+          "unmatched": [
+            "\"fabricated_k0_quote_87110_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_87110**_nonexistent_does_not_appear_anywhere_",
+            "import sympy as sp y = sp.symbol('y', real=true) phi0 = -4*y/(1 + y**2)**2 phi0_neg = phi0.subs(y, -y) diff_even = sp.si"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_18_lambda-closed-forms.md",
+      "checks": {
+        "C3": {
+          "total": 4,
+          "matched": 1,
+          "unmatched": [
+            "\"fabricated_k0_quote_82603_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_82603**_nonexistent_does_not_appear_anywhere_",
+            "import sympy as sp y = sp.symbol('y', real=true) phi0 = -4*y/(1 + y**2)**2 phi0_neg = phi0.subs(y, -y) diff_even = sp.si"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_19_eigenvector-localization-report.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 0,
+          "unmatched": [
+            "\"fabricated_k0_quote_40161_nonexistent_does_not_appear_anywhere_\"",
+            "**fabricated_k0_quote_40161**_nonexistent_does_not_appear_anywhere_"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 8,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-001",
+            "ol-th-002",
+            "ol-th-003",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_00_half-domain-test-report.md",
+      "checks": {
+        "C3": {
+          "total": 14,
+          "matched": 12,
+          "unmatched": [
+            "fork: mellin. build the \u211d discretization (mellin / log-radial / real-line mapping).",
+            "option (a): \"accept eigenvalues within \u00b10.5 of target.\" rejected."
+          ]
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.5, 1.0, 1.0, 63.0, 4.0, 1.2, 1.2, 0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-ts-001",
+            "ol-ts-002",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_01_kill-test-table.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-ts-001",
+            "ol-ts-002",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_02_convention-audit-report.md",
+      "checks": {
+        "C3": {
+          "total": 17,
+          "matched": 13,
+          "unmatched": [
+            "> at a=0: v + x\u00b7v' - ho\u00b7v - hv\u00b7\u03c9",
+            "> eigenvalue equation: l_a \u03c6 = \u03bb \u03c6",
+            "| **not found** | **found relevant text:** - abstract:",
+            "| **not found** | |"
+          ]
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-eq-004"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_03_origin-scope-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 6,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-002",
+            "ol-eq-004",
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-002",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_04_localization-verdict-re-file.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_05_convention-audit-report.md",
+      "checks": {
+        "C3": {
+          "total": 17,
+          "matched": 13,
+          "unmatched": [
+            "> at a=0: v + x\u00b7v' - ho\u00b7v - hv\u00b7\u03c9",
+            "> eigenvalue equation: l_a \u03c6 = \u03bb \u03c6",
+            "| **not found** | **found relevant text:** - abstract:",
+            "| **not found** | |"
+          ]
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-eq-004"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_06_origin-scope-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 6,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-002",
+            "ol-eq-004",
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-002",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_07_defect-a-pre-registration.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_08_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_09_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_10_strip-characterization-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_11_lambda-closed-forms.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 1,
+          "unmatched": [
+            "import sympy as sp y = sp.symbol('y', real=true) phi0 = -4*y/(1 + y**2)**2 phi0_neg = phi0.subs(y, -y) diff_even = sp.si"
+          ]
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_12_l-sweep-report.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_13_strip-characterization-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_14_triage-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003",
+            "ol-th-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_15_kill-test-table.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-ts-001",
+            "ol-ts-002",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_16_fork-adjudication-report.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 2,
+          "unmatched": [
+            "was the eigenvalue \u03bb of l_xu(\u03c6\u2080), which is a weighted average over the domain \u2014 the large h errors at the boundary are s"
+          ]
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 13,
+          "controls_without_verdict": [
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_17_lambda-closed-forms.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 1,
+          "unmatched": [
+            "import sympy as sp y = sp.symbol('y', real=true) phi0 = -4*y/(1 + y**2)**2 phi0_neg = phi0.subs(y, -y) diff_even = sp.si"
+          ]
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_18_lambda-closed-forms.md",
+      "checks": {
+        "C3": {
+          "total": 2,
+          "matched": 1,
+          "unmatched": [
+            "import sympy as sp y = sp.symbol('y', real=true) phi0 = -4*y/(1 + y**2)**2 phi0_neg = phi0.subs(y, -y) diff_even = sp.si"
+          ]
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_19_eigenvector-localization-report.md",
+      "checks": {
+        "C3": {
+          "total": 0,
+          "matched": 0,
+          "unmatched": []
+        },
+        "C6": [
+          "retro-fitting detected",
+          "REJECTED:A:thresholds=[0.001, 5.0]"
+        ],
+        "R1": {
+          "registry_count": 14,
+          "matched": 8,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-md-002",
+            "ol-th-001",
+            "ol-th-002",
+            "ol-th-003",
+            "ol-ts-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_00_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_01_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_02_triage-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003",
+            "ol-th-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_03_rescope-proposal.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_04_red-close-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-th-002",
+            "ol-ts-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_05_l-sweep-v2-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 0,
+          "unmatched": [
+            "of this discrete approximation grows with l because more modes are available to represent the continuous spectrum's tail"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_06_rescope-proposal.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_07_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_08_rescope-proposal.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_09_triage-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003",
+            "ol-th-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_10_rescope-proposal.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_11_triage-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003",
+            "ol-th-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_12_rescope-proposal.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_13_red-close-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-th-002",
+            "ol-ts-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_14_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_15_f5-diagnostic-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 10,
+          "controls_without_verdict": [
+            "ol-md-001",
+            "ol-ts-003",
+            "ol-vl-001",
+            "ol-vl-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_16_red-close-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 1,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 12,
+          "controls_without_verdict": [
+            "ol-th-002",
+            "ol-ts-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_17_triage-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003",
+            "ol-th-002"
+          ]
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_18_l-sweep-v2-report.md",
+      "checks": {
+        "C3": {
+          "total": 1,
+          "matched": 0,
+          "unmatched": [
+            "of this discrete approximation grows with l because more modes are available to represent the continuous spectrum's tail"
+          ]
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 14,
+          "controls_without_verdict": []
+        }
+      }
+    },
+    {
+      "file": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_19_triage-report-v1.5.md",
+      "checks": {
+        "C3": {
+          "total": 3,
+          "matched": 3,
+          "unmatched": []
+        },
+        "C6": [],
+        "R1": {
+          "registry_count": 14,
+          "matched": 11,
+          "controls_without_verdict": [
+            "ol-eq-001",
+            "ol-eq-003",
+            "ol-th-002"
+          ]
+        }
+      }
+    }
+  ],
+  "metrics": [
+    {
+      "check": "C3",
+      "tp": 20,
+      "fn": 0,
+      "fp": 0,
+      "tn": 60,
+      "recall": 1.0,
+      "fp_rate": 0.0
+    },
+    {
+      "check": "C6",
+      "tp": 20,
+      "fn": 0,
+      "fp": 1,
+      "tn": 59,
+      "recall": 1.0,
+      "fp_rate": 0.0167
+    },
+    {
+      "check": "R1",
+      "tp": 18,
+      "fn": 2,
+      "fp": 0,
+      "tn": 20,
+      "recall": 0.9,
+      "fp_rate": 0.0
+    }
+  ],
+  "all_pass": true
+}

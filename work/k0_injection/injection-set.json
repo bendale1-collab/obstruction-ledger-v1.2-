@@ -1,0 +1,522 @@
+[
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_00_half-domain-test-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/half-domain-test-report.md",
+    "defect_type": "c3",
+    "label": 0,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_01_convention-audit-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/convention-audit-report.md",
+    "defect_type": "c3",
+    "label": 1,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_02_origin-scope-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/origin-scope-report.md",
+    "defect_type": "c3",
+    "label": 2,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_03_localization-verdict-re-file.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/localization-verdict-re-file.md",
+    "defect_type": "c3",
+    "label": 3,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_04_convention-audit-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/convention-audit-report.md",
+    "defect_type": "c3",
+    "label": 4,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_05_origin-scope-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/origin-scope-report.md",
+    "defect_type": "c3",
+    "label": 5,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_06_f5-diagnostic-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/f5-diagnostic-report.md",
+    "defect_type": "c3",
+    "label": 6,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_07_f5-diagnostic-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/f5-diagnostic-report.md",
+    "defect_type": "c3",
+    "label": 7,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_08_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "c3",
+    "label": 8,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_09_lambda-closed-forms.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/lambda-closed-forms.md",
+    "defect_type": "c3",
+    "label": 9,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_10_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "c3",
+    "label": 10,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_11_triage-report-v1.5.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/triage-report-v1.5.md",
+    "defect_type": "c3",
+    "label": 11,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_12_fork-adjudication-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/fork-adjudication-report.md",
+    "defect_type": "c3",
+    "label": 12,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_13_lambda-closed-forms.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/lambda-closed-forms.md",
+    "defect_type": "c3",
+    "label": 13,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_14_lambda-closed-forms.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/lambda-closed-forms.md",
+    "defect_type": "c3",
+    "label": 14,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_15_xu-referent-check.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/xu-referent-check.md",
+    "defect_type": "c3",
+    "label": 15,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_16_rescope-proposal.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/rescope-proposal.md",
+    "defect_type": "c3",
+    "label": 16,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_17_half-domain-test-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/half-domain-test-report.md",
+    "defect_type": "c3",
+    "label": 17,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_18_half-domain-test-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/half-domain-test-report.md",
+    "defect_type": "c3",
+    "label": 18,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c3/c3_19_lambda-closed-forms.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/lambda-closed-forms.md",
+    "defect_type": "c3",
+    "label": 19,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_00_half-domain-test-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/half-domain-test-report.md",
+    "defect_type": "c6",
+    "label": 0,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_01_kill-test-table.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/kill-test-table.md",
+    "defect_type": "c6",
+    "label": 1,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_02_convention-audit-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/convention-audit-report.md",
+    "defect_type": "c6",
+    "label": 2,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_03_origin-scope-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/origin-scope-report.md",
+    "defect_type": "c6",
+    "label": 3,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_04_localization-verdict-re-file.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/localization-verdict-re-file.md",
+    "defect_type": "c6",
+    "label": 4,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_05_convention-audit-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/convention-audit-report.md",
+    "defect_type": "c6",
+    "label": 5,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_06_origin-scope-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/origin-scope-report.md",
+    "defect_type": "c6",
+    "label": 6,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_07_defect-a-pre-registration.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/defect-a-pre-registration.md",
+    "defect_type": "c6",
+    "label": 7,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_08_f5-diagnostic-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/f5-diagnostic-report.md",
+    "defect_type": "c6",
+    "label": 8,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_09_f5-diagnostic-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/f5-diagnostic-report.md",
+    "defect_type": "c6",
+    "label": 9,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_10_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "c6",
+    "label": 10,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_11_lambda-closed-forms.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/lambda-closed-forms.md",
+    "defect_type": "c6",
+    "label": 11,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_12_l-sweep-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/l-sweep-report.md",
+    "defect_type": "c6",
+    "label": 12,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_13_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "c6",
+    "label": 13,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_14_triage-report-v1.5.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/triage-report-v1.5.md",
+    "defect_type": "c6",
+    "label": 14,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_15_kill-test-table.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/kill-test-table.md",
+    "defect_type": "c6",
+    "label": 15,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_16_fork-adjudication-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/fork-adjudication-report.md",
+    "defect_type": "c6",
+    "label": 16,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_17_lambda-closed-forms.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/lambda-closed-forms.md",
+    "defect_type": "c6",
+    "label": 17,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_18_lambda-closed-forms.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/lambda-closed-forms.md",
+    "defect_type": "c6",
+    "label": 18,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/c6/c6_19_eigenvector-localization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/eigenvector-localization-report.md",
+    "defect_type": "c6",
+    "label": 19,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_00_localization-verdict-re-file.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/localization-verdict-re-file.md",
+    "defect_type": "r1",
+    "label": 0,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_01_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "r1",
+    "label": 1,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_02_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "r1",
+    "label": 2,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_03_xu-referent-check.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/xu-referent-check.md",
+    "defect_type": "r1",
+    "label": 3,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_04_rescope-proposal.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/rescope-proposal.md",
+    "defect_type": "r1",
+    "label": 4,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_05_term-by-term-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/term-by-term-report.md",
+    "defect_type": "r1",
+    "label": 5,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_06_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "r1",
+    "label": 6,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_07_l-sweep-v2-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/l-sweep-v2-report.md",
+    "defect_type": "r1",
+    "label": 7,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_08_rescope-proposal.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/rescope-proposal.md",
+    "defect_type": "r1",
+    "label": 8,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_09_localization-verdict-re-file.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/localization-verdict-re-file.md",
+    "defect_type": "r1",
+    "label": 9,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_10_rescope-proposal.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/rescope-proposal.md",
+    "defect_type": "r1",
+    "label": 10,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_11_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "r1",
+    "label": 11,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_12_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "r1",
+    "label": 12,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_13_strip-characterization-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/strip-characterization-report.md",
+    "defect_type": "r1",
+    "label": 13,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_14_rescope-proposal.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/rescope-proposal.md",
+    "defect_type": "r1",
+    "label": 14,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_15_rescope-proposal.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/rescope-proposal.md",
+    "defect_type": "r1",
+    "label": 15,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_16_xu-referent-check.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/xu-referent-check.md",
+    "defect_type": "r1",
+    "label": 16,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_17_term-by-term-report.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/term-by-term-report.md",
+    "defect_type": "r1",
+    "label": 17,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_18_xu-referent-check.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/xu-referent-check.md",
+    "defect_type": "r1",
+    "label": 18,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/r1/r1_19_xu-referent-check.md",
+    "src": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/xu-referent-check.md",
+    "defect_type": "r1",
+    "label": 19,
+    "has_defect": true
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/lambda-closed-forms.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/l-sweep-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/triage-report-v1.5.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/red-close-report-v1.5.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/rescope-proposal.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/localization-verdict-re-file.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/l-sweep-v2-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/eigenvector-localization-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/term-by-term-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/origin-scope-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/control-repair-v2-terminal.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/defect-a-pre-registration.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/mellin-discretization-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/convention-audit-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/f5-diagnostic-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/strip-characterization-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/xu-referent-check.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/kill-test-table.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/fork-adjudication-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  },
+  {
+    "path": "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k0_injection/clean/half-domain-test-report.md",
+    "defect_type": "clean",
+    "has_defect": false
+  }
+]

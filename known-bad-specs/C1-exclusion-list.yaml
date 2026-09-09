@@ -1,0 +1,19 @@
+# C1 — Prose-table number mismatch exclusion list
+# Fixed and versioned in the repo. Additions are ledger entries.
+# No open-ended context rules.
+
+exclusions:
+  - value: 1024
+    reason: "Resolution parameter N — declared at top of report, not a table result"
+  - value: 2048
+    reason: "Resolution doubling parameter — declared, not tabulated"
+  - value: 20
+    reason: "Domain half-length L — declared, not tabulated"
+  - value: 40
+    reason: "Domain size sweep parameter — declared, not tabulated"
+  - value: 80
+    reason: "Domain size sweep parameter — declared, not tabulated"
+  - pattern: '\b\d+e[+-]?\d+\b'
+    reason: "Scientific-notation tolerance values — declared, not measured"
+  - pattern: 'T-\d+'
+    reason: "Run timestamp — not a quantitative result"

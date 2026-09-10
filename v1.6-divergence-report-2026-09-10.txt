@@ -1,0 +1,50 @@
+DIVERGENCE REPORT — 2026-09-10
+================================
+
+Sealed-file append-only regime declared.
+Seal check v2 is an attestation, not a monitor.
+Seal certifies 7d4aad7 and nothing about HEAD.
+
+DIVERGENCE REPORT — 7d4aad7 vs HEAD (78d961b)
+----------------------------------------------
+
+path                                                                  | status   | declaring entry
+----------------------------------------------------------------------+----------+-----------------------------------------------
+amendment-log-v1.4.txt                                                | SAME     | —
+anchors/ANCHORS.md                                                    | SAME     | —
+engine/f1.py                                                          | SAME     | —
+HANDOFF-CHECKLIST.md                                                  | SAME     | —
+known-bad-specs/C1-exclusion-list.yaml                                | SAME     | —
+ledger/chebyshev-mapping-rejection-2026-09-07.yaml                    | SAME     | —
+ledger/chebyshev-mapping-rejection.md                                 | SAME     | —
+ledger/conv-flag-diagnosis-2026-09-07.yaml                            | SAME     | —
+ledger/conv-flag-diagnosis.md                                         | SAME     | —
+ledger/engine-modification-f1-odd-basis.md                            | SAME     | —
+ledger/fourier-diff-tolerance-2026-09-07.yaml                         | SAME     | —
+ledger/fourier-diff-tolerance.md                                      | SAME     | —
+ledger/misidentification-by-acronym-collision-2026-09-08.yaml         | SAME     | —
+ledger/misidentification-by-acronym-collision.md                      | SAME     | —
+ledger/seal-detached-v1.5.md                                          | DIFFERS  | rendering-as-record.md, publication-delegation-failed.md
+leg-a-closed-2026-09-09.md                                            | DIFFERS  | rendering-as-record.md (§3 standing rule, §4 K1 candidate)
+RUNBOOK.md                                                            | SAME     | —
+SPEC.md                                                               | SAME     | —
+specs/leg-a-p1-pre-registration-v1.5.txt                              | SAME     | —
+
+17 SAME, 2 DIFFERS. No undeclared divergence.
+
+DECISION — sealed-file append-only regime
+-----------------------------------------
+ledger/sealed-file-append-only.md
+  Sealed files are append-only after seal.
+  Corrections live at commits after 7d4aad7.
+  Seal certifies the bundle at 7d4aad7 and nothing about HEAD.
+
+K1 CANDIDATE ADDED (alongside quote-vs-anchor)
+-----------------------------------------------
+  Divergence-declaration check: every manifest file that differs
+  between seal commit and HEAD must have a declaring ledger entry
+  in the divergence report. Undeclared divergence is a finding.
+
+STANDING BLOCK (unchanged)
+--------------------------
+  No compute until Leg B or CHECKER K1 is pre-registered.

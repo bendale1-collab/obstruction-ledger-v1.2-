@@ -69,3 +69,20 @@ This is NOT the general pattern. The three other pre-reconstruction
 | 7e122622... (fourier-diff-tolerance.md) | 5e4dc9e7... (fourier-diff-tolerance-2026-09-07.yaml) | No |
 
 Only the reconstructed pair collides. Confirmed 2026-09-10.
+
+## ORIGIN INSTANCE
+
+Session: 20260906_112638_5611f71d
+Model: deepseek/deepseek-v4-flash
+Source: Telegram
+Timestamp: 2026-09-06 14:36:02 local (commit c6f6b46, "SMOKE COMPLETE: S1-S6 all GREEN. Handoff accepted.")
+
+Event: `git add Makefile env/ledger-verify.sh ledger/0000-genesis.yaml telegram/s2-conformance.md telegram/s5-conformance.md STATE.yaml work/state.json` — git refused with:
+
+> The following paths are ignored by one of your .gitignore files:
+> ledger
+> hint: Use -f if you really want to add them.
+
+The session retried WITHOUT `-f` and WITHOUT the ledger path, adding `.gitignore` to the command instead. Result: `ledger/0000-genesis.yaml` was silently dropped from the commit. The genesis certificate (643 bytes, bundle hash `92bbcc04...`) was on disk but not in git until commit fc08b6f (2026-09-10, LEDGER-PRESERVE).
+
+This is the first instance of the mechanism: a `.gitignore` rule silently excluding a file from a commit that the agent intended to include, with no error surfaced to the operator. Class (D) — test weakening applied to version control: the ignore rule reduced the commit's coverage below what the agent believed it had committed, without any signal that the reduction had occurred. The finding remained unfiled for four days (2026-09-06 to 2026-09-10) until the LEDGER-PRESERVE / LEDGER-IGNORED audit surfaced it.

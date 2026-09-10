@@ -35,6 +35,20 @@ The rule is now extracted to its canonical address: ledger/standing-rules.md.
 
 The blast-radius amendment describing the section-renumbering as "timing, not design" was inserted mid-file into `leg-a-closed-2026-09-09.md` (a sealed closed record) in the same session. The insertion target should have been this RULE-IN-CLOSED-RECORD entry in `ledger/sealed-file-append-only.md`. Not reverted — the content is correct — but recorded as the third instance of a closed-record edit, distinct from the §3/§4 insertion (first instance) and the standing-rules cross-reference insertion that followed (second instance). Standing rule #8 now prohibits all post-seal edits and mid-file insertions to closed result documents; EOF pointers only.
 
+### Instance classification correction (2026-09-10)
+
+Correction to the instance list above: classifications were wrong because the chronology crosses the moment the append-only rule was declared.
+
+| Instance | Commit | Action | Classification |
+|----------|--------|-------|---------------|
+| 1 (pre-rule) | fe8a1e9 | §7 SPEC-scope insertion into leg-a-closed | Pre-rule. Append-only rule did not yet exist. |
+| Rule declared | 78d961b | Append-only regime declared in sealed-file-append-only.md | — |
+| 2 (post-rule) | 78d961b | §3/§4 insertion into leg-a-closed (same commit as rule declaration) | Post-rule. Contradiction acknowledged: rule and insertion in same commit. |
+| — (excluded) | 26fb687 | EOF pointer into leg-a-closed | **Not an instance.** Rule 8 permits EOF pointers. Misclassified above. |
+| 3 (post-rule) | a8e11c8 | Blast-radius amendment mid-file into leg-a-closed | Post-rule. Should have been appended to RULE-IN-CLOSED-RECORD here, not mid-file. |
+
+Two of three post-rule insertions. EOF pointers are excluded by standing rule 8.
+
 ## REFERENT SWEEP — citations of leg-a-closed sections (2026-09-10)
 
 A sweep of ledger/, specs/, work/, harness/ for citations of leg-a-closed

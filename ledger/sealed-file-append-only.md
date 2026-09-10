@@ -30,3 +30,23 @@ in the same commit that declared append-only. Both actions stand; the
 contradiction is acknowledged, not resolved by reverting either side.
 
 The rule is now extracted to its canonical address: ledger/standing-rules.md.
+
+## REFERENT SWEEP — citations of leg-a-closed sections (2026-09-10)
+
+A sweep of ledger/, specs/, work/, harness/ for citations of leg-a-closed
+sections (pattern: "leg-a-closed.*§[0-9]" or "leg-a-closed.*section [0-9]")
+found hits only in files created after the renumbering:
+
+| File | § ref | Pre-dates 78d961b? | Resolvable? |
+|------|-------|-------------------|-------------|
+| ledger/standing-rules.md:9 | §5 | No (created 26fb687) | ✅ Refers to OUTPUT-PRECISION POLICY (new §5) |
+| ledger/standing-rules.md:10 | §6 | No (created 26fb687) | ✅ Refers to C1 EXCLUSION LIST (new §6) |
+| ledger/standing-rules.md:11 | §7 | No (created 26fb687) | ✅ Refers to SPEC SCOPE RULE (new §7) |
+| ledger/standing-rules.md:12 | §3 | No (created 26fb687) | ✅ Refers to DERIVED/VERBATIM rule (new §3) |
+| ledger/standing-rules.md:13 | §3/§4 | No (created 26fb687) | ✅ Refers to insertion in sealed-file-append-only |
+| ledger/standing-rules.md:19 | §4 | No (created 26fb687) | ✅ Refers to K1 candidate 1 (new §4) |
+| ledger/standing-rules.md:20 | — | No (created 26fb687) | ✅ No section ref |
+| ledger/sealed-file-append-only.md:21 | — | No (created 26fb687) | ✅ No section ref; mentions leg-a-closed as sealed file |
+
+No citations in specs/, work/, or harness/. No citations predate 78d961b.
+No unresolvable entries — all refs use the new numbering.

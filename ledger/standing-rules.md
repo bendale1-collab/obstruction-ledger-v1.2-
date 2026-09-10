@@ -18,3 +18,4 @@ Rules in sealed files are not moved; they are indexed here by reference.
 |-----------|-------------|-------------|--------|
 | 1 | Quote-vs-anchor byte check: verify quoted anchor text is byte-identical to the anchor's current published version | leg-a-closed-2026-09-09.md §4 | 78d961b |
 | 2 | Divergence-declaration check: every manifest file differing between seal commit and HEAD must have a declaring ledger entry | leg-a-closed-2026-09-09.md (founder instruction, divergence report) | 78d961b |
+| 3 | **Section-structure stability** — for each sealed file, header text and numbering at HEAD must match the seal commit. Note: K1 candidate 2 (divergence-declaration check) passed on leg-a-closed while a renumbering (originally §3→§5, §4→§6, §5→§6) hid inside a declared diff. Divergence output must report diff **nature** (append / edit / renumber), not just SAME/DIFFERS. | leg-a-closed-2026-09-09.md (founder instruction, divergence report) | 78d961b |

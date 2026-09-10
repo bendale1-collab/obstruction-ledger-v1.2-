@@ -74,3 +74,14 @@ recovery and stand on their own evidence files where those exist.
 - Reconstructed files are NOT sealed originals and are not represented
   as such.
 - engine/f1.py ENGINE-MODIFICATION entry filed separately.
+
+## Gist revision history (external anchor, added 2026-09-10)
+
+| Revision | Description | SHA | UTC Timestamp |
+|----------|-------------|-----|---------------|
+| Original v1.5 | First freeze hash published | f4e3a19333bea12ec5459e28180da3dcfc16675c | 2026-09-08T13:57:07Z |
+| Rev A | v1.5 SUPERSESSION NOTE appended (seal-detached correction) | 05c96bd0aa15e646ddac1cfa1e2ed816d85cc67a | 2026-09-10T03:08:39Z |
+| Rev B | v1.6 block (seal recovered, leg a closed) | 862219a34fdca397ced5e3260e4c044ceff5383c | 2026-09-10T03:11:25Z |
+
+Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05

@@ -136,9 +136,21 @@ Registered as a standing policy. Eigenvalues and residuals at ≥12 significant 
 
 Committed to `known-bad-specs/C1-exclusion-list.yaml`. Additions = ledger entries.
 
+## 5. SPEC SCOPE RULE (decision, not inference)
+
+The v1.6 MANIFEST.sha256 seals the **core bundle only**: SPEC.md, RUNBOOK.md,
+anchors/ANCHORS.md, engine/f1.py, amendment-log-v1.4.txt, HANDOFF-CHECKLIST.md,
+specs/leg-a-p1-pre-registration-v1.5.txt, all ledger/ entries, and
+known-bad-specs/C1-exclusion-list.yaml. Files in work/, registry/, harness/,
+arbiter/, env/, known-bad-specs/RB-*.yaml, and SEAL-PACKET.md are tracked in
+git but **unsealed** — they are not in the manifest and are not verified by
+seal checks. The K0 injection set and all work products belong outside the
+seal boundary. This is a decision recorded here, not an inference from
+practice.
+
 ---
 
-## 5. v1.6 SEAL
+## 6. v1.6 SEAL
 
 New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
 

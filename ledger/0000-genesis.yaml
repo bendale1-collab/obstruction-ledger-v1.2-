@@ -1,0 +1,13 @@
+certificate:
+  type: genesis
+  bundle_hash: 92bbcc04984cac1fb3fa333f497da003dd2357883aa0cb54c4b32b24f3287536
+  freeze_files:
+    SPEC.md: edc496bf83dc5e4d8e889b54b74df92bbf4e47bc69651b91a48ed0d2c3090172
+    RUNBOOK.md: 841b9cf46a890f8f247a5a276765c5bd2b55898214559bea4885cb9c470eec2a
+    HANDOFF-CHECKLIST.md: 7ca4fcfe7ebc9dc2143a0829c6e7008d6774bd6f57b190e1eeff2e52f2e6f9a1
+    anchors/ANCHORS.md: c7db74442b6e4e7e1245a11d88f57032a0582cc526b439fc12864ca430f7cfeb
+  gist_url: https://gist.github.com/bendale1-collab/6874753d84c84de30c791656ab7c700a
+  launch_utc: 2026-09-06T19:12:00Z
+  seal_utc: null
+  prev_hash: genesis
+  chain_hash: genesis

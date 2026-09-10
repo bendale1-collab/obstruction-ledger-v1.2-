@@ -1,0 +1,48 @@
+# Ledger Entry — P1 ENGINE-RED (F-4 FAILED)
+# Filed: 2026-09-08
+# Type: ENGINE-RED
+# Test: F-4 POSITIVE CONTROL (run first, per pre-registration)
+
+## Pre-registered F-4 pass condition (specs/leg-a-p1-pre-registration-v1.5.txt)
+1. Maximal-L2 eigensolve returns >= 2 eigenvalues in Re lambda in (FLOOR, -5e-4)
+   that are NOT 0 or 1. Count stable under resolution doubling (N2=2048).
+2. None of these strip eigenvalues appear in the origin-H2 solve at the same
+   discretization.
+FAIL condition: Both realizations agree (neither has extra eigenvalues, or both
+have the same extra eigenvalues) => engine RED, do not proceed.
+
+## Measured values (N=1024, N2=2048, L=20.0, FLOOR=-0.497, DELTA=5e-4)
+- Naive (max-L2) in-zone count at N=1024: 28
+- Origin-H2 (clean) in-zone count at N=1024: 28   <-- SAME as naive
+- Naive (max-L2) in-zone count at N=2048: 60     <-- NOT stable under doubling
+- F-4 pass: FALSE
+
+## Failure characterization (diagnostic, not a scored test)
+1. REALIZATION INDISTINGUISHABILITY: origin-H2 realization shows the identical
+   in-zone eigenvalue count (28) as the naive realization at N=1024. Both
+   produce the strip. The engine cannot distinguish realizations at P1
+   resolution and tolerance.
+2. COUNT NOT STABLE UNDER DOUBLING: naive count 28 -> 60 from N=1024 to N=2048.
+   Violates F-4 pass condition 1.
+3. ADDITIONAL OBSERVATION (F-1-relevant, NOT scored): in the origin-H2 (odd
+   basis) realization, the nearest eigenvalue to 1.0 is the eigenvalue at 0
+   (distance 1.0) — the {1} point eigenvalue appears ABSENT. Point spectrum in
+   the odd-basis realization is {0}, not {0,1}. This would independently fail
+   F-1, but F-1 is not scored (pre-reg: do not evaluate F-1/2/3/5 as scored
+   tests after F-4 fails).
+4. Strip eigenvalues have large imaginary parts (Im up to +/-14.97), consistent
+   with boundary/discretization modes of the finite Fourier domain [-L,L], and
+   Re spread from -0.013 to below FLOOR.
+
+## Interpretation per pre-registration
+"F-4 failure = engine RED regardless of F-1 through F-3 and F-5 outcomes.
+No pass-through." "Do not run F-1/2/3/5 as scored tests."
+
+## Evidence files
+- work/p1-battery-results.json (battery harness output, terminal=ENGINE-RED)
+- work/diag_f4.py (diagnostic characterization)
+- harness/p1_battery.py (battery runner, NEW file, write-ahead SELF-MODIFICATION
+  ledger entry filed before creation)
+
+## Spend
+$0 (local CPU only; no OpenRouter/GPU spend in this run).

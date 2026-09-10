@@ -114,6 +114,10 @@ The naive (maximal-L², no parity) realization produces strip eigenvalues that a
 
 No further compute on Leg A. Candidates 6,7,8 are UNTRIED with documented reasons. The obstruction is typed and filed.
 
+### RULE-IN-CLOSED-RECORD: section-renumbering blast radius
+
+The renumbering of sections in this file (78d961b: §3→§5, §4→§6, §5→§6) had zero blast radius because the affected sections were three hours old and had no known consumers. Timing, not design. A renumbering of long-lived sections (weeks/months old, cited externally, referenced by prior ledger entries) would silently invalidate every prior citation. No check in place — seal check, divergence report, or K0 — would have flagged it. Section-structure stability is now K1 candidate 3 (standing-rules.md).
+
 ---
 
 ## 2. SEAL RECOVERY (see seal-detached-v1.5.md)

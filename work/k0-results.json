@@ -1752,5 +1752,7 @@
       "fp_rate": 0.0
     }
   ],
-  "all_pass": true
+  "all_pass": true,
+  "scope_correction": "K0 v0.1 implements C3, C6, R1 only. C1 designed, unbuilt. C2, C4, C5, C7, C8, C9, R2: names, no spec, no code. The 'nine checks' description is superseded.",
+  "scope_correction_filed": "2026-09-10"
 }

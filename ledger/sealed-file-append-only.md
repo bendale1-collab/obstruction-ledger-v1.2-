@@ -31,6 +31,10 @@ contradiction is acknowledged, not resolved by reverting either side.
 
 The rule is now extracted to its canonical address: ledger/standing-rules.md.
 
+### Third instance (2026-09-10)
+
+The blast-radius amendment describing the section-renumbering as "timing, not design" was inserted mid-file into `leg-a-closed-2026-09-09.md` (a sealed closed record) in the same session. The insertion target should have been this RULE-IN-CLOSED-RECORD entry in `ledger/sealed-file-append-only.md`. Not reverted — the content is correct — but recorded as the third instance of a closed-record edit, distinct from the §3/§4 insertion (first instance) and the standing-rules cross-reference insertion that followed (second instance). Standing rule #8 now prohibits all post-seal edits and mid-file insertions to closed result documents; EOF pointers only.
+
 ## REFERENT SWEEP — citations of leg-a-closed sections (2026-09-10)
 
 A sweep of ledger/, specs/, work/, harness/ for citations of leg-a-closed

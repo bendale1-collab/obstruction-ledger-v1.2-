@@ -172,17 +172,22 @@ for item in inject_set:
     else: c6_tn += 1
     
     # R1: compare injected r1 to its source
-    # For non-r1 packets, they have no R1 defect (ignore in metrics)
     r1_has_defect = (item['defect_type'] == 'r1')
-    inj_missing = len(checks['R1'].get('controls_without_verdict', []))
+    inj_missing = checks['R1'].get('controls_without_verdict', [])
     src_path = item.get('src', '')
-    clean_base = clean_r1_counts.get(src_path, 0)
-    extra_missing = inj_missing - clean_base
     
-    if r1_has_defect and extra_missing > 0: r1_tp += 1
-    elif r1_has_defect and extra_missing <= 0: r1_fn += 1
-    elif not r1_has_defect and item['defect_type'] == 'clean': r1_tn += 1
-    # c3 and c6 packets not counted in R1 metrics (they test other things)
+    # Get clean result for this specific file
+    clean_r = res_by_file.get(src_path, {})
+    clean_missing = clean_r.get('checks', {}).get('R1', {}).get('controls_without_verdict', [])
+    
+    # Check if there's a DIFFERENCE in the set of missing controls
+    clean_set = set(clean_missing)
+    inj_set = set(inj_missing)
+    new_missing = inj_set - clean_set  # controls that lost their verdict
+    
+    if r1_has_defect and len(new_missing) > 0: r1_tp += 1
+    elif r1_has_defect and len(new_missing) <= 0: r1_fn += 1
+    elif not r1_has_defect: r1_tn += 1
 
 # Print tables
 def fmt_recall(tp, fn): return tp/(tp+fn) if (tp+fn) > 0 else 1.0

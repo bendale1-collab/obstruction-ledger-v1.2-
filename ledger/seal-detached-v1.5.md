@@ -85,3 +85,63 @@ recovery and stand on their own evidence files where those exist.
 
 Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
 Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+
+## Correction (2026-09-10) — condensed rendering replaced with verbatim anchor
+
+The revision history table above is a **condensed** rendering of the gist content,
+not verbatim text. It records only the revision SHAs and timestamps, omitting the
+full gist text. The RENDERING-AS-RECORD ledger entry (filed 2026-09-10) covers
+this class of defect.
+
+Verbatim gist text follows, fetched 2026-09-10T04:01:06Z from:
+  https://gist.githubusercontent.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05/raw/ol-freeze-hashes.txt
+
+```
+OBSTRUCTION LEDGER — FREEZE HASH CHAIN
+
+v1.3  92bbcc04984cac1fb3fa333f497da003dd2357883aa0cb54c4b32b24f3287536
+      Frozen 2026-09-06. RETROACTIVE, ASSERTED-ONLY:
+      (a) not externally published at freeze time — agent
+          publication failed on credentials;
+      (b) the v1.3 MANIFEST.sha256 was never committed to git;
+          this value is recorded in ledger/0000-genesis.yaml and
+          STATE.yaml at v1.3 commits, but cannot be reproduced
+          from the v1.3 tree. First manifest in git is at v1.4
+          (87671c8).
+      P0 GREEN (2026-09-07) ran against this asserted hash.
+      Recorded here 2026-09-08 for chain continuity only.
+
+v1.4  ee189ec49945fde81e18c842996a7ddd265c32d0dbfe3d22557f134ff034ebb2
+      Unpublished, superseded (CCF misidentification).
+
+v1.5  FREEZE_HASH=c6a73ae82f2e8bda1cdac2f348d6a2342ce5c07e5d43ae97516db05d178c00a4
+      MANIFEST_FILES=15
+      GIT_HEAD=5a6d9c8
+      SPEC_VERSION=v1.5
+      TIMESTAMP=2026-09-08T12:30:00Z
+      Published: 2026-09-08T12:58:00Z
+      First hash in this chain that is both reproducible from
+      git and externally anchored.
+v1.5 SUPERSESSION NOTE (work dated 2026-09-09 local)
+      Manifest was verified on disk only. 5 of 15 files were never
+      committed to git and are unrecoverable as sealed originals;
+      engine/f1.py was modified post-seal. The claim above,
+      "reproducible from git," is FALSE for v1.5. All results in
+      commits 66f9b16..526f7a5 were produced against a detached
+      seal. Founder-attributed. See ledger/seal-detached-v1.5.
+      Published: 2026-09-10T03:08Z
+v1.6  FREEZE_HASH=d7043bba1eda9996da2575dba81d2bdc38456ca66dfbd2124d570a915bf1aee9
+      MANIFEST_FILES=19
+      GIT_HEAD=7d4aad7
+      SPEC_VERSION=v1.6
+      Verified against commit (git show), not working tree.
+      Seal check v2: 19/19 PASS.
+      Composition: 15 files carried forward from the v1.5 manifest
+      (9 unchanged since 5a6d9c8, 1 modified, 5 RECONSTRUCTED and
+      marked in-file) + 4 v1.6 additions. v1.6 does not restore
+      v1.5; the 5 lost originals remain unrecoverable.
+      Published: 2026-09-10T03:11Z
+      NOTE: all Published timestamps in this file are UTC. Ledger
+      entry dates are local (America/New_York). The v1.6 work is
+      dated 2026-09-09 local = 2026-09-10 UTC.
+```

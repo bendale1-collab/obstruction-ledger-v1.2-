@@ -124,19 +124,45 @@ No further compute on Leg A. Candidates 6,7,8 are UNTRIED with documented reason
 - SEAL CHECK v2 PASS — all 19 files committed to HEAD, all hashes match git objects
 - No files exist on disk that are not in HEAD
 
+## 3. STANDING RULE — DERIVED vs VERBATIM anchor representation
+
+Any text presented as the content of an anchored file (gist, gist revision,
+manifest file, published block) must be either:
+  (a) **byte-identical** to the anchor (proven by hash or diff), or
+  (b) **explicitly identified as DERIVED** with the source revision SHA
+      cited and a note that the text is condensed/paraphrased.
+
+This rule applies to all ledger entries, reports, and chat output. A
+file that carries the anchor's content without either property is a
+RENDERING-AS-RECORD defect.
+
+## 4. K1 CANDIDATE — quote-vs-anchor byte check
+
+New K1 candidate: verify that quoted anchor text in a report is
+byte-identical to the anchor's current published version. The check
+would:
+  1. Extract all quoted blocks attributed to a gist or published hash
+  2. Fetch the raw text from the anchor URL at the stated revision SHA
+  3. Diff the quoted text against the fetched raw bytes
+  4. Flag any difference as a VERBATIM-MISMATCH defect
+
+Implementation sketch: use the gist raw URL pattern
+  https://gist.githubusercontent.com/{user}/{gist_id}/raw/{rev_sha}/{filename}
+to fetch the authoritative bytes for any quoted gist block.
+
 ---
 
-## 3. OUTPUT-PRECISION POLICY
+## 5. OUTPUT-PRECISION POLICY
 
 Registered as a standing policy. Eigenvalues and residuals at ≥12 significant digits in machine-readable JSON. Enters v1.6 seal.
 
 ---
 
-## 4. C1 EXCLUSION LIST
+## 6. C1 EXCLUSION LIST
 
 Committed to `known-bad-specs/C1-exclusion-list.yaml`. Additions = ledger entries.
 
-## 5. SPEC SCOPE RULE (decision, not inference)
+## 7. SPEC SCOPE RULE (decision, not inference)
 
 The v1.6 MANIFEST.sha256 seals the **core bundle only**: SPEC.md, RUNBOOK.md,
 anchors/ANCHORS.md, engine/f1.py, amendment-log-v1.4.txt, HANDOFF-CHECKLIST.md,

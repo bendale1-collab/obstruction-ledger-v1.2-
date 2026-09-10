@@ -181,3 +181,6 @@ practice.
 New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
 
 **TERMINAL: LEG-A-CLOSED**
+
+---
+**Standing rules index:** `ledger/standing-rules.md` is the canonical address for all live standing rules. Rules in sealed files are indexed there by reference; nothing is moved from sealed files.

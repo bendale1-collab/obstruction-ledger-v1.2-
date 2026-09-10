@@ -1,0 +1,141 @@
+QUOTED: identifiers below are reproduced as evidence, not asserted
+=== SECTION 1: truncated ID in history ===
+Command: git log -S 6b6d2d4265 --all --format='%h %cI %s'
+78d961b 2026-09-09T23:03:38-05:00 RENDERING-AS-RECORD filed; seal-detached verbatim correction + standing rule + K1 candidate; leg-a-closed renumbered
+fe8a1e9 2026-09-09T22:18:39-05:00 PUBLICATION-DELEGATION-FAILED filed; gist revision SHAs recorded in seal-detached; SPEC scope rule added to leg-a-closed
+5f49023 2026-09-09T12:04:34-05:00 SEAL RECOVERY: reconstruct 5 lost ledger files from surviving sources; file seal-detached-v1.5 + engine-modification entries
+9123787 2026-09-09T11:08:17-05:00 v1.6 SEAL: LEG-A-CLOSED
+e7b2261 2026-09-09T11:08:17-05:00 v1.6 LEG-A-CLOSED: obstruction typed, A1/A5 reconciliation, C1 promoted + exclusion list, output-precision policy
+66f9b16 2026-09-08T09:09:47-05:00 P1 ENGINE-RED: F-4 failed at P1 pre-registered tolerances
+
+Command: git grep -n 6b6d2d4265 <commit> (per commit above)
+commit | UTC | path | line number | full line text
+78d961b | 2026-09-09T23:03:38-05:00 | SEAL-PACKET.md | 29 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/publication-delegation-failed.md | 4 | # Gist: 6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/seal-detached-v1.5.md | 86 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/seal-detached-v1.5.md | 87 | Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/seal-detached-v1.5.md | 97 |   https://gist.githubusercontent.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05/raw/ol-freeze-hashes.txt
+78d961b | 2026-09-09T23:03:38-05:00 | leg-a-closed-2026-09-09.md | 181 | New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | SEAL-PACKET.md | 29 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/publication-delegation-failed.md | 4 | # Gist: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/seal-detached-v1.5.md | 86 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/seal-detached-v1.5.md | 87 | Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | leg-a-closed-2026-09-09.md | 155 | New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
+5f49023 | 2026-09-09T12:04:34-05:00 | SEAL-PACKET.md | 20 | Gist ID: 6b6d2d4265ffe5b63ab6a54a603ca05
+5f49023 | 2026-09-09T12:04:34-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+5f49023 | 2026-09-09T12:04:34-05:00 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+5f49023 | 2026-09-09T12:04:34-05:00 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6.
+9123787 | 2026-09-09T11:08:17-05:00 | SEAL-PACKET.md | 20 | Gist ID: 6b6d2d4265ffe5b63ab6a54a603ca05
+9123787 | 2026-09-09T11:08:17-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+9123787 | 2026-09-09T11:08:17-05:00 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6.
+e7b2261 | 2026-09-09T11:08:17-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+e7b2261 | 2026-09-09T11:08:17-05:00 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6.
+66f9b16 | 2026-09-08T09:09:47-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+
+=== SECTION 2: full 32-char ID in history ===
+Command: git log -S 6b6d2d42651ffe5b63ab6a54a603ca05 --all --format='%h %cI %s'
+78d961b 2026-09-09T23:03:38-05:00 RENDERING-AS-RECORD filed; seal-detached verbatim correction + standing rule + K1 candidate; leg-a-closed renumbered
+fe8a1e9 2026-09-09T22:18:39-05:00 PUBLICATION-DELEGATION-FAILED filed; gist revision SHAs recorded in seal-detached; SPEC scope rule added to leg-a-closed
+9aeb0b7 2026-09-09T12:16:19-05:00 v1.6 SEAL: SEAL-RECOVERED, LEG-A-CLOSED
+a3efbd3 2026-09-09T12:16:19-05:00 v1.6 MANIFEST: SEAL CHECK v2 verified, obstruction rebuilt with JSON provenance, C1 exclusions updated
+5f49023 2026-09-09T12:04:34-05:00 SEAL RECOVERY: reconstruct 5 lost ledger files from surviving sources; file seal-detached-v1.5 + engine-modification entries
+66f9b16 2026-09-08T09:09:47-05:00 P1 ENGINE-RED: F-4 failed at P1 pre-registered tolerances
+
+Command: git grep -n 6b6d2d42651ffe5b63ab6a54a603ca05 <commit> (per commit above)
+commit | UTC | path | line number | full line text
+78d961b | 2026-09-09T23:03:38-05:00 | SEAL-PACKET.md | 29 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/publication-delegation-failed.md | 4 | # Gist: 6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/seal-detached-v1.5.md | 86 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/seal-detached-v1.5.md | 87 | Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+78d961b | 2026-09-09T23:03:38-05:00 | ledger/seal-detached-v1.5.md | 97 |   https://gist.githubusercontent.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05/raw/ol-freeze-hashes.txt
+78d961b | 2026-09-09T23:03:38-05:00 | leg-a-closed-2026-09-09.md | 181 | New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | SEAL-PACKET.md | 29 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/publication-delegation-failed.md | 4 | # Gist: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/seal-detached-v1.5.md | 86 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/seal-detached-v1.5.md | 87 | Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | ledger/seal-detached-v1.5.md | 97 |   https://gist.githubusercontent.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05/raw/ol-freeze-hashes.txt
+fe8a1e9 | 2026-09-09T22:18:39-05:00 | leg-a-closed-2026-09-09.md | 155 | New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
+9aeb0b7 | 2026-09-09T12:16:19-05:00 | SEAL-PACKET.md | 29 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+9aeb0b7 | 2026-09-09T12:16:19-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+9aeb0b7 | 2026-09-09T12:16:19-05:00 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+9aeb0b7 | 2026-09-09T12:16:19-05:00 | leg-a-closed-2026-09-09.md | 143 | New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
+a3efbd3 | 2026-09-09T12:16:19-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+a3efbd3 | 2026-09-09T12:16:19-05:00 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+a3efbd3 | 2026-09-09T12:16:19-05:00 | leg-a-closed-2026-09-09.md | 143 | New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
+5f49023 | 2026-09-09T12:04:34-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+5f49023 | 2026-09-09T12:04:34-05:00 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+66f9b16 | 2026-09-08T09:09:47-05:00 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+
+=== SECTION 3: working tree, tracked and untracked ===
+Command: grep -rn 6b6d2d4265 . --exclude-dir=.git
+path | line number | full line text | tracked or untracked
+./STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | tracked
+./SEAL-PACKET.md | 29 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05 | tracked
+./ledger/anchor-gap-v1.3-2026-09-08.yaml | 19 | anchored (published to gist 6b6d2d42651ffe5b63ab6a54a603ca05, revision | untracked
+./ledger/publication-delegation-failed.md | 4 | # Gist: 6b6d2d42651ffe5b63ab6a54a603ca05 | tracked
+./ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05 | tracked
+./ledger/seal-detached-v1.5.md | 86 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05 | tracked
+./ledger/seal-detached-v1.5.md | 87 | Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | tracked
+./ledger/seal-detached-v1.5.md | 97 |   https://gist.githubusercontent.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05/raw/ol-freeze-hashes.txt | tracked
+./ledger/anchor-gap-v1.3.md | 19 | anchored (published to gist 6b6d2d42651ffe5b63ab6a54a603ca05, revision | untracked
+./leg-a-closed-2026-09-09.md | 185 | New freeze hash to be computed from the verified v1.6 manifest. Founder must publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05. | tracked
+./gist-id-audit-2026-09-10.txt | 1 | GIST ID AUDIT — 6b6d2d4265 (truncated) / 6b6d2d42651ffe5b63ab6a54a603ca05 (full 32-char) | untracked
+./gist-id-audit-2026-09-10.txt | 3 | Command: git log -p -S 6b6d2d4265 --all --format='%h %cI %s' | untracked
+./gist-id-audit-2026-09-10.txt | 4 | Then per-commit: git grep -n 6b6d2d4265 <commit> | untracked
+./gist-id-audit-2026-09-10.txt | 12 | 5f49023 | SEAL-PACKET.md | 20 | Gist ID: 6b6d2d4265ffe5b63ab6a54a603ca05 | Y — 31 chars (missing "1" at pos 11) | untracked
+./gist-id-audit-2026-09-10.txt | 13 | 5f49023 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6. | Y — 31 chars | untracked
+./gist-id-audit-2026-09-10.txt | 14 | 9123787 | SEAL-PACKET.md | 20 | Gist ID: 6b6d2d4265ffe5b63ab6a54a603ca05 | Y — 31 chars | untracked
+./gist-id-audit-2026-09-10.txt | 15 | 9123787 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6. | Y — 31 chars | untracked
+./gist-id-audit-2026-09-10.txt | 16 | e7b2261 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6. | Y — 31 chars | untracked
+./gist-id-audit-2026-09-10.txt | 17 | e7b2261 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | N — full in URL | untracked
+./gist-id-audit-2026-09-10.txt | 18 | 66f9b16 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | N — full in URL | untracked
+./gist-id-audit-2026-09-10.txt | 21 | Note: the truncated ID is 31 chars: 6b6d2d4265ffe5b63ab6a54a603ca05 (missing the "1" after 6b6d2d4265). | untracked
+./gist-id-audit-2026-09-10.txt | 24 | 2. FULL 32-CHAR ID OCCURRENCES — 6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 29 | 66f9b16 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 30 | e7b2261 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 31 | 9123787 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 32 | 5f49023 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 33 | 5f49023 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 34 | fe8a1e9 | SEAL-PACKET.md | 29 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 35 | fe8a1e9 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 36 | fe8a1e9 | ledger/publication-delegation-failed.md | 4 | # Gist: 6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 37 | fe8a1e9 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 38 | fe8a1e9 | ledger/seal-detached-v1.5.md | 86 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 39 | fe8a1e9 | ledger/seal-detached-v1.5.md | 87 | Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | untracked
+./gist-id-audit-2026-09-10.txt | 40 | fe8a1e9 | ledger/seal-detached-v1.5.md | 97 |   https://gist.githubusercontent.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05/raw/ol-freeze-hashes.txt | untracked
+./gist-id-audit-2026-09-10.txt | 41 | fe8a1e9 | leg-a-closed-2026-09-09.md | 155 | ...publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05. | untracked
+./gist-id-audit-2026-09-10.txt | 49 | not record 6b6d2d4265 in any form. No verbatim line exists to quote. | untracked
+./gist-id-audit-2026-09-10.txt | 59 | SEAL-PACKET.md        | 5f49023:20, 9123787:20 | Gist ID: 6b6d2d4265ffe5b63ab6a54a603ca05 (31 chars) | fe8a1e9 (line 29) | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05 (32 chars) | untracked
+./gist-id-audit-2026-09-10.txt | 60 | leg-a-closed-2026-09-09.md | e7b2261:161, 9123787:161, 5f49023:161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6. (31 chars) | fe8a1e9 (line 155) | ...6b6d2d42651ffe5b63ab6a54a603ca05. (32 chars, different sentence context) | untracked
+./gist-id-audit-2026-09-10.txt | 68 |   "GIST REVISION HISTORY (anchor: 6b6d2d4265)" — 10 chars, uncorrected. | untracked
+./v1.6-publication-confirmation-2026-09-10.txt | 35 | GIST REVISION HISTORY (anchor: 6b6d2d4265) | untracked
+
+=== SECTION 4: anchor record ===
+Command: grep -rn "gist" anchors/ --include=*.md
+anchors/ANCHORS.md:66:Each value is stated at the precision given in the primary source. Excess digits from prior versions are filed as UNSOURCED-PRECISION (separate registry below).
+anchors/ANCHORS.md:72:| λ₂ 2nd unstable | 0.4713248638620 | 13 digits — from 2509.14185 table (line 194); prose at L240 states 0.4703 — prose/table conflict UNRESOLVED (see UNRESOLVED-SOURCE-DISCREPANCY registry) | 2509.14185 |
+anchors/ANCHORS.md:94:## UNSOURCED-PRECISION registry (v1.5)
+anchors/ANCHORS.md:102:## UNRESOLVED-SOURCE-DISCREPANCY registry (v1.5)
+anchors/ANCHORS.md:108:## SELECTION-UNRECORDED registry (v1.5)
+anchors/ANCHORS.md:124:| Fourier diff err < 0.5 (smoke) | ASSERTED-UNDERIVABLE | post-hoc, no pre-registered derivation |
+
+No matching line in anchors/*.md contains the canonical 32-char gist ID (6b6d2d42651ffe5b63ab6a54a603ca05) or any substring match to it. All matches above are unrelated occurrences of the literal string "gist" (e.g. "digits").
+ANCHOR-UNRECORDED
+
+=== SECTION 5: environment ===
+Command: git rev-parse HEAD
+a8e11c813a4828e1ee5d57ccde0ae926671287ff
+
+Command: git status --porcelain | wc -l
+      18
+
+Command: date -u +%Y-%m-%dT%H:%M:%SZ
+2026-09-10T13:49:27Z

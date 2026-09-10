@@ -1,0 +1,76 @@
+v1.6  PUBLICATION CONFIRMATION
+      2026-09-10
+
+SEAL CHECK v2 — sha256(git show 7d4aad7:path) vs MANIFEST entry
+==============================================================
+
+✅ amendment-log-v1.4.txt
+✅ anchors/ANCHORS.md
+✅ engine/f1.py
+✅ HANDOFF-CHECKLIST.md
+✅ known-bad-specs/C1-exclusion-list.yaml
+✅ ledger/chebyshev-mapping-rejection-2026-09-07.yaml
+✅ ledger/chebyshev-mapping-rejection.md
+✅ ledger/conv-flag-diagnosis-2026-09-07.yaml
+✅ ledger/conv-flag-diagnosis.md
+✅ ledger/engine-modification-f1-odd-basis.md
+✅ ledger/fourier-diff-tolerance-2026-09-07.yaml
+✅ ledger/fourier-diff-tolerance.md
+✅ ledger/misidentification-by-acronym-collision-2026-09-08.yaml
+✅ ledger/misidentification-by-acronym-collision.md
+✅ ledger/seal-detached-v1.5.md
+✅ leg-a-closed-2026-09-09.md
+✅ RUNBOOK.md
+✅ SPEC.md
+✅ specs/leg-a-p1-pre-registration-v1.5.txt
+
+19 of 19 — 0 failures
+
+FREEZE HASH VERIFICATION
+========================
+  From gist:   d7043bba1eda9996da2575dba81d2bdc38456ca66dfbd2124d570a915bf1aee9
+  Local:       d7043bba1eda9996da2575dba81d2bdc38456ca66dfbd2124d570a915bf1aee9
+  Result:      ✅ MATCH
+
+GIST REVISION HISTORY (anchor: 6b6d2d4265)
+===========================================
+  Original v1.5   f4e3a19333bea12ec5459e28180da3dcfc16675c   2026-09-08T13:57:07Z
+  Rev A           (v1.5 SUPERSESSION NOTE, seal-detached)
+                  05c96bd0aa15e646ddac1cfa1e2ed816d85cc67a   2026-09-10T03:08:39Z
+  Rev B           (v1.6 block, seal recovered, leg a closed)
+                  862219a34fdca397ced5e3260e4c044ceff5383c   2026-09-10T03:11:25Z
+
+COMPOSITION (v1.6, 19 files)
+=============================
+  Carried forward from v1.5 manifest:   15 files
+    9 unchanged since seal commit 5a6d9c8
+    1 modified (engine/f1.py — odd_basis rewrite, see engine-modification ledger)
+    5 RECONSTRUCTED from surviving sources (never committed as sealed originals)
+  Added in v1.6:                         4 files
+    ledger/seal-detached-v1.5.md
+    ledger/engine-modification-f1-odd-basis.md
+    leg-a-closed-2026-09-09.md
+    known-bad-specs/C1-exclusion-list.yaml
+
+  v1.6 does not re-certify v1.5. The 5 lost originals remain unrecoverable.
+
+LEDGER ENTRIES FILED
+====================
+  ledger/seal-detached-v1.5.md           (updated with gist revision SHAs)
+  ledger/publication-delegation-failed.md (3 x 403, credential separation by design)
+  ledger/engine-modification-f1-odd-basis.md
+
+NEW COMMIT (HEAD moves past 7d4aad7; seal unaffected)
+=====================================================
+  fe8a1e98af5e48a9f55598173d07b07b97593da7
+  MANIFEST.sha256 unchanged — seal remains bound to 7d4aad7 / d7043bba
+
+SPEC SCOPE RULE (decision, not inference)
+==========================================
+  Manifest seals core bundle only (19 files).  work/, registry/, harness/,
+  arbiter/, env/, SEAL-PACKET.md, known-bad-specs/RB-*.yaml are tracked in
+  git but unsealed.  K0 injection set and work products outside seal boundary.
+
+STANDING BLOCK
+==============
+  No compute until Leg B or CHECKER K1 has its own pre-registration.

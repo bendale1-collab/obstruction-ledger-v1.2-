@@ -1,0 +1,72 @@
+QUOTED: identifiers below are reproduced as evidence, not asserted
+GIST ID AUDIT — 6b6d2d4265 (truncated) / 6b6d2d42651ffe5b63ab6a54a603ca05 (full 32-char)
+Date: 2026-09-10
+Command: git log -p -S 6b6d2d4265 --all --format='%h %cI %s'
+Then per-commit: git grep -n 6b6d2d4265 <commit>
+
+=====================================================================
+1. TRUNCATED GIST-ID OCCURRENCES — commits returned by the pickaxe log
+=====================================================================
+
+commit | path | line | full line text | truncated? (chars)
+-------|------|------|---------------|-------------------
+5f49023 | SEAL-PACKET.md | 20 | Gist ID: 6b6d2d4265ffe5b63ab6a54a603ca05 | Y — 31 chars (missing "1" at pos 11)
+5f49023 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6. | Y — 31 chars
+9123787 | SEAL-PACKET.md | 20 | Gist ID: 6b6d2d4265ffe5b63ab6a54a603ca05 | Y — 31 chars
+9123787 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6. | Y — 31 chars
+e7b2261 | leg-a-closed-2026-09-09.md | 161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6. | Y — 31 chars
+e7b2261 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | N — full in URL
+66f9b16 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05 | N — full in URL
+fe8a1e9 / 78d961b | all | all | all locations carry the full 32-char ID | N
+
+Note: the truncated ID is 31 chars: 6b6d2d4265ffe5b63ab6a54a603ca05 (missing the "1" after 6b6d2d4265).
+
+=====================================================================
+2. FULL 32-CHAR ID OCCURRENCES — 6b6d2d42651ffe5b63ab6a54a603ca05
+=====================================================================
+
+commit | path | line | full line text
+-------|------|------|---------------
+66f9b16 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+e7b2261 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+9123787 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+5f49023 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+5f49023 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | SEAL-PACKET.md | 29 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | STATE.yaml | 19 | gist_url: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | ledger/publication-delegation-failed.md | 4 | # Gist: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | ledger/seal-detached-v1.5.md | 8 | ## GIST CORRECTION — text for founder to append to gist 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | ledger/seal-detached-v1.5.md | 86 | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | ledger/seal-detached-v1.5.md | 87 | Repository: https://gist.github.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05
+fe8a1e9 | ledger/seal-detached-v1.5.md | 97 | https://gist.githubusercontent.com/bendale1-collab/6b6d2d42651ffe5b63ab6a54a603ca05/raw/ol-freeze-hashes.txt
+fe8a1e9 | leg-a-closed-2026-09-09.md | 155 | ...publish to gist 6b6d2d42651ffe5b63ab6a54a603ca05.
+78d961b | same 8 paths as fe8a1e9 | | all full 32-char
+
+=====================================================================
+3. anchors/ANCHORS.md — canonical 32-char ID
+=====================================================================
+
+No mention of the gist ID (full or truncated) in any commit. The file does
+not record 6b6d2d4265 in any form. No verbatim line exists to quote.
+The UNSOURCED-PRECISION and UNRESOLVED-SOURCE-DISCREPANCY registries in the
+file address precision and discrepancy, not anchor fixation.
+
+=====================================================================
+4. CORRECTIONS (original -> correcting commit)
+=====================================================================
+
+File                  | Truncated at          | Original line                       | Correcting commit | Corrected to
+----------------------|-----------------------|-------------------------------------|-------------------|-------------
+SEAL-PACKET.md        | 5f49023:20, 9123787:20 | Gist ID: 6b6d2d4265ffe5b63ab6a54a603ca05 (31 chars) | fe8a1e9 (line 29) | Gist ID: 6b6d2d42651ffe5b63ab6a54a603ca05 (32 chars)
+leg-a-closed-2026-09-09.md | e7b2261:161, 9123787:161, 5f49023:161 | to the existing gist (6b6d2d4265ffe5b63ab6a54a603ca05) as v1.6. (31 chars) | fe8a1e9 (line 155) | ...6b6d2d42651ffe5b63ab6a54a603ca05. (32 chars, different sentence context)
+
+=====================================================================
+5. ADDITIONAL FINDING — untracked file (not in git)
+=====================================================================
+
+v1.6-publication-confirmation-2026-09-10.txt (on disk, untracked, not in any
+commit) line 35 contains a truncated gist ID:
+  "GIST REVISION HISTORY (anchor: 6b6d2d4265)" — 10 chars, uncorrected.
+Not in scope of the pickaxe log (untracked, never committed).
+
+No commentary. No recommendations. No files edited in this run.

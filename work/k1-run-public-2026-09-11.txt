@@ -1,0 +1,220 @@
+INJECTION TABLE
+check | case | expected | got | detail
+------|------|----------|-----|-------
+C1 | pos-01 | FINDING | PASS | 4 finding(s)
+C1 | pos-02 | FINDING | PASS | 5 finding(s)
+C1 | pos-03 | FINDING | PASS | 4 finding(s)
+C1 | pos-04 | FINDING | PASS | 2 finding(s)
+C1 | pos-05 | FINDING | PASS | 1 finding(s)
+C1 | pos-06 | FINDING | PASS | 2 finding(s)
+C1 | pos-07 | FINDING | PASS | 1 finding(s)
+C1 | pos-08 | FINDING | PASS | 1 finding(s)
+C1 | pos-09 | FINDING | PASS | 1 finding(s)
+C1 | pos-10 | FINDING | FAIL | no findings (expected FINDING)
+C1 | neg-01 | SILENT | FAIL | 1 finding(s) (expected SILENT)
+C1 | neg-02 | SILENT | FAIL | 2 finding(s) (expected SILENT)
+C1 | neg-03 | SILENT | FAIL | 1 finding(s) (expected SILENT)
+C1 | neg-04 | SILENT | FAIL | 3 finding(s) (expected SILENT)
+C1 | neg-05 | SILENT | FAIL | 1 finding(s) (expected SILENT)
+C1 | neg-06 | SILENT | FAIL | 1 finding(s) (expected SILENT)
+C1 | neg-07 | SILENT | FAIL | 1 finding(s) (expected SILENT)
+C1 | neg-08 | SILENT | FAIL | 2 finding(s) (expected SILENT)
+C1 | neg-09 | SILENT | FAIL | 1 finding(s) (expected SILENT)
+C1 | neg-10 | SILENT | PASS | silent
+K1-1 | pos-01 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-02 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-03 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-04 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-05 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-06 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-07 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-08 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-09 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | pos-10 | MISMATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-01 | MATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-02 | MATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-03 | DERIVED (skip) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-04 | DERIVED (skip) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-05 | MATCH ×2 | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-06 | SILENT | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-07 | MATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-08 | MATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-09 | MATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-1 | neg-10 | MATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+K1-2 | pos-01 | FINDING a.md APPEND undeclared | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-02 | FINDING a.md EDIT undeclared | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-03 | FINDING a.md APPEND self-declared only | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-04 | FINDING a.md DELETE undeclared | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-05 | FINDING b.md APPEND undeclared | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-06 | FINDING a.md RENUMBER undeclared | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-07 | FINDING a.md APPEND undeclared | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-08 | FINDING a.md APPEND undeclared | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-09 | FINDING ledger/l.md APPEND self-declared only | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | pos-10 | FINDING a.md APPEND undeclared | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-01 | SILENT (2 SAME) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-02 | SILENT (a.md DIFFERS/APPEND declared) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-03 | SILENT (a.md DIFFERS/EDIT declared) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-04 | SILENT (a.md DIFFERS/RENUMBER declared) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-05 | SILENT (a.md DIFFERS/DELETE declared) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-06 | SILENT (two DIFFERS, both declared) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-07 | SILENT (ledger/l.md DIFFERS declared by ledger/other.md) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-08 | SILENT (2 SAME) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-09 | SILENT (1 SAME) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+K1-2 | neg-10 | SILENT (a.md declared) | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+
+PER-CHECK INJECTION STATS
+C1: recall=0.90 (9/10), FPR=0.90 (9/10 false positives)
+K1-1: recall=0.00 (0/10), FPR=1.00 (7/7 false positives)
+K1-2: recall=0.00 (0/0), FPR=0.00 (0/0 false positives)
+
+RETRODICTION TABLE
+row | check | expected | got | detail
+----|-------|----------|-----|-------
+R1 | K1-1 | MISMATCH ×2 | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+R2 | K1-1 | MATCH | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_1.py", line 44, in <module>
+    def extract_gist_id(text: str) -> str | None:
+TypeError: unsuppor
+R3 | K1-2 | leg-a-closed DIFFERS/EDIT UNDECLARED | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+R4 | K1-2 | 17 SAME + 2 declared DIFFERS | ERROR | exit 1: Traceback (most recent call last):
+  File "/Users/brukendale/ol-run/obstruction-ledger-v1.2/work/k1/k1_2.py", line 26, in <module>
+    def git_show(commit: str, path: str) -> bytes | None:
+TypeError: 
+R5 | K1-3 | FINDING (§7 inserted) | NO_CODE | K1-3 not implemented
+R6 | K1-3 | FINDING (§3/§4 inserted, renumbered) | NO_CODE | K1-3 not implemented
+R7 | K1-3 | 18 × SILENT | NO_CODE | K1-3 not implemented
+R8 | K1-4 | FINDING ×5 | NO_CODE | K1-4 not implemented
+R8b | K1-4 | FINDING ×1 | NO_CODE | K1-4 not implemented
+R8c | K1-4 | SILENT | NO_CODE | K1-4 not implemented
+R9 | K1-4 | SILENT | NO_CODE | K1-4 not implemented
+R10 | C1 | FINDING | MISSING | reconciliation file not found
+R11 | C1 | SILENT | PASS | silent
+R12 | K1-5 | FINDING ×1 | NO_CODE | K1-5 not implemented
+R13 | K1-6 | FAIL ×4, PARSE ×1 | NO_CODE | K1-6 not implemented
+R14 | K1-5 | SILENT | NO_CODE | K1-5 not implemented

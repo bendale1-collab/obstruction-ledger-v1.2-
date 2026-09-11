@@ -1,15 +1,15 @@
-file | parse result
----|---
-p-json-comment.txt | YAML_OK
-p-json-missing-brace.txt | PARSE_FAIL
-p-json-nan-literal.txt | YAML_OK
-p-json-single.txt | YAML_OK
-p-json-trailing-comma.txt | YAML_OK
-p-json-unquoted.txt | YAML_OK
-p-yaml-bad-indent.txt | PARSE_FAIL
-p-yaml-dup.txt | YAML_OK
-p-yaml-multi-dash.txt | PARSE_FAIL
-p-yaml-tab-char.txt | PARSE_FAIL
-n-empty.txt | YAML_OK
-n-valid-json.txt | YAML_OK
-n-valid-yaml.txt | YAML_OK
+file | parser | exit code
+---|---|---
+p-json-comment.txt | json.load | 1
+p-json-missing-brace.txt | json.load | 1
+p-json-single.txt | json.load | 1
+p-json-trailing-comma.txt | json.load | 1
+p-json-unclosed-string.txt | json.load | 1
+p-json-unquoted.txt | json.load | 1
+p-yaml-bad-indent.txt | yaml.safe_load | 1
+p-yaml-multi-dash.txt | yaml.safe_load | 1
+p-yaml-tab-char.txt | yaml.safe_load | 1
+p-yaml-unclosed-flow.txt | yaml.safe_load | 1
+n-empty.txt | yaml.safe_load | 0
+n-valid-json.txt | json.load | 0
+n-valid-yaml.txt | yaml.safe_load | 0

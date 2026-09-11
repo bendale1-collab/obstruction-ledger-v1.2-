@@ -24,3 +24,7 @@ Rules in sealed files are not moved; they are indexed here by reference.
 | 2 | Divergence-declaration check: every manifest file differing between seal commit and HEAD must have a declaring ledger entry | leg-a-closed-2026-09-09.md (founder instruction, divergence report) | 78d961b |
 | 3 | **Section-structure stability** — for each sealed file, header text and numbering at HEAD must match the seal commit. Note: K1 candidate 2 (divergence-declaration check) passed on leg-a-closed while a renumbering (originally §3→§5, §4→§6, §5→§6) hid inside a declared diff. Divergence output must report diff **nature** (append / edit / renumber), not just SAME/DIFFERS. | leg-a-closed-2026-09-09.md (founder instruction, divergence report) | 78d961b |
 | 4 | **File identifier-length check** — every hash, SHA, and gist ID in a report must match its canonical length (64 hex for SHA-256, 40 hex for SHA-1, 32 hex for gist ID) and, where an anchor exists, its canonical value. Source: three truncated gist-ID occurrences observed 2026-09-10. | ledger/standing-rules.md (founder instruction) | current | K1 candidate 4. |
+
+K1-4 label scope — §2 lists labels illustratively. Whether hash: and similar unlisted labels trigger the check is undefined in the sealed spec, identified pre-code at injection k1-4/neg-08. Disagreement between code and fixture will be adjudicated under §4, not resolved by editing either.
+
+K1-6 fixtures are labelled by running yaml.safe_load / json.load; for this check that is the only possible labelling method.

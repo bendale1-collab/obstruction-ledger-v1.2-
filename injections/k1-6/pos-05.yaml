@@ -1,0 +1,4 @@
+## Heading: not a valid yaml key
+  - unbalanced: list
+    bad: nesting
+  broken: [unclosed

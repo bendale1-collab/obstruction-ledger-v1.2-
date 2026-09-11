@@ -1,0 +1,6 @@
+# Ledger Entry — YML-FILE
+# Type: YML-FILE
+
+key: value
+  bad: indent without parent key
+another: value: with: extra colons

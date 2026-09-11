@@ -1,0 +1,9 @@
+ledger:
+  entry:
+    type: TEST
+    filed: "2026-09-08"
+  metadata:
+    version: 1
+    tags:
+      - audit
+      - verification

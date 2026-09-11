@@ -1,0 +1,3 @@
+key: value
+  bad_indent: this line is over-indented without parent
+another: value

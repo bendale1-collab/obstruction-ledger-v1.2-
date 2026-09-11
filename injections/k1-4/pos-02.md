@@ -1,0 +1,3 @@
+# Report
+
+FREEZE_HASH=c6a73ae82f2e8bda1cdac2f348d6a2342ce5c07e5d43ae97516db05d178c00a

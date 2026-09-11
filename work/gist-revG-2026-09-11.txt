@@ -1,0 +1,123 @@
+OBSTRUCTION LEDGER — FREEZE HASH CHAIN
+
+v1.3  92bbcc04984cac1fb3fa333f497da003dd2357883aa0cb54c4b32b24f3287536
+      Frozen 2026-09-06. RETROACTIVE, ASSERTED-ONLY:
+      (a) not externally published at freeze time — agent
+          publication failed on credentials;
+      (b) the v1.3 MANIFEST.sha256 was never committed to git;
+          this value is recorded in ledger/0000-genesis.yaml and
+          STATE.yaml at v1.3 commits, but cannot be reproduced
+          from the v1.3 tree. First manifest in git is at v1.4
+          (87671c8).
+      P0 GREEN (2026-09-07) ran against this asserted hash.
+      Recorded here 2026-09-08 for chain continuity only.
+
+v1.4  ee189ec49945fde81e18c842996a7ddd265c32d0dbfe3d22557f134ff034ebb2
+      Unpublished, superseded (CCF misidentification).
+
+v1.5  FREEZE_HASH=c6a73ae82f2e8bda1cdac2f348d6a2342ce5c07e5d43ae97516db05d178c00a4
+      MANIFEST_FILES=15
+      GIT_HEAD=5a6d9c8
+      SPEC_VERSION=v1.5
+      TIMESTAMP=2026-09-08T12:30:00Z
+      Published: 2026-09-08T12:58:00Z
+      First hash in this chain that is both reproducible from
+      git and externally anchored.
+v1.5 SUPERSESSION NOTE (work dated 2026-09-09 local)
+      Manifest was verified on disk only. 5 of 15 files were never
+      committed to git and are unrecoverable as sealed originals;
+      engine/f1.py was modified post-seal. The claim above,
+      "reproducible from git," is FALSE for v1.5. All results in
+      commits 66f9b16..526f7a5 were produced against a detached
+      seal. Founder-attributed. See ledger/seal-detached-v1.5.
+      Published: 2026-09-10T03:08Z
+v1.6  FREEZE_HASH=d7043bba1eda9996da2575dba81d2bdc38456ca66dfbd2124d570a915bf1aee9
+      MANIFEST_FILES=19
+      GIT_HEAD=7d4aad7
+      SPEC_VERSION=v1.6
+      Verified against commit (git show), not working tree.
+      Seal check v2: 19/19 PASS.
+      Composition: 15 files carried forward from the v1.5 manifest
+      (9 unchanged since 5a6d9c8, 1 modified, 5 RECONSTRUCTED and
+      marked in-file) + 4 v1.6 additions. v1.6 does not restore
+      v1.5; the 5 lost originals remain unrecoverable.
+      Published: 2026-09-10T03:11Z
+      NOTE: all Published timestamps in this file are UTC. Ledger
+      entry dates are local (America/New_York). The v1.6 work is
+      dated 2026-09-09 local = 2026-09-10 UTC.
+CORRECTIONS (2026-09-10, founder-attributed)
+
+1. v1.5 "Published: 12:58:00Z" is founder-typed and wrong.
+   GitHub records 13:57:07Z. The revision timestamp is
+   authoritative.
+2. v1.6 composition, never shortened: 9 unchanged, 1
+   modified (engine/f1.py), 5 RECONSTRUCTED, + 4 additions.
+   v1.6 does not restore v1.5.
+3. MANIFEST_FILES=19 counts 18 distinct artifacts.
+   ledger/misidentification-by-acronym-collision.md and
+   ...-2026-09-08.yaml are byte-identical (53ca0569…),
+   a defect of the 2026-09-09 reconstruction.
+4. 4 of 5 .yaml manifest paths do not parse as YAML. The
+   .md/.yaml ledger convention is prose with commented
+   headers, not structured data.
+5. Root cause of SEAL-DETACHED: .gitignore ignored ledger/
+   from the 2026-09-06 bootstrap. Every tracked ledger file
+   was force-added past it. The 5 v1.5 files were never
+   committable by default. Rule removed 2026-09-10; 13
+   further ledger files were on disk only until then.
+6. RUNBOOK.md (sealed) names qwen3-coder-next as operator.
+   No session ever ran under that string. The producing
+   session was deepseek/deepseek-v4-flash. One commit
+   (a8e11c8) is UNATTRIBUTED.
+7. Repo integrity is procedural, not enforced. Three agent
+   gateways share write access under one git author;
+   commits cannot be attributed to a session. Credential
+   separation holds for publication only.
+
+Corrections are appended, never edited in. Prior text stands.
+
+K1-PREREG  FREEZE_HASH=34f06514419c660174e6ae0c3b4e828595681d72c31e355cf366a634bae7dacd
+           MANIFEST_FILES=1
+           GIT_HEAD=51c22340b9030282430b3a83062045b813323c06
+           SPEC_VERSION=K1-prereg-v0.3
+           Verified against commit (seal check v2).
+           Separate seal; base v1.6 (7d4aad7 / d7043bba) unchanged.
+           Seven checks, fourteen retrodiction rows, outcomes stated before any run.
+
+Not published. Standing block unchanged.
+CORRECTION (2026-09-10, Rev E)
+
+8. The line "Not published. Standing block unchanged."
+   at the end of the previous revision is agent report
+   prose, pasted in error. It is false: the K1-PREREG
+   block was published. Left in place per append-only.
+9. This gist provides third-party-witnessed ordering via
+   GitHub's revision clock. It is not proof of time. No
+   timestamp authority binds these hashes. Any claim that
+   a hash existed before a given moment rests on GitHub's
+   record, not on cryptography.
+10. Indentation in the K1-PREREG block was flattened by
+    the mobile editor. The FREEZE_HASH line is exact;
+    continuation-line whitespace differs from the prepared
+    block.
+
+K1-RUN  FREEZE_HASH=61459091e98aa11ed9fcabc7a4964b55dd5e8f49bcb4752bc5c7882f4eaf844e
+        MANIFEST_FILES=281 (+1 founder-held holdout)
+        GIT_HEAD=32d23b2
+        HOLDOUT=fd2d6faa9b06d8fc6e108eac70583b889ab6e2424eea0f2b4891fe3c9dc8c8e1
+        Fixtures split by author; neither author has read the other's.
+        Holdout: 7 rows, founder-held, revealed after both code commits.
+        No check code exists at this commit.
+
+K1a-PREREG  SUBSET_DIGEST=051de5a40a653e4db3111334ad86303a9dc42a44bf1bf5b77fbe572cbccba5a6
+            BLOB=a7331e1d95b7c5a494345c256bc06d5c1540f2f1
+            SHA256=5b2d4774ef0488fe53bf228652f5b07742fbba89a2268a79b7042c2b612bcbda
+            GIT_HEAD=7db938eb932c719984aac30ac9e6ece98f73c64f
+            SPEC_VERSION=K1a-prereg-v0.3
+            Seal object: sorted (path, blob) list, sha256-digested
+            (ledger/seal-object-decision.md, 9deb91f). First seal on
+            this object. HEAD^{tree} rejected, falsified 2026-09-11.
+            Supersedes nothing; K1 stands RED as published.
+            Holdout unchanged: fd2d6faa9b06d8fc6e108eac70583b889ab6e2424eea0f2b4891fe3c9dc8c8e1
+
+

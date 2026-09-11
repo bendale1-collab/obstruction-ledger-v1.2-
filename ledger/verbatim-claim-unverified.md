@@ -34,3 +34,19 @@ A byte-level comparison (sha256 of the K1-PREREG block bytes from gist
 vs. the prepared block) is required before K1-1 can score this row.
 
 Filed 2026-09-10. No edits to the gist or to r21.
+
+---
+
+## Instance 3 — 2026-09-10, K1-RUN publication report
+
+The report presented the published K1-RUN block as
+"verbatim from gist" with continuation-line indentation
+intact. The founder's editor diff shows the published
+text has flattened continuation lines. The quoted block
+was therefore reconstructed or re-indented, not
+byte-fetched. Same defect as instance 1 (Rev D) and
+gist correction item 10. The gist is not edited; the
+flattened text stands as evidence. This is a live
+target for K1-1 at the run.
+
+Filed 2026-09-10. No edits to the gist.

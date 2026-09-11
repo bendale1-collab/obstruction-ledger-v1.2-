@@ -1,0 +1,79 @@
+K1a GATES REPORT — 2026-09-11
+================================
+
+## Timestamps
+
+- c3e7e19 (Agent A: C1, K1-1, K1-2): 2026-09-11T18:50:50Z (13:50:50 -0500)
+- 163f11b (Agent B: K1-3..K1-6): 2026-09-11T18:55:38Z (13:55:38 -0500)
+- Rev H (gist revision a948002653d0): 2026-09-11T22:10:53Z
+
+Gap:
+- Rev H minus c3e7e19: 3 hours 20 minutes 3 seconds
+- Rev H minus 163f11b: 3 hours 15 minutes 15 seconds
+
+FINDING: Rev H postdates both code commits. Public-before-code claim does not hold for K1a.
+Filed: ledger/anchor-postdates-artifact.md
+
+## GATE G0 — Import smoke test
+
+Command: uv run --python 3.11 python -c "import importlib.util, glob; ..."
+
+Output:
+  work/k1a/c1.py IMPORT-OK
+  work/k1a/k1_1.py IMPORT-OK
+  work/k1a/k1_2.py IMPORT-OK
+  work/k1a/k1_3.py IMPORT-OK
+  work/k1a/k1_4.py IMPORT-OK
+  work/k1a/k1_5.py IMPORT-OK
+  work/k1a/k1_6.py IMPORT-OK
+
+Result: 7/7 IMPORT-OK ✓
+
+Empty-input invocation (no arguments):
+  c1.py:   [] exit 0 ✓
+  k1_1.py: [] exit 0 ✓
+  k1_2.py: [] exit 0 ✓
+  k1_3.py: [{"error": "Usage: ..."}] exit 1 ✗ FAIL
+  k1_4.py: [{"error": "Usage: ..."}] exit 1 ✗ FAIL
+  k1_5.py: [{"error": "Usage: ..."}] exit 1 ✗ FAIL
+  k1_6.py: [{"error": "Usage: ..."}] exit 1 ✗ FAIL
+
+Result: 3/7 emit [] exit 0; 4/7 emit error object exit 1 ✗ FAIL
+
+G0 VERDICT: IMPORT-OK 7/7; empty-input 3/7. FAIL on empty-input condition (Agent B files).
+
+## GATE G1 — Static syntax (ruff FA,UP)
+
+Command: uvx ruff check --select FA,UP work/k1a/
+
+Output: All checks passed!
+
+Result: PASS ✓
+
+## GATE G2 — pytest collect-only
+
+Command: uv run --python 3.11 pytest work/k1a-test.py --collect-only -q
+
+Output: 56 tests collected (7 import tests + 7×7 fixture tests)
+
+All seven checks discovered:
+  test_check_imports[c1]
+  test_check_imports[k1_1]
+  test_check_imports[k1_2]
+  test_check_imports[k1_3]
+  test_check_imports[k1_4]
+  test_check_imports[k1_5]
+  test_check_imports[k1_6]
+
+Result: PASS ✓
+
+## Summary
+
+G0: IMPORT-OK 7/7; empty-input 3/7 (Agent A: 3/3, Agent B: 0/4) — FAIL
+G1: PASS
+G2: PASS (all 7 checks collected)
+
+G0 empty-input failure is on Agent B's code (k1_3..k1_6): they exit 1 with
+error JSON instead of [] exit 0 on no arguments. Per §2.2: "every check
+module is imported and invoked with empty input. Expected: 7/7 IMPORT-OK
+and `[]` from each." 4/7 do not emit `[]` on empty input.

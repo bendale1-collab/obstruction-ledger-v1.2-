@@ -28,3 +28,5 @@ Rules in sealed files are not moved; they are indexed here by reference.
 K1-4 label scope — §2 lists labels illustratively. Whether hash: and similar unlisted labels trigger the check is undefined in the sealed spec, identified pre-code at injection k1-4/neg-08. Disagreement between code and fixture will be adjudicated under §4, not resolved by editing either.
 
 K1-6 fixtures are labelled by running yaml.safe_load / json.load; for this check that is the only possible labelling method.
+
+Spec-scope note — checker-k1-prereg.md §2 defines all seven checks in one sealed document, so each code author read all seven definitions. Contamination is bounded to definitions; neither author read the other's code or fixtures. Stated pre-run.

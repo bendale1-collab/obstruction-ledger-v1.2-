@@ -50,3 +50,16 @@ flattened text stands as evidence. This is a live
 target for K1-1 at the run.
 
 Filed 2026-09-10. No edits to the gist.
+
+---
+
+## Instance 4 — 2026-09-10, Claude (frontier) session-identity inference
+
+Claude (frontier) read Agent B's self-label "Agent B (Hermes, this session)"
+as evidence that A and B were the same session, and halted the run. Session
+state showed otherwise: B is 20260909_215809_aa334cf1, default profile,
+z-ai/glm-5.3; A is mahamara, qwen/qwen3.7-max. The claim was an inference
+from a naming convention, not from the record. Same class as instances 1-3,
+frontier tier, committed while auditing for that class.
+
+Filed 2026-09-10.

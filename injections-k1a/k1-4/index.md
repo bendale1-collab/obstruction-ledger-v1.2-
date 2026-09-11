@@ -1,31 +1,49 @@
 # K1-4 Fixtures — Identifier well-formedness (in-scope, canonical length)
 
+## MEASUREMENTS
+
+file | label preceding | hex length
+---|---|---
+p-blob-39 | BLOB= | 39
+p-commit-6 | commit: | 6
+p-commit-8 | commit: | 8
+p-freeze-hash-63 | FREEZE_HASH= | 63
+p-gist-31 | Gist ID: | 31
+p-gist-33 | Gist ID: | 33
+p-gist-prefix-14 | Referenced: | 14
+p-sha256-31 | SHA256= | 31
+p-sha256-63 | (no label) | 63
+p-sha256-65 | SHA256= | 65
+n-commit-40 | commit: | 40
+n-gist-32 | Gist ID: | 32
+n-sha256-64 | SHA256= | 64
+
 Positive fixtures (must fire): 10 cases where in-scope identifiers have non-canonical length.
 
 | case | expected | rationale | hard Y/N |
 |------|----------|-----------|----------|
-| p-gist-truncated-one-short | FINDING | Gist ID after label, 31 chars; canonical 32 | Y—same context (label + hex string), differs only in length |
-| p-sha256-extra-one-char | FINDING | SHA after label, 65 chars; canonical 64 | Y—same format (label + hex), differs only in length |
-| p-commit-six-chars-short | FINDING | commit label, 6 chars; canonical 7 or 40 | Y—same context (commit label + hex), differs only in length |
-| p-freeze-hash-one-short | FINDING | FREEZE_HASH= label, 63 chars; canonical 64 | Y—same format (label + hex), differs only in length |
-| p-prefix-gist-incomplete | FINDING | Prefix of known gist, 15 chars; canonical 32 | Y—matches gist ID structure, but incomplete canonical form |
-| p-label-embedded-wrong-length | FINDING | SHA256= label with 31-char value; canonical 64 | Y—same label context, differs only in length |
-| p-commit-eight-invalid | FINDING | commit label, 8 chars; canonical 7 or 40 | Y—same context (commit label + hex), differs only in length |
-| p-blob-incomplete-forty | FINDING | Blob hash 49 chars; within 40-char canonical form range but incomplete | Y—hex string format, wrong length for canonical 40 |
-| p-gist-exactly-short | FINDING | Gist ID, 31 chars; canonical 32 | Y—same gist context, one char short of canonical |
-| p-sha-wrong-length-fiftyfive | FINDING | SHA label, 65 chars; canonical 64 | Y—same SHA format, differs only in length |
+| p-blob-39 | FINDING | BLOB= label, 39 chars; canonical 40 | Y—same format (label + hex), differs only in length |
+| p-commit-6 | FINDING | commit: label, 6 chars; canonical 40 | Y—same context (commit label + hex), differs only in length |
+| p-commit-8 | FINDING | commit: label, 8 chars; canonical 40 | Y—same context (commit label + hex), differs only in length |
+| p-freeze-hash-63 | FINDING | FREEZE_HASH= label, 63 chars; canonical 64 | Y—same format (label + hex), differs only in length |
+| p-gist-31 | FINDING | Gist ID: label, 31 chars; canonical 32 | Y—same context (label + hex), differs only in length |
+| p-gist-33 | FINDING | Gist ID: label, 33 chars; canonical 32 | Y—same context (label + hex), differs only in length |
+| p-gist-prefix-14 | FINDING | Referenced: label, 14 chars; gist canonical 32 | Y—matches gist ID structure, but incomplete canonical form |
+| p-sha256-31 | FINDING | SHA256= label, 31 chars; canonical 64 | Y—same label context, differs only in length |
+| p-sha256-63 | FINDING | SHA label, 63 chars; canonical 64 | Y—same SHA format, differs only in length |
+| p-sha256-65 | FINDING | SHA256= label, 65 chars; canonical 64 | Y—same format (label + hex), differs only in length |
 
 Negative fixtures (must stay silent): 3 cases where in-scope identifiers are canonical length.
 
 | case | expected | rationale | hard Y/N |
 |------|----------|-----------|----------|
-| n-canonical-gist-32 | SILENT | Gist ID with label, exactly 32 hex chars | Y—same label and hex format, correct canonical length |
-| n-canonical-sha256-64 | SILENT | SHA with label, exactly 64 hex chars | Y—same label and hex format, correct canonical length |
-| n-canonical-commit-40 | SILENT | commit label, exactly 40 hex chars (full form) | Y—same commit context and hex format, correct canonical length |
+| n-commit-40 | SILENT | commit: label, exactly 40 hex chars (full form) | Y—same commit context and hex format, correct canonical length |
+| n-gist-32 | SILENT | Gist ID: label, exactly 32 hex chars | Y—same label and hex format, correct canonical length |
+| n-sha256-64 | SILENT | SHA256= label, exactly 64 hex chars | Y—same label and hex format, correct canonical length |
 
 ## Properties
 
-**property_canonical_gist_id_32**: Generates 32-character hex strings following Gist ID labels (Gist ID:, FREEZE_HASH=).
+**property_canonical_gist_id_32**: Generates 32-character hex strings following Gist ID: labels only.
 - Minimum 250 examples
 - All characters [0-9a-f]
 - Exactly 32 characters
@@ -37,7 +55,7 @@ Negative fixtures (must stay silent): 3 cases where in-scope identifiers are can
 - Exactly 40 characters (full form)
 - No length variants
 
-**property_canonical_sha64**: Generates 64-character hex strings following SHA256=, FREEZE_HASH=, or BLOB= labels.
+**property_canonical_sha64**: Generates 64-character hex strings following SHA256=, BLOB=, or unlabeled SHA occurrences.
 - Minimum 250 examples
 - All characters [0-9a-f]
 - Exactly 64 characters

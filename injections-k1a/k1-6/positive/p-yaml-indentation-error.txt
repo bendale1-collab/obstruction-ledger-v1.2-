@@ -1,3 +1,0 @@
-valid:
-  nested: value
- bad: indent

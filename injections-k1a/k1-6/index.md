@@ -1,27 +1,45 @@
 # K1-6 Fixtures — Declared extension vs content
 
+## MEASUREMENTS
+
+file | parse result
+---|---
+p-json-comment | YAML_OK
+p-json-missing-brace | PARSE_FAIL
+p-json-nan-literal | YAML_OK
+p-json-single | YAML_OK
+p-json-trailing-comma | YAML_OK
+p-json-unquoted | YAML_OK
+p-yaml-bad-indent | PARSE_FAIL
+p-yaml-dup | YAML_OK
+p-yaml-multi-dash | PARSE_FAIL
+p-yaml-tab-char | PARSE_FAIL
+n-empty | YAML_OK
+n-valid-json | YAML_OK
+n-valid-yaml | YAML_OK
+
 Positive fixtures (must fire): 10 cases where .yaml/.yml/.json files fail to parse.
 
 | case | expected | rationale | hard Y/N |
 |------|----------|-----------|----------|
-| p-yaml-bad-colon-syntax | FINDING | YAML with multiple colons on line (invalid); same file type as negatives | Y—same YAML file structure and format, differs only in validity |
-| p-json-trailing-comma-invalid | FINDING | JSON with trailing comma (invalid); same file type structure as negatives | Y—same JSON object structure, differs only in syntax validity |
-| p-yaml-indentation-error | FINDING | YAML with inconsistent indentation (invalid); same format as negatives | Y—same YAML key-value structure, differs only in indentation rules violated |
+| p-json-comment | FINDING | JSON with C-style comment (invalid); same file type structure as negatives | Y—same JSON object format, differs only in comment syntax |
 | p-json-missing-brace | FINDING | JSON with unclosed brace (invalid); same structure as valid JSON negatives | Y—same JSON object format, differs only in completeness |
-| p-yaml-tab-in-indent | FINDING | YAML with tab character in indentation (invalid); same YAML structure | Y—same YAML key-value format, differs only in tab vs space |
-| p-json-not-a-value | FINDING | JSON with NaN literal (not valid JSON); same object structure as valid JSON | Y—same JSON format, differs only in value validity |
-| p-yaml-list-bad-indent | FINDING | YAML list with inconsistent indentation (invalid); same list structure | Y—same YAML list format as valid negatives, differs only in indentation |
-| p-json-wrong-quotes | FINDING | JSON with single quotes instead of double (invalid); same object structure | Y—same JSON object format, differs only in quote style |
-| p-yaml-duplicate-keys | FINDING | YAML with duplicate keys (invalid in strict YAML); same key-value structure | Y—same YAML format, differs only in key uniqueness |
-| p-json-c-comment | FINDING | JSON with C-style comment (invalid); same object structure as valid JSON | Y—same JSON object format, differs only in comment syntax |
+| p-json-nan-literal | FINDING | JSON with NaN literal (not valid JSON); same object structure as valid JSON | Y—same JSON format, differs only in value validity |
+| p-json-single | FINDING | JSON with single quotes instead of double (invalid); same object structure | Y—same JSON object format, differs only in quote style |
+| p-json-trailing-comma | FINDING | JSON with trailing comma (invalid); same file type structure as negatives | Y—same JSON object structure, differs only in syntax validity |
+| p-json-unquoted | FINDING | JSON with unquoted key (invalid); same object structure as valid JSON | Y—same JSON object format, differs only in key quoting |
+| p-yaml-bad-indent | FINDING | YAML with inconsistent indentation (invalid); same format as negatives | Y—same YAML key-value structure, differs only in indentation rules violated |
+| p-yaml-dup | FINDING | YAML with duplicate keys (invalid in strict YAML); same key-value structure | Y—same YAML format, differs only in key uniqueness |
+| p-yaml-multi-dash | FINDING | YAML with multiple document markers (invalid format); same YAML structure | Y—same YAML file format, differs only in document count |
+| p-yaml-tab-char | FINDING | YAML with tab character in indentation (invalid); same YAML structure | Y—same YAML key-value format, differs only in tab vs space |
 
 Negative fixtures (must stay silent): 3 cases where .yaml/.json files parse successfully.
 
 | case | expected | rationale | hard Y/N |
 |------|----------|-----------|----------|
-| n-valid-yaml-structure | SILENT | Well-formed YAML with valid key-value pairs; same file type structure as positives | Y—same YAML key-value structure type as positives, differs only in being valid |
-| n-valid-json-object | SILENT | Well-formed JSON with valid syntax and double quotes; same object structure as positives | Y—same JSON object format and structure, differs only in syntax validity |
-| n-empty-yaml-doc | SILENT | Empty YAML document (valid, parses as null); same YAML file type and structure | Y—same YAML file format, differs only in being empty (which is valid) |
+| n-empty | SILENT | Empty YAML document (valid, parses as null); same YAML file type and structure | Y—same YAML file format, differs only in being empty (which is valid) |
+| n-valid-json | SILENT | Well-formed JSON with valid syntax and double quotes; same object structure as positives | Y—same JSON object format and structure, differs only in syntax validity |
+| n-valid-yaml | SILENT | Well-formed YAML with valid key-value pairs; same file type structure as positives | Y—same YAML key-value structure type as positives, differs only in being valid |
 
 ## Properties
 

@@ -1,4 +1,0 @@
-name: test
-value: data
-nested:
-  key: val

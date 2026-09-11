@@ -1,0 +1,19 @@
+K1-3 MEASUREMENTS
+file (positive) | header divergence rationale
+---|---
+p-case-variant | Case changed (lowercase at seal → UPPERCASE at HEAD)
+p-deep-header-changed | Level increased (### → ####)
+p-header-inserted | New header inserted (# New header inserted, did not exist at seal)
+p-header-removed | One header removed (was: ## Removed before p-header-removed)
+p-header-renumbered | Original # renamed to ## (# Demoted → ## Demoted)
+p-header-text-modified | Text content changed (different phrase at seal)
+p-headers-and-content | Original header modified + new subsection inserted
+p-multiple-removed | Multiple headers removed
+p-numbering-reset | Numbering restarted (## One appears twice)
+p-section-three-to-four | Level increased (### → ####)
+
+file (negative) | structure stable rationale
+---|---
+n-append-only-after-final | headers identical to seal, only content/position changed
+n-content-modified-headers-same | headers identical to seal, only content/position changed
+n-identical-unchanged | headers identical to seal, only content/position changed

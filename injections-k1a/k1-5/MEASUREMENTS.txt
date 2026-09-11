@@ -1,0 +1,15 @@
+file | line count | unique hash count
+---|---|---
+p-all-three-same.txt | 3 | 1
+p-consecutive-dups.txt | 3 | 2
+p-dup-at-manifest-end.txt | 4 | 3
+p-dup-mid-manifest.txt | 4 | 3
+p-many-unique-then-dup.txt | 6 | 5
+p-mix-of-duplicates.txt | 5 | 3
+p-triple-dup-one-hash.txt | 4 | 2
+p-two-duplicate-pairs.txt | 4 | 2
+p-two-paths-same-hash.txt | 3 | 2
+p-unsorted-dupes.txt | 3 | 2
+n-eight-distinct-hashes.txt | 8 | 8
+n-five-all-unique.txt | 5 | 5
+n-single-entry.txt | 1 | 1

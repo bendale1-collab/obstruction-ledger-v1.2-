@@ -1,0 +1,15 @@
+file | parse result
+---|---
+p-json-comment.txt | YAML_OK
+p-json-missing-brace.txt | PARSE_FAIL
+p-json-nan-literal.txt | YAML_OK
+p-json-single.txt | YAML_OK
+p-json-trailing-comma.txt | YAML_OK
+p-json-unquoted.txt | YAML_OK
+p-yaml-bad-indent.txt | PARSE_FAIL
+p-yaml-dup.txt | YAML_OK
+p-yaml-multi-dash.txt | PARSE_FAIL
+p-yaml-tab-char.txt | PARSE_FAIL
+n-empty.txt | YAML_OK
+n-valid-json.txt | YAML_OK
+n-valid-yaml.txt | YAML_OK

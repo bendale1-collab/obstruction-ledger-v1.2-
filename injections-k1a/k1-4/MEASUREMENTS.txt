@@ -1,0 +1,15 @@
+file | label preceding | hex length
+---|---|---
+p-blob-39.txt | BLOB= | 39
+p-commit-6.txt | commit: | 6
+p-commit-8.txt | commit: | 8
+p-freeze-hash-63.txt | FREEZE_HASH= | 63
+p-gist-31.txt | Gist ID: | 31
+p-gist-33.txt | Gist ID: | 33
+p-gist-prefix-14.txt | Referenced: | 14
+p-sha256-31.txt | SHA256= | 31
+p-sha256-63.txt | (no label) | 63
+p-sha256-65.txt | SHA256= | 65
+n-commit-40.txt | commit: | 40
+n-gist-32.txt | Gist ID: | 32
+n-sha256-64.txt | SHA256= | 64

@@ -63,3 +63,22 @@ from a naming convention, not from the record. Same class as instances 1-3,
 frontier tier, committed while auditing for that class.
 
 Filed 2026-09-10.
+
+---
+
+## Instance 5 — 2026-09-11, K1a-PREREG RevG verification report
+
+The report (no file name stored; verbal output) stated: "Prior line
+differences (byte-level, whitespace included): NONE (no prior Rev F
+fetch exists in repo to compare against; gist revG is first commit
+of this fetch)". The verdict "NONE" implies the comparison was
+performed. The preamble "(no prior Rev F fetch exists...)" indicates
+no baseline existed. A verdict was emitted for a comparison that was
+not run. When the baseline was later found (work/r27-k1-run-publication-verify-2026-09-10.txt),
+the diff showed lines 1-34 (K1-RUN PUBLICATION VERIFICATION header
+and state checks) are absent from the revG fetch. The gist revG is
+a raw fetch; r27 is a report wrapping that fetch. The comparison
+should have been deferred or stated as not-performed. Same class as
+instances 1-4: a judgment reported as a measurement.
+
+Filed 2026-09-11.

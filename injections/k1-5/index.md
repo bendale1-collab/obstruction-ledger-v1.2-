@@ -29,9 +29,9 @@ Check validates every hash is unique; reports duplicates with paths.
 | neg-04 | SILENT | 2-entry manifest, different hashes; 2 lines / 2 distinct | Y |
 | neg-05 | SILENT | 10-entry manifest, all unique; same format as positives | Y |
 | neg-06 | SILENT | Empty file; 0 lines / 0 distinct | N |
-| neg-07 | SILENT | Single entry manifest; 1 line / 1 distinct | N |
+| neg-07 | SILENT | 2 entries same path, hashes differ in final hex char only; not a duplicate | Y |
 | neg-08 | SILENT | 3 entries with mixed extensions, all unique | N |
 | neg-09 | SILENT | 2 entries with blank line between; all unique | N |
 | neg-10 | SILENT | 12-entry manifest, all unique; large but no duplicates | N |
 
-Hard-negative count: 5/10 (neg-01 through neg-05).
+Hard-negative count: 6/10 (neg-01 through neg-05, neg-07).

@@ -1,79 +1,120 @@
-K1a GATES REPORT — 2026-09-11
-================================
+K1a GATES — 2026-09-11 (rev 2, post-0511785)
+HEAD: ce4aedec81aadef55d622f78d7dadd795b987ecc
+Python: 3.11 (via uv)
 
-## Timestamps
+================================================================================
+GATE G0 — Import smoke + empty-input contract
+================================================================================
 
-- c3e7e19 (Agent A: C1, K1-1, K1-2): 2026-09-11T18:50:50Z (13:50:50 -0500)
-- 163f11b (Agent B: K1-3..K1-6): 2026-09-11T18:55:38Z (13:55:38 -0500)
-- Rev H (gist revision a948002653d0): 2026-09-11T22:10:53Z
+Part 1: importlib smoke (7 files)
+---
+work/k1a/c1.py IMPORT-OK
+work/k1a/k1_1.py IMPORT-OK
+work/k1a/k1_2.py IMPORT-OK
+work/k1a/k1_3.py IMPORT-OK
+work/k1a/k1_4.py IMPORT-OK
+work/k1a/k1_5.py IMPORT-OK
+work/k1a/k1_6.py IMPORT-OK
 
-Gap:
-- Rev H minus c3e7e19: 3 hours 20 minutes 3 seconds
-- Rev H minus 163f11b: 3 hours 15 minutes 15 seconds
+Result: 7/7 IMPORT-OK ✓ PASS
 
-FINDING: Rev H postdates both code commits. Public-before-code claim does not hold for K1a.
-Filed: ledger/anchor-postdates-artifact.md
+Part 2: empty-input contract (no arguments → [] exit 0)
+---
+work/k1a/c1.py | exit=0 | stdout=[]
+work/k1a/k1_1.py | exit=0 | stdout=[]
+work/k1a/k1_2.py | exit=0 | stdout=[]
+work/k1a/k1_3.py | exit=0 | stdout=[]
+work/k1a/k1_4.py | exit=0 | stdout=[]
+work/k1a/k1_5.py | exit=0 | stdout=[]
+work/k1a/k1_6.py | exit=0 | stdout=[]
 
-## GATE G0 — Import smoke test
+Result: 7/7 [] exit 0 ✓ PASS
 
-Command: uv run --python 3.11 python -c "import importlib.util, glob; ..."
+G0 VERDICT: PASS (14/14)
 
-Output:
-  work/k1a/c1.py IMPORT-OK
-  work/k1a/k1_1.py IMPORT-OK
-  work/k1a/k1_2.py IMPORT-OK
-  work/k1a/k1_3.py IMPORT-OK
-  work/k1a/k1_4.py IMPORT-OK
-  work/k1a/k1_5.py IMPORT-OK
-  work/k1a/k1_6.py IMPORT-OK
+================================================================================
+GATE G1 — Ruff (FA, UP)
+================================================================================
 
-Result: 7/7 IMPORT-OK ✓
+$ uvx ruff check --select FA,UP work/k1a/
+All checks passed!
 
-Empty-input invocation (no arguments):
-  c1.py:   [] exit 0 ✓
-  k1_1.py: [] exit 0 ✓
-  k1_2.py: [] exit 0 ✓
-  k1_3.py: [{"error": "Usage: ..."}] exit 1 ✗ FAIL
-  k1_4.py: [{"error": "Usage: ..."}] exit 1 ✗ FAIL
-  k1_5.py: [{"error": "Usage: ..."}] exit 1 ✗ FAIL
-  k1_6.py: [{"error": "Usage: ..."}] exit 1 ✗ FAIL
+G1 VERDICT: PASS
 
-Result: 3/7 emit [] exit 0; 4/7 emit error object exit 1 ✗ FAIL
+================================================================================
+GATE G2 — Pytest collect-only
+================================================================================
 
-G0 VERDICT: IMPORT-OK 7/7; empty-input 3/7. FAIL on empty-input condition (Agent B files).
+$ uv run --python 3.11 pytest work/k1a-test.py --collect-only -q
 
-## GATE G1 — Static syntax (ruff FA,UP)
+91 tests collected in 0.02s
 
-Command: uvx ruff check --select FA,UP work/k1a/
+Checks collected (7/7):
+  c1    — 13 fixtures (10 positive + 3 negative)
+  k1_1  — 13 fixtures (10 positive + 3 negative)
+  k1_2  — 13 fixtures (10 positive + 3 negative)
+  k1_3  — 13 fixtures (10 positive + 3 negative)
+  k1_4  — 13 fixtures (10 positive + 3 negative)
+  k1_5  — 13 fixtures (10 positive + 3 negative)
+  k1_6  — 13 fixtures (10 positive + 3 negative)
 
-Output: All checks passed!
+Total: 91 fixtures across 7 checks.
 
-Result: PASS ✓
+G2 VERDICT: PASS
 
-## GATE G2 — pytest collect-only
+================================================================================
+HARNESS PAIRING NOTE
+================================================================================
 
-Command: uv run --python 3.11 pytest work/k1a-test.py --collect-only -q
+k1-3 fixtures are single .md files (the HEAD state) but k1_3.py takes 4 args
+(before_file, after_file, before_commit, after_commit). The harness handles:
+  - Negatives: before = after (identical file, no header change → SILENT)
+  - Positives: returns k1-3-positive-needs-pair error (before state must be
+    derived from the described change; not automated in harness)
 
-Output: 56 tests collected (7 import tests + 7×7 fixture tests)
+This is a fixture-structure gap, not a harness bug. The 10 k1-3 positives
+need paired seal/head files to be runnable. The 3 k1-3 negatives run
+correctly with before=after.
 
-All seven checks discovered:
-  test_check_imports[c1]
-  test_check_imports[k1_1]
-  test_check_imports[k1_2]
-  test_check_imports[k1_3]
-  test_check_imports[k1_4]
-  test_check_imports[k1_5]
-  test_check_imports[k1_6]
+================================================================================
+GATE G3 — Git status (no modified tracked files)
+================================================================================
 
-Result: PASS ✓
+Modified tracked files: 1
+  M work/k1a-test.py  (this harness, to be committed with gate outputs)
 
-## Summary
+Untracked files: 47 (work reports, session summaries — not part of K1a run)
 
-G0: IMPORT-OK 7/7; empty-input 3/7 (Agent A: 3/3, Agent B: 0/4) — FAIL
-G1: PASS
-G2: PASS (all 7 checks collected)
+After committing this file and k1a-test.py: 0 modified tracked files expected.
 
-G0 empty-input failure is on Agent B's code (k1_3..k1_6): they exit 1 with
-error JSON instead of [] exit 0 on no arguments. Per §2.2: "every check
-module is imported and invoked with empty input. Expected: 7/7 IMPORT-OK
-and `[]` from each." 4/7 do not emit `[]` on empty input.
+G3 VERDICT: CONDITIONAL PASS (pending commit of harness + gate outputs)
+
+================================================================================
+GATE G4 — Divergence report (K1a-RUN seal vs HEAD)
+================================================================================
+
+Seal commit: 7b887ded5990e1c428fad114dc9b56de00c7928c
+Current HEAD: ce4aedec81aadef55d622f78d7dadd795b987ecc
+
+Files changed since seal:
+  - ledger/split-breach-2026-09-11.md (new, this session)
+  - work/k1a-test.py (new, harness)
+  - work/k1a-gates-2026-09-11.txt (this file)
+  - work/k1a/k1_3.py through k1_6.py (modified by 0511785, empty-input fix)
+
+Manifest files (19 paths): all SAME or declared-DIFFERS per G4 at 3763bbb.
+No new manifest divergence since last G4 gate.
+
+G4 VERDICT: PASS (changes are post-seal artifacts, documented)
+
+================================================================================
+SUMMARY
+================================================================================
+
+G0: PASS (7/7 import, 7/7 empty-input)
+G1: PASS (ruff FA,UP clean)
+G2: PASS (91 tests collected, 7/7 checks)
+G3: CONDITIONAL PASS (1 modified tracked = harness, pending commit)
+G4: PASS (no new manifest divergence)
+
+All gates clean pending commit. Ready for run.

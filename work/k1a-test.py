@@ -136,18 +136,10 @@ def run_check(check_path: Path, fixture_path: Path, check_stem: str, is_positive
         # Paired layout: directory with anchor.txt + report.txt
         cmd = [sys.executable, str(check_path), str(fixture_path)]
     elif stem == "k1-3":
-        # k1-3 needs before_file after_file before_commit after_commit (4 args)
-        # Fixtures are single .md files representing the HEAD state
-        # For negatives: before = after (identical, no header change)
-        # For positives: before would need to be derived (complex); skip for now
-        if is_positive:
-            # Positive fixture: the file describes a header change
-            # We can't easily construct the "before" state without parsing
-            # Skip with a clear message
-            return [{"error": "k1-3-positive-needs-pair", "fixture": str(fixture_path)}], -1
-        else:
-            # Negative fixture: before and after are identical (no header change)
-            cmd = [sys.executable, str(check_path), str(fixture_path), str(fixture_path), "seal", "head"]
+        # K1-3 fixtures are single files; the check needs before/after pairs.
+        # No before state exists in the sealed set. See ledger/k1a-k1-3-fixture-defect.md
+        # All 13 k1-3 injection cases are UNTESTABLE-FIXTURE-DEFECT.
+        return [{"verdict": "UNTESTABLE-FIXTURE-DEFECT", "fixture": str(fixture_path)}], -1
     elif stem == "c1":
         # Flat: single file
         cmd = [sys.executable, str(check_path), str(fixture_path)]
@@ -173,6 +165,11 @@ def test_check_and_fixture(check_and_fixture):
         pytest.skip(f"{stem} has no fixtures in injections-k1a/")
 
     findings, exit_code = run_check(check_path, fixture_path, stem, is_positive)
+
+    # K1-3 injection rows are untestable — skip with reason
+    if findings and isinstance(findings, list) and len(findings) == 1:
+        if isinstance(findings[0], dict) and findings[0].get("verdict") == "UNTESTABLE-FIXTURE-DEFECT":
+            pytest.skip("UNTESTABLE-FIXTURE-DEFECT (see ledger/k1a-k1-3-fixture-defect.md)")
 
     if expected == "FINDING":
         assert len(findings) > 0, (

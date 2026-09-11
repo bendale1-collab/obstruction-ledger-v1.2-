@@ -1,0 +1,28 @@
+G4 — DIVERGENCE REPORT
+Seal commit: 7d4aad7
+HEAD:        591d638eaa0a194f8b8b1d55564bc33e371e3f0f
+Date:        2026-09-11
+
+path | 7d4aad7 blob | HEAD blob | status | nature | declaring entry
+-----+-------------+-----------+--------+--------+----------------
+amendment-log-v1.4.txt | 9261f752a2e66944147edaa8a06ec19defb03066 | 9261f752a2e66944147edaa8a06ec19defb03066 | SAME | — | —
+anchors/ANCHORS.md | 28cc84af2a6fdd2155c7810cadfd5d010c99b919 | 28cc84af2a6fdd2155c7810cadfd5d010c99b919 | SAME | — | —
+engine/f1.py | 2073b69354cec8905c951002a16b92c13619d1b2 | 2073b69354cec8905c951002a16b92c13619d1b2 | SAME | — | —
+HANDOFF-CHECKLIST.md | 70775498b464b2194dfc383073132c4297dd6ea6 | 70775498b464b2194dfc383073132c4297dd6ea6 | SAME | — | —
+known-bad-specs/C1-exclusion-list.yaml | 470e55d39268ba1e8787247b612ec71a04c78fb8 | 470e55d39268ba1e8787247b612ec71a04c78fb8 | SAME | — | —
+ledger/chebyshev-mapping-rejection-2026-09-07.yaml | 200ab5b1a31b322ebc6456121417c0f14ddd122c | 200ab5b1a31b322ebc6456121417c0f14ddd122c | SAME | — | —
+ledger/chebyshev-mapping-rejection.md | 7683cf44d30596cd9ce2d5aac9a524b916129b58 | 7683cf44d30596cd9ce2d5aac9a524b916129b58 | SAME | — | —
+ledger/conv-flag-diagnosis-2026-09-07.yaml | 54c06644bdc664e0ee929733e9e5ce38f601a0d2 | 54c06644bdc664e0ee929733e9e5ce38f601a0d2 | SAME | — | —
+ledger/conv-flag-diagnosis.md | 5baf93145975d05bdf1b7686350e08fad9a14e9e | 5baf93145975d05bdf1b7686350e08fad9a14e9e | SAME | — | —
+ledger/engine-modification-f1-odd-basis.md | 0a290d0de29ecc3b5e51313261bc739c7ae5c4c1 | 0a290d0de29ecc3b5e51313261bc739c7ae5c4c1 | SAME | — | —
+ledger/fourier-diff-tolerance-2026-09-07.yaml | c1ad3753b4bf5ad997d59a1c8d9b1181e1e9cfdf | c1ad3753b4bf5ad997d59a1c8d9b1181e1e9cfdf | SAME | — | —
+ledger/fourier-diff-tolerance.md | abf77ce97079aa5f96b2ac95a0507702ee919a86 | abf77ce97079aa5f96b2ac95a0507702ee919a86 | SAME | — | —
+ledger/misidentification-by-acronym-collision-2026-09-08.yaml | 64ced0c258eb677ea30eb12bfd23b523624fb18e | 64ced0c258eb677ea30eb12bfd23b523624fb18e | SAME | — | —
+ledger/misidentification-by-acronym-collision.md | 64ced0c258eb677ea30eb12bfd23b523624fb18e | 64ced0c258eb677ea30eb12bfd23b523624fb18e | SAME | — | —
+ledger/seal-detached-v1.5.md | 5f9f89615eea07f81c4a36bf3833d94243146678 | 0515c4be7ebd03cd931876458b6c0b5f54761759 | DIFFERS | APPEND | ledger/rendering-as-record.md
+leg-a-closed-2026-09-09.md | 08ecf08433c8519457d450c8c436bb0b0939dbe2 | f4d42db6f31deb43774c5605b7f5db84c7ef2205 | DIFFERS | INSERT | ledger/standing-rules.md (rules 6,7,8), ledger/sealed-file-append-only.md
+RUNBOOK.md | 5685ca87931d01646afa1b68e80f6bee0363bf28 | 5685ca87931d01646afa1b68e80f6bee0363bf28 | SAME | — | —
+SPEC.md | 3b211d6dd4204706ac8862a5a47f3edcdfe99124 | 3b211d6dd4204706ac8862a5a47f3edcdfe99124 | SAME | — | —
+specs/leg-a-p1-pre-registration-v1.5.txt | d1a6322fe18604fcd4c750ae85caa752a46d5f3c | d1a6322fe18604fcd4c750ae85caa752a46d5f3c | SAME | — | —
+
+SUMMARY: 17 SAME, 2 DIFFERS (both declared)

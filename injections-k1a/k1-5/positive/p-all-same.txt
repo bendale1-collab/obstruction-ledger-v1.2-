@@ -1,0 +1,3 @@
+samehash                                                               file-one
+samehash                                                               file-two
+samehash                                                               file-three

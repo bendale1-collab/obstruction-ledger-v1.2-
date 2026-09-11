@@ -1,0 +1,4 @@
+items:
+- one
+ - bad
+- three

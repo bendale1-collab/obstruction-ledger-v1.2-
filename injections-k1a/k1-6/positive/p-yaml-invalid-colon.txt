@@ -1,0 +1,2 @@
+bad: yaml: syntax
+here: is: wrong

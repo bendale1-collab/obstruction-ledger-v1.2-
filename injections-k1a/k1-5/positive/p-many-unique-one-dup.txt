@@ -1,0 +1,6 @@
+alpha                                                                  file-alpha
+beta                                                                   file-beta
+gamma                                                                  file-gamma
+delta                                                                  file-delta
+epsilon                                                                file-epsilon
+delta                                                                  file-delta-dup

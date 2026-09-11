@@ -30,6 +30,9 @@ def extract_headers(text: str) -> list[dict]:
 
 
 def main() -> None:
+    if len(sys.argv) == 1:
+        print(json.dumps([]))
+        sys.exit(0)
     if len(sys.argv) != 5:
         print(json.dumps([
             {"error": "Usage: k1_3.py <before_file> <after_file> <before_commit> <after_commit>"}

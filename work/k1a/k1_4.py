@@ -93,8 +93,8 @@ def collect_canonical_anchors(
 
 def main() -> None:
     if len(sys.argv) < 2:
-        print(json.dumps([{"error": "Usage: k1_4.py <file> [file ...]"}]))
-        sys.exit(1)
+        print(json.dumps([]))
+        sys.exit(0)
 
     paths = sys.argv[1:]
 

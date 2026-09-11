@@ -18,10 +18,8 @@ _LINE_RE = re.compile(r'^([0-9a-fA-F]+)\s+(.+)$')
 
 def main() -> None:
     if len(sys.argv) < 2:
-        print(json.dumps([
-            {"error": "Usage: k1_5.py <manifest_file>"}
-        ]))
-        sys.exit(1)
+        print(json.dumps([]))
+        sys.exit(0)
 
     manifest_path = sys.argv[1]
 

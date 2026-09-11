@@ -34,10 +34,8 @@ def _try_yaml(text: str, yaml_module) -> tuple[bool, str]:
 
 def main() -> None:
     if len(sys.argv) < 2:
-        print(json.dumps([
-            {"error": "Usage: k1_6.py <manifest_file> [base_directory]"}
-        ]))
-        sys.exit(1)
+        print(json.dumps([]))
+        sys.exit(0)
 
     manifest_path = sys.argv[1]
     base_dir: str | None = None

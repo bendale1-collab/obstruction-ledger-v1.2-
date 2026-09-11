@@ -82,3 +82,39 @@ should have been deferred or stated as not-performed. Same class as
 instances 1-4: a judgment reported as a measurement.
 
 Filed 2026-09-11.
+
+---
+
+## Instance 6 — 2026-09-11, K1a-INJECTIONS round-3 K1-6 index
+
+The round-3 K1-6 index.md (committed at 3cebd19) presented a MEASUREMENTS
+table with a "parse result" column (YAML_OK / PARSE_FAIL) that contradicted
+its own "expected" column on six of ten positive rows: p-json-comment,
+p-json-nan-literal, p-json-single, p-json-trailing-comma, p-json-unquoted,
+and p-yaml-dup were all labeled FINDING/hard-negative-differs-only-in-validity
+in the expected column while the measured parse result showed YAML_OK
+(the fixture actually parsed successfully, contradicting the FINDING
+expectation). The measurement was taken with `yaml.safe_load` used as a
+universal fallback parser for files intended as JSON-invalid cases,
+not with the §2-mandated parser selection (json.load for JSON-typed
+fixtures, yaml.safe_load for YAML-typed fixtures) — YAML's permissive
+grammar accepts most malformed JSON as a scalar or mapping, masking the
+intended failure. Additionally the source-incident paragraph listed four
+undated ".yaml" filenames (chebyshev-mapping-rejection.yaml,
+conv-flag-diagnosis.yaml, fourier-diff-tolerance.yaml,
+misidentification-by-acronym-collision.yaml) that do not exist in
+MANIFEST.sha256; the actual undated twins are .md files. A verdict
+(FINDING, hard Y) was emitted for six fixtures whose measured behavior,
+under the correct parser, would show otherwise — a report contradicting
+its own recorded measurement. Same class as instances 1-5: a claim
+presented as verified fact where the measurement was either not run
+under the frozen procedure or contradicted the claim outright.
+
+Corrected at commit 898c566: MEASUREMENTS re-run with the §2 parsers
+exactly (json.load for .json-typed fixtures, yaml.safe_load for
+.yaml/.yml-typed fixtures), all 13 rows now agree with their expected
+column, and the source-incident paragraph corrected to name only the
+four dated .yaml paths that exist in MANIFEST.sha256, with the .md
+twins named as .md.
+
+Filed 2026-09-11.

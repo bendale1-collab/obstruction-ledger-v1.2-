@@ -8,4 +8,4 @@ Text.
 
 # Final
 
-End of doc.
+End.

@@ -1,6 +1,6 @@
 ## Demoted
 
-Was top-level at seal.
+Content.
 
 ### Deep structure
 

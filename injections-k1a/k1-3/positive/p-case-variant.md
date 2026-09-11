@@ -1,6 +1,6 @@
-# section one
+# SECTION ONE
 
-Was uppercase at seal.
+Was lowercase at seal.
 
 ## SUBSECTION
 

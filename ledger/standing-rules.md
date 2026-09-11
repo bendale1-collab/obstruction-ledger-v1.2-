@@ -32,3 +32,15 @@ K1-4 label scope — §2 lists labels illustratively. Whether hash: and similar 
 K1-6 fixtures are labelled by running yaml.safe_load / json.load; for this check that is the only possible labelling method.
 
 Spec-scope note — checker-k1-prereg.md §2 defines all seven checks in one sealed document, so each code author read all seven definitions. Contamination is bounded to definitions; neither author read the other's code or fixtures. Stated pre-run.
+
+## K1a findings
+
+**K1a §2.5 "no numerals in parsed content" is unsatisfiable for K1-4 and K1-5:**
+
+K1-4 ("identifier well-formedness") must inspect identifiers (hex strings, which are numerals). K1-5 ("duplicate hash within manifest") must inspect hashes (64-hex strings, numerals). The no-numerals rule cannot apply to the thing being checked.
+
+**Restatement as implemented:** For all checks, case labels do not appear in parsed content (filenames and index.md only). For K1-4 and K1-5, numerals other than the identifier/hash under test do not appear in parsed content.
+
+**Status:** Spec defect identified by Claude-attributed agent before any code run. Pre-registration (checker-k1a-prereg.md) not edited. Fixtures and properties.py treat the restated rule as binding.
+
+**Commit:** 54e33e8 (Hermes first fixtures) had rule violation; replaced at current commit with restated rule observed.

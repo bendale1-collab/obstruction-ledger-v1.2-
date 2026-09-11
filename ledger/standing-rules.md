@@ -44,3 +44,15 @@ K1-4 ("identifier well-formedness") must inspect identifiers (hex strings, which
 **Status:** Spec defect identified by Claude-attributed agent before any code run. Pre-registration (checker-k1a-prereg.md) not edited. Fixtures and properties.py treat the restated rule as binding.
 
 **Commit:** 54e33e8 (Hermes first fixtures) had rule violation; replaced at current commit with restated rule observed.
+
+**Agent B executed py_compile despite no-execution instruction:**
+
+Agent B (163f11b, K1-3..K1-6) ran `python3 -m py_compile` on work/k1a/*.py
+before committing code. This violates the "no compute except the gates named"
+instruction from the K1a procedure. The py_compile step does not import or
+run the checks; it only verifies syntax. It would not have caught the K1
+import failure (PEP 604 `X | None` is valid syntax but fails at runtime
+on Python 3.9).
+
+Filed, not disqualifying. The code was written correctly and the gates
+(G0–G2) will run under the operator's control per procedure.

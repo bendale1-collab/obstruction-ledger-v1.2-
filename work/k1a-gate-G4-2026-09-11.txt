@@ -1,0 +1,24 @@
+G4 DIVERGENCE GATE — 7d4aad7 vs 3763bbb (19 manifest paths)
+==============================================================================================================
+
+path | SAME/DIFFERS | nature | declaring entry
+--------------------------------------------------------------------------------------------------------------
+amendment-log-v1.4.txt | SAME |  | 
+anchors/ANCHORS.md | SAME |  | 
+engine/f1.py | SAME |  | 
+HANDOFF-CHECKLIST.md | SAME |  | 
+known-bad-specs/C1-exclusion-list.yaml | SAME |  | 
+ledger/chebyshev-mapping-rejection-2026-09-07.yaml | SAME |  | 
+ledger/chebyshev-mapping-rejection.md | SAME |  | 
+ledger/conv-flag-diagnosis-2026-09-07.yaml | SAME |  | 
+ledger/conv-flag-diagnosis.md | SAME |  | 
+ledger/engine-modification-f1-odd-basis.md | SAME |  | 
+ledger/fourier-diff-tolerance-2026-09-07.yaml | SAME |  | 
+ledger/fourier-diff-tolerance.md | SAME |  | 
+ledger/misidentification-by-acronym-collision-2026-09-08.yaml | SAME |  | 
+ledger/misidentification-by-acronym-collision.md | SAME |  | 
+ledger/seal-detached-v1.5.md | DIFFERS | APPEND | ledger/ledger-ignored.md
+leg-a-closed-2026-09-09.md | DIFFERS | EDIT | ledger/seal-object-decision.md
+RUNBOOK.md | SAME |  | 
+SPEC.md | SAME |  | 
+specs/leg-a-p1-pre-registration-v1.5.txt | SAME |  | 

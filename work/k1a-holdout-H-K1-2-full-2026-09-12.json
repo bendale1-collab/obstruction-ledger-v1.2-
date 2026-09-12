@@ -1,0 +1,110 @@
+[
+  {
+    "path": "amendment-log-v1.4.txt",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "anchors/ANCHORS.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "engine/f1.py",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "HANDOFF-CHECKLIST.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "known-bad-specs/C1-exclusion-list.yaml",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/chebyshev-mapping-rejection-2026-09-07.yaml",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/chebyshev-mapping-rejection.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/conv-flag-diagnosis-2026-09-07.yaml",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/conv-flag-diagnosis.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/engine-modification-f1-odd-basis.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/fourier-diff-tolerance-2026-09-07.yaml",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/fourier-diff-tolerance.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/misidentification-by-acronym-collision-2026-09-08.yaml",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/misidentification-by-acronym-collision.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "ledger/seal-detached-v1.5.md",
+    "status": "DIFFERS",
+    "nature": "APPEND",
+    "declaring_entries": [
+      "ledger/rendering-as-record.md",
+      "ledger/standing-rules.md",
+      "ledger/ledger-ignored.md",
+      "ledger/write-file-destruction-2026-09-11.md",
+      "ledger/multi-writer-unattributed.md",
+      "ledger/seal-object-decision.md"
+    ]
+  },
+  {
+    "path": "leg-a-closed-2026-09-09.md",
+    "status": "DIFFERS",
+    "nature": "RENUMBER",
+    "declaring_entries": [
+      "ledger/standing-rules.md",
+      "ledger/sealed-file-append-only.md",
+      "ledger/seal-object-decision.md"
+    ]
+  },
+  {
+    "path": "RUNBOOK.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "SPEC.md",
+    "status": "SAME",
+    "nature": "SAME"
+  },
+  {
+    "path": "specs/leg-a-p1-pre-registration-v1.5.txt",
+    "status": "SAME",
+    "nature": "SAME"
+  }
+]

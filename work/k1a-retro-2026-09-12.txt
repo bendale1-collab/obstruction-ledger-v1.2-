@@ -1,0 +1,24 @@
+row | check | expected | got
+R1 | K1-1 | MISMATCH x2 blocks (v1.5, v1.6) | []
+R2 | K1-1 | MATCH | []
+R3 | K1-2 | leg-a-closed DIFFERS/EDIT, UNDECLARED | SAME=17 DIFFERS=0 FINDING=2
+R4 | K1-2 | 17 SAME; seal-detached DIFFERS/APPEND declared; leg-a-closed | SAME=17 DIFFERS=2 FINDING=0
+R5 | K1-3 | FINDING (section 7 inserted) | FINDING x4
+R6 | K1-3 | FINDING (3/4 inserted, 3-5 renumbered) | FINDING x12
+R7 | K1-3 | 18 x SILENT | SILENT=18 FINDING=0 ABSENT=0
+R8@5f49023 | K1-4 | FINDING at locked coordinates only (31-char variant) | SILENT
+R8@9123787 | K1-4 | FINDING at locked coordinates only (31-char variant) | SILENT
+R8@e7b2261 | K1-4 | FINDING at locked coordinates only (31-char variant) | SILENT
+R8b | K1-4 | FINDING x1 (10-char anchor ref) | SILENT
+R8c | K1-4 | SILENT (QUOTED header) | SILENT
+R9 | K1-4 | SILENT | SILENT
+R10 | C1 | FINDING (distance reported as eigenvalue) | FINDING x2470
+R11 | C1 | SILENT (bet; adjudication branch) | FINDING x4868
+R12 | K1-5 | FINDING x1: 53ca0569 at misidentification pair; 19 lines / 1 | FINDING x1
+R14 | K1-5 | SILENT | SILENT
+R13 | K1-6 | FAIL x4 (chebyshev, conv-flag, fourier-diff, misidentificati | FAIL x4, PARSE x1
+RA-1 | G0 smoke | IMPORT-FAIL x2 (k1_1, k1_2) | OK=1 FAIL=2 NOPY39=0
+RA-2 | G0 smoke | IMPORT-OK x5, IMPORT-FAIL x2 | OK=5 FAIL=2 NOPY39=0
+RA-3 | G1 ruff FA102 | FINDING at k1_1.py:44 and k1_2.py:26 | FA102 lines=8
+RA-4 | G2 collect-only | 3 of 7 checks — harness defect reproduced | checks invoked=3
+RA-5 | C1 | FINDING — contamination reproduced on the sealed fixture | FINDING x3

@@ -1,0 +1,190 @@
+{
+ "head": "199faf8f0342b5209583e0689e586f605d5afbd0",
+ "python": "3.11.15",
+ "rows": [
+  {
+   "row": "R1",
+   "target": "ledger/seal-detached-v1.5.md @78d961b (composed-vs-verbatim)",
+   "check": "K1-1",
+   "expected": "MISMATCH x2 blocks (v1.5, v1.6)",
+   "got": "[]",
+   "note": "exported=['ledger/seal-detached-v1.5.md'] rc=0"
+  },
+  {
+   "row": "R2",
+   "target": "seal-detached verbatim correction @78d961b",
+   "check": "K1-1",
+   "expected": "MATCH",
+   "got": "[]",
+   "note": "rc=0"
+  },
+  {
+   "row": "R3",
+   "target": "7d4aad7 vs fe8a1e9 (19 manifest paths)",
+   "check": "K1-2",
+   "expected": "leg-a-closed DIFFERS/EDIT, UNDECLARED",
+   "got": "SAME=17 DIFFERS=0 FINDING=2",
+   "note": "[{\"path\": \"ledger/seal-detached-v1.5.md\", \"status\": \"FINDING\", \"nature\": \"APPEND\", \"declaring_entries\": []}, {\"path\": \"leg-a-closed-2026-09-09.md\", \"status\": \"FINDING\", \"nature\": \"RENUMBER\", \"declaring_entries\": []}]"
+  },
+  {
+   "row": "R4",
+   "target": "7d4aad7 vs a8e11c8 (19 manifest paths)",
+   "check": "K1-2",
+   "expected": "17 SAME; seal-detached DIFFERS/APPEND declared; leg-a-closed DIFFERS/RENUMBER declared",
+   "got": "SAME=17 DIFFERS=2 FINDING=0",
+   "note": "[{\"path\": \"ledger/seal-detached-v1.5.md\", \"status\": \"DIFFERS\", \"nature\": \"APPEND\", \"declaring_entries\": [\"ledger/rendering-as-record.md\", \"ledger/standing-rules.md\"]}, {\"path\": \"leg-a-closed-2026-09-09.md\", \"status\": \"DIFFERS\", \"nature\": \"RENUMBER\", \"declaring_entries\": [\"ledger/standing-rules.md\", \"ledger/sealed-file-append-only.md\"]}]"
+  },
+  {
+   "row": "R5",
+   "target": "leg-a-closed-2026-09-09.md 7d4aad7->fe8a1e9",
+   "check": "K1-3",
+   "expected": "FINDING (section 7 inserted)",
+   "got": "FINDING x4",
+   "note": "[{\"path\": \"/var/folders/rw/npnch0ss6_jctyn1j3f436z40000gn/T/tmpsf4alxn9/after.md\", \"header_diff\": \"REMOVED: \\\"5. v1.6 SEAL\\\" (line 141) present in seal (7d4aad7) but absent from HEAD (fe8a1e9)\"}, {\"path\": \"/var/folders/rw/npnch0ss6_jctyn1j3f436z40000gn/T/tmpsf4alxn9/after.md\", \"header_diff\": \"INSERTED: \\\"5. SPEC SCOPE RULE (decision, not inference)\\\" (line 139) in HEAD (fe8a1e9), not present in se"
+  },
+  {
+   "row": "R6",
+   "target": "leg-a-closed-2026-09-09.md fe8a1e9->78d961b",
+   "check": "K1-3",
+   "expected": "FINDING (3/4 inserted, 3-5 renumbered)",
+   "got": "FINDING x12",
+   "note": "[{\"path\": \"/var/folders/rw/npnch0ss6_jctyn1j3f436z40000gn/T/tmp9fi8gwjt/after.md\", \"header_diff\": \"REMOVED: \\\"3. OUTPUT-PRECISION POLICY\\\" (line 129) present in seal (fe8a1e9) but absent from HEAD (78d961b)\"}, {\"path\": \"/var/folders/rw/npnch0ss6_jctyn1j3f436z40000gn/T/tmp9fi8gwjt/after.md\", \"header_diff\": \"REMOVED: \\\"4. C1 EXCLUSION LIST\\\" (line 135) present in seal (fe8a1e9) but absent from HEAD "
+  },
+  {
+   "row": "R7",
+   "target": "18 other sealed files 7d4aad7->a8e11c8",
+   "check": "K1-3",
+   "expected": "18 x SILENT",
+   "got": "SILENT=18 FINDING=0 ABSENT=0",
+   "note": "[]"
+  },
+  {
+   "row": "R8@5f49023",
+   "target": "['SEAL-PACKET.md', 'leg-a-closed-2026-09-09.md'] @5f49023",
+   "check": "K1-4",
+   "expected": "FINDING at locked coordinates only (31-char variant)",
+   "got": "SILENT",
+   "note": "[]"
+  },
+  {
+   "row": "R8@9123787",
+   "target": "['SEAL-PACKET.md', 'leg-a-closed-2026-09-09.md'] @9123787",
+   "check": "K1-4",
+   "expected": "FINDING at locked coordinates only (31-char variant)",
+   "got": "SILENT",
+   "note": "[]"
+  },
+  {
+   "row": "R8@e7b2261",
+   "target": "['SEAL-PACKET.md', 'leg-a-closed-2026-09-09.md'] @e7b2261",
+   "check": "K1-4",
+   "expected": "FINDING at locked coordinates only (31-char variant)",
+   "got": "SILENT",
+   "note": "[]"
+  },
+  {
+   "row": "R8b",
+   "target": "['v1.6-publication-confirmation-2026-09-10.txt'] @0c32940",
+   "check": "K1-4",
+   "expected": "FINDING x1 (10-char anchor ref)",
+   "got": "SILENT",
+   "note": "[]"
+  },
+  {
+   "row": "R8c",
+   "target": "['gist-id-audit-2026-09-10.txt', 'work/r8-grep-2026-09-10.txt'] @0c32940",
+   "check": "K1-4",
+   "expected": "SILENT (QUOTED header)",
+   "got": "SILENT",
+   "note": "[]"
+  },
+  {
+   "row": "R9",
+   "target": "['anchors/ANCHORS.md'] @6b70539",
+   "check": "K1-4",
+   "expected": "SILENT",
+   "got": "SILENT",
+   "note": "[]"
+  },
+  {
+   "row": "R10",
+   "target": "work/red-close-reconciliation.py @a8e11c8",
+   "check": "C1",
+   "expected": "FINDING (distance reported as eigenvalue)",
+   "got": "FINDING x2470",
+   "note": "[{\"prose_location\": \"packet.md\", \"table_location\": \"packet.md\", \"prose_value\": \"1\", \"prose_unit\": \"\", \"table_value\": \"6\", \"table_unit\": \"f\", \"reason\": \"unit mismatch\"}, {\"prose_location\": \"packet.md\", \"table_location\": \"packet.md\", \"prose_value\": \"1\", \"prose_unit\": \"\", \"table_value\": \"4\", \"table_unit\": \"f\", \"reason\": \"unit mismatch\"}, {\"prose_location\": \"packet.md\", \"table_location\": \"packet.md\", \"prose_value\": \"1\", \"prose_unit\": \"\", \"table_value\": \"6\", \"table_unit\": \"s\", \"reason\": \"unit mismatc"
+  },
+  {
+   "row": "R11",
+   "target": "work/h2-report.md @a8e11c8",
+   "check": "C1",
+   "expected": "SILENT (bet; adjudication branch)",
+   "got": "FINDING x4868",
+   "note": "[{\"prose_location\": \"packet.md\", \"table_location\": \"packet.md\", \"prose_value\": \"1.5\", \"table_value\": \"1\", \"unit\": \"\", \"prose_rounded\": \"2\", \"table_rounded\": \"1\", \"reason\": \"value mismatch after rounding\"}, {\"prose_location\": \"packet.md\", \"table_location\": \"packet.md\", \"prose_value\": \"1.5\", \"table_value\": \"0\", \"unit\": \"\", \"prose_rounded\": \"2\", \"table_rounded\": \"0\", \"reason\": \"value mismatch after rounding\"}, {\"prose_location\": \"packet.md\", \"table_location\": \"packet.md\", \"prose_value\": \"1.5\", \"tab"
+  },
+  {
+   "row": "R12",
+   "target": "MANIFEST.sha256 @7d4aad7",
+   "check": "K1-5",
+   "expected": "FINDING x1: 53ca0569 at misidentification pair; 19 lines / 18 distinct",
+   "got": "FINDING x1",
+   "note": "{\"summary\": [{\"_summary\": {\"MANIFEST_LINES\": 19, \"DISTINCT_ARTIFACTS\": 18}}], \"findings\": [{\"hash\": \"53ca05692a8711df5ec27b2dc3dcc754bfa11c8e3889cb11969247aff5e059f5\", \"paths\": [\"ledger/misidentification-by-acronym-collision-2026-09-08.yaml\", \"ledger/misidentification-by-acronym-collision.md\"]}]}"
+  },
+  {
+   "row": "R14",
+   "target": "K1-MANIFEST.sha256 @51c2234",
+   "check": "K1-5",
+   "expected": "SILENT",
+   "got": "SILENT",
+   "note": "{\"summary\": [{\"_summary\": {\"MANIFEST_LINES\": 1, \"DISTINCT_ARTIFACTS\": 1}}], \"findings\": []}"
+  },
+  {
+   "row": "R13",
+   "target": "5 .yaml manifest paths @7d4aad7",
+   "check": "K1-6",
+   "expected": "FAIL x4 (chebyshev, conv-flag, fourier-diff, misidentification); PARSE x1 (C1-exclusion-list)",
+   "got": "FAIL x4, PARSE x1",
+   "note": "[{\"path\": \"known-bad-specs/C1-exclusion-list.yaml\", \"status\": \"PARSE\"}, {\"path\": \"ledger/chebyshev-mapping-rejection-2026-09-07.yaml\", \"status\": \"FAIL\"}, {\"path\": \"ledger/conv-flag-diagnosis-2026-09-07.yaml\", \"status\": \"FAIL\"}, {\"path\": \"ledger/fourier-diff-tolerance-2026-09-07.yaml\", \"status\": \"FAIL\"}, {\"path\": \"ledger/misidentification-by-acronym-collision-2026-09-08.yaml\", \"status\": \"FAIL\"}]"
+  },
+  {
+   "row": "RA-1",
+   "target": "work/k1/*.py @b21abb0 under py3.9",
+   "check": "G0 smoke",
+   "expected": "IMPORT-FAIL x2 (k1_1, k1_2)",
+   "got": "OK=1 FAIL=2 NOPY39=0",
+   "note": "[[\"work/k1/c1.py\", \"IMPORT-OK\"], [\"work/k1/k1_1.py\", \"IMPORT-FAIL\"], [\"work/k1/k1_2.py\", \"IMPORT-FAIL\"]]"
+  },
+  {
+   "row": "RA-2",
+   "target": "work/k1/*.py @d00f75f under py3.9",
+   "check": "G0 smoke",
+   "expected": "IMPORT-OK x5, IMPORT-FAIL x2",
+   "got": "OK=5 FAIL=2 NOPY39=0",
+   "note": "[[\"work/k1/c1.py\", \"IMPORT-OK\"], [\"work/k1/k1_1.py\", \"IMPORT-FAIL\"], [\"work/k1/k1_2.py\", \"IMPORT-FAIL\"], [\"work/k1/k1_3.py\", \"IMPORT-OK\"], [\"work/k1/k1_4.py\", \"IMPORT-OK\"], [\"work/k1/k1_5.py\", \"IMPORT-OK\"], [\"work/k1/k1_6.py\", \"IMPORT-OK\"]]"
+  },
+  {
+   "row": "RA-3",
+   "target": "work/k1/ @d00f75f",
+   "check": "G1 ruff FA102",
+   "expected": "FINDING at k1_1.py:44 and k1_2.py:26",
+   "got": "FA102 lines=8",
+   "note": "FA102 Missing `from __future__ import annotations`, but uses PEP 604 union\n  --> /var/folders/rw/npnch0ss6_jctyn1j3f436z40000gn/T/tmp8zpqcmjb/work/k1/k1_1.py:44:35\nFA102 Missing `from __future__ import annotations`, but uses PEP 604 union\n  --> /var/folders/rw/npnch0ss6_jctyn1j3f436z40000gn/T/tmp8zpqcmjb/work/k1/k1_2.py:26:41\nFA102 Missing `from __future__ import annotations`, but uses PEP 604 union\nFA102 Missing `from __future__ import annotations`, but uses PEP 604 union\nFA102 Missing `from __"
+  },
+  {
+   "row": "RA-4",
+   "target": "work/k1-test.py @d00f75f",
+   "check": "G2 collect-only",
+   "expected": "3 of 7 checks \u2014 harness defect reproduced",
+   "got": "checks invoked=3",
+   "note": "[\"c1\", \"k1_1\", \"k1_2\"]"
+  },
+  {
+   "row": "RA-5",
+   "target": "injections/c1/neg-01 @a094184 (K1 set, unedited)",
+   "check": "C1",
+   "expected": "FINDING \u2014 contamination reproduced on the sealed fixture",
+   "got": "FINDING x3",
+   "note": "[{\"prose_location\": \"neg-01.md\", \"table_location\": \"neg-01.md\", \"prose_value\": \"2\", \"prose_unit\": \"is\", \"table_value\": \"2\", \"table_unit\": \"\", \"reason\": \"unit mismatch\"}, {\"prose_location\": \"neg-01.md\", \"table_location\": \"neg-01.md\", \"prose_value\": \"2\", \"prose_unit\": \"is\", \"table_value\": \"1.1807776628998\", \"table_unit\": \"\", \"reason\": \"unit mismatch\"}, {\"prose_location\": \"neg-01.md\", \"table_location"
+  }
+ ]
+}

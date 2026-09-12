@@ -1,0 +1,26 @@
+HOLDOUT v1 — 2026-09-11 — reveal after both code commits
+
+H-C1   v1.6-divergence-report-2026-09-10.txt @8541919
+       → SILENT. Prose "17 SAME, 2 DIFFERS" has no
+         matching row label in the table; C1 links by
+         label, not by count.
+H-K1-1 ledger/seal-detached-v1.5.md lines 100-146
+       (the verbatim gist block) vs raw gist Rev B
+       f4e3a193…→862219a3 revision content
+       → MATCH. Bytes identical to the 09-10T04:01Z fetch.
+H-K1-2 7d4aad7 vs 51c2234
+       → 17 SAME, 2 DIFFERS, both declared. No finding.
+         K1-PREREG commits touched no manifest path.
+H-K1-3 ledger/seal-detached-v1.5.md, 7d4aad7 vs 51c2234
+       → SILENT. Appended headers after the original final
+         header; original headers unchanged.
+H-K1-4 ledger/rendering-as-record.md @78d961b
+       → SILENT. Every identifier full-length; no QUOTED
+         block needed.
+H-K1-5 MANIFEST.sha256 @5274ca6
+       → SILENT. Pre-reconstruction manifest; the collapse
+         is a 09-09 defect, so no duplicate exists here.
+H-K1-6 ledger/0000-genesis.yaml @fc08b6f
+       → PARSE. Real YAML (certificate: / bundle_hash: /
+         freeze_files: mapping), unlike the four ledger
+         .yaml prose files.

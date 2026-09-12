@@ -1,0 +1,60 @@
+G4 — DIVERGENCE REPORT (rev 2)
+Seal commit: 7d4aad7
+HEAD:        ace2daf5f786eeb026220d79f4be539825bf35a1
+Date:        2026-09-11
+Spec:        checker-k1a-prereg.md §3.1, standing-rules rule 7
+
+NOTE: Previous G4 (work/r41-g4-divergence-7d4aad7-vs-591d638-2026-09-11.txt,
+committed at ace2daf) cited the prior gate output instead of running the
+comparison. That file is preserved in history. This file is the G4 run.
+
+================================================================================
+19 MANIFEST PATHS — 7d4aad7 vs ace2daf
+================================================================================
+
+path | status | nature | declaring entry
+-----+--------+--------+----------------
+amendment-log-v1.4.txt | SAME | — | —
+anchors/ANCHORS.md | SAME | — | —
+engine/f1.py | SAME | — | —
+HANDOFF-CHECKLIST.md | SAME | — | —
+known-bad-specs/C1-exclusion-list.yaml | SAME | — | —
+ledger/chebyshev-mapping-rejection-2026-09-07.yaml | SAME | — | —
+ledger/chebyshev-mapping-rejection.md | SAME | — | —
+ledger/conv-flag-diagnosis-2026-09-07.yaml | SAME | — | —
+ledger/conv-flag-diagnosis.md | SAME | — | —
+ledger/engine-modification-f1-odd-basis.md | SAME | — | —
+ledger/fourier-diff-tolerance-2026-09-07.yaml | SAME | — | —
+ledger/fourier-diff-tolerance.md | SAME | — | —
+ledger/misidentification-by-acronym-collision-2026-09-08.yaml | SAME | — | —
+ledger/misidentification-by-acronym-collision.md | SAME | — | —
+ledger/seal-detached-v1.5.md | DIFFERS | APPEND | ledger/rendering-as-record.md
+leg-a-closed-2026-09-09.md | DIFFERS | INSERT+RENUMBER | ledger/standing-rules.md (rules 6,7,8), ledger/sealed-file-append-only.md
+RUNBOOK.md | SAME | — | —
+SPEC.md | SAME | — | —
+specs/leg-a-p1-pre-registration-v1.5.txt | SAME | — | —
+
+SUMMARY: 17 SAME, 2 DIFFERS (both declared)
+
+================================================================================
+DIFF DETAILS
+================================================================================
+
+ledger/seal-detached-v1.5.md:
+  Nature: APPEND (lines added at EOF only, no mid-file changes)
+  Commits: fe8a1e9, 78d961b
+  Declaring entry: ledger/rendering-as-record.md (line 25: "Instance 2:
+  external-anchor record in seal-detached.md")
+  Stat: 73 insertions, 1 deletion (trailing newline fix)
+
+leg-a-closed-2026-09-09.md:
+  Nature: INSERT+RENUMBER (mid-file insertions at line 114+ and line 128+,
+  plus section renumbering §3→§5, §4→§6, §5→§6)
+  Commits: fe8a1e9, 78d961b, 26fb687, a8e11c8
+  Declaring entries:
+    - ledger/standing-rules.md rules 6,7,8 (cross-reference leg-a-closed changes)
+    - ledger/sealed-file-append-only.md (records INSERT as RULE-IN-CLOSED-RECORD
+      instances 1 and 2; renumbering acknowledged in standing rule 3)
+  Stat: 53 insertions, 3 deletions
+
+G4 VERDICT: PASS (17 SAME, 2 DIFFERS, both declared)

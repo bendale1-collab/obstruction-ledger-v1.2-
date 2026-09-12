@@ -1,0 +1,21 @@
+G3 — GIT STATUS (rev 2)
+Date: 2026-09-11
+HEAD: f2eaf8a
+
+Spec: checker-k1a-prereg.md §3.1 — no modified tracked files.
+
+================================================================================
+git status --porcelain — modified-tracked lines
+================================================================================
+
+$ git status --porcelain | grep '^ M\|^M '
+
+(empty)
+
+Modified tracked files: 0
+
+================================================================================
+VERDICT
+================================================================================
+
+G3: PASS — no modified tracked files.

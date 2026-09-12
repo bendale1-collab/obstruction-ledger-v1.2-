@@ -4,6 +4,13 @@
 
 Injection defect (§4). Fixture structure does not match check interface.
 
+## Sealed fixture set (at 7b887de)
+
+K1-3 fixtures at 7b887de are 13 single .md files under positive/ and
+negative/ (per K1a-RUN-MANIFEST.txt lines for injections-k1a/k1-3/):
+  10 positives in injections-k1a/k1-3/positive/
+   3 negatives in injections-k1a/k1-3/negative/
+
 ## Check interface
 
 K1-3 (section-structure stability) compares two states:
@@ -12,30 +19,23 @@ K1-3 (section-structure stability) compares two states:
 The check extracts ATX headings from both files and reports any header
 that was inserted, removed, renumbered, or modified between them.
 
-## Sealed fixture set (at 7b887de)
+## Defect
 
-All 13 K1-3 fixtures are single `.md` files:
-  10 positives in injections-k1a/k1-3/positive/
-   3 negatives in injections-k1a/k1-3/negative/
-
-No fixture contains a before/after pair. Each positive file is a single
-markdown document whose content *describes* a header change (e.g. a file
-with a header that "did not exist at seal"), but it is not paired with
-the seal state it diverges from.
-
-## Consequence
-
-No before_file exists in the sealed set. The check cannot be invoked
-against these fixtures with a valid before state. The fixtures are
-structurally untestable by the sealed interface.
+No before state exists in the sealed set. Each fixture is a single .md
+file — there is no paired seal-state file for any of the 13 cases.
+The check cannot be invoked against these fixtures with a valid before
+state. The fixtures are structurally untestable by the sealed interface.
 
 ## Authorship
 
 Mahamara session authored the K1-3..K1-6 fixtures (commits 3cebd19,
-898c566). The 591d638 harness patch (negatives as before==after,
-positives as needs-pair) was written by the same author who wrote the
-fixtures. That patch is withdrawn as a scoring path: it was authored by
-the fixture author to work around the fixture author's defect.
+898c566).
+
+## 591d638 harness patch withdrawn
+
+The 591d638 harness patch (negatives as before==after, positives as
+needs-pair) was written by the fixture author to work around the
+fixture author's defect. It is withdrawn as a scoring path.
 
 ## Verdict for K1-3 injection rows
 
@@ -55,5 +55,12 @@ The injection rows do not contribute to the K1-3 score.
 
 ## No properties.py
 
-injections-k1a/k1-3/ contains no `properties.py` file. The negative-space
+injections-k1a/k1-3/ contains no properties.py file. The negative-space
 property was not delivered for this check.
+
+## G3 conditional outcome
+
+Gates file (work/k1a-gates-2026-09-11.txt, line 117) reported G3 as
+"CONDITIONAL PASS" with one modified tracked file. checker-k1a-prereg.md
+§3.1 has no conditional outcome — gates PASS or FAIL. Recorded here,
+not corrected by editing the gates file (which is a committed artifact).

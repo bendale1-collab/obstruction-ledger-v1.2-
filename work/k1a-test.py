@@ -96,6 +96,13 @@ def discover_fixtures(check_stem: str) -> list[tuple[str, Path, bool]]:
     return results
 
 
+def discover_properties(check_stem: str) -> Path | None:
+    """Find properties.py for a check. Returns path or None."""
+    fixture_dir_name = check_stem.replace("_", "-")
+    prop_file = FIXTURE_ROOT / fixture_dir_name / "properties.py"
+    return prop_file if prop_file.is_file() else None
+
+
 def pytest_generate_tests(metafunc):
     """Generate test cases dynamically from disk."""
     if "check_and_fixture" in metafunc.fixturenames:
@@ -117,6 +124,23 @@ def pytest_generate_tests(metafunc):
                         id=f"{stem}::{case_name}"
                     ))
         metafunc.parametrize("check_and_fixture", params)
+
+    if "properties_file" in metafunc.fixturenames:
+        params = []
+        for check_path in discover_checks():
+            stem = check_path.stem
+            prop = discover_properties(stem)
+            if prop:
+                params.append(pytest.param(
+                    (check_path, prop),
+                    id=f"{stem}::properties"
+                ))
+            else:
+                params.append(pytest.param(
+                    (check_path, None),
+                    id=f"{stem}::no-properties"
+                ))
+        metafunc.parametrize("properties_file", params)
 
 
 def run_check(check_path: Path, fixture_path: Path, check_stem: str, is_positive: bool) -> tuple[list, int]:
@@ -187,3 +211,40 @@ def test_check_and_fixture(check_and_fixture):
             f"Exit code: {exit_code}\n"
             f"Findings: {json.dumps(findings, indent=2)}"
         )
+
+
+def test_properties(properties_file):
+    """Run properties.py hypothesis tests and assert no finding produced.
+
+    For each property defined in PROPERTIES dict (c1, k1-1, k1-2) or
+    @given tests (k1-4, k1-5), draw MIN_EXAMPLES cases and assert the
+    check produces no finding.
+
+    Missing properties.py: skip with reason.
+    """
+    check_path, prop_path = properties_file
+
+    if prop_path is None:
+        pytest.skip(f"{check_path.stem} has no properties.py in injections-k1a/")
+
+    # Run properties.py as a pytest module
+    # It contains @given tests or PROPERTIES dict with strategies
+    result = subprocess.run(
+        [sys.executable, "-m", "pytest", str(prop_path), "-v", "--tb=short"],
+        capture_output=True,
+        text=True,
+        timeout=60,
+        cwd=str(REPO_ROOT),
+    )
+
+    # Hypothesis tests pass if no assertion fails
+    # Exit code 0 = all properties held (no findings)
+    # Exit code 1 = some property failed (finding produced)
+    assert result.returncode == 0, (
+        f"properties.py produced finding(s).\n"
+        f"Check: {check_path.name}\n"
+        f"Properties: {prop_path}\n"
+        f"Exit code: {result.returncode}\n"
+        f"Stdout:\n{result.stdout}\n"
+        f"Stderr:\n{result.stderr}"
+    )

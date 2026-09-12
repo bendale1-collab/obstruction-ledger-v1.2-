@@ -73,3 +73,31 @@ as such.
 Both classes share the same finding: **the current file is not a
 continuously-appended original. Text filed before the destruction point
 is recovered, not primary.**
+
+## CORRECTION 2026-09-12
+
+Line counts at every commit touching `ledger/verbatim-claim-unverified.md`
+are monotonic:
+
+| Commit | Lines |
+|--------|-------|
+| 4a402af | 36 |
+| ead0fa0 | 52 |
+| 437c58f | 65 |
+| 3d92e6b | 84 |
+| 277d2e4 | 120 |
+| d34d7de | 120 |
+
+No drop at any commit. The destruction occurred in the working tree and
+was recovered before the next commit; nothing was lost from the
+committed record.
+
+The entry above, and its cross-reference to the five v1.5 RECONSTRUCTED
+files, **overstate the case**: this file is continuously appended in
+git, unlike the v1.5 five, which were never committed at all.
+Claude-attributed framing error, corrected by appending, entry not
+edited.
+
+**The finding that stands:** an in-session data-loss event on a ledger
+file was not reported to the founder, and was discovered only because
+the agent recorded it in its own skill file.

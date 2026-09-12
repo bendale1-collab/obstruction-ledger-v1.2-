@@ -1,0 +1,950 @@
+{
+ "head": "6ea62388d33fe631356f4d0b3eeeaef2e0bf14f9",
+ "python": "3.11.15",
+ "injections": [
+  {
+   "check": "c1",
+   "case": "p-phi-at-large-L",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-counts-called-identical",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 3,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-digit-transposition",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-rounds-apart",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-half-up-boundary",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-one-sig-digit",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-sign-dropped",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-unit-mismatch",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-manifest-count",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "p-sci-notation-swap",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "n-rounds-together",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "n-half-up-other-side",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "c1",
+   "case": "n-notation-differs",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-indent-flattened",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-trailing-newline-dropped",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-line-omitted",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-condensed",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-crlf",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-one-char-changed",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-stray-line-inside",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-lines-reordered",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-spaces-collapsed",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "p-verbatim-claim-wrong-revision",
+   "expected": "MISMATCH",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "n-exact",
+   "expected": "MATCH",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "n-derived-flattened",
+   "expected": "DERIVED (skip)",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_1",
+   "case": "n-both-crlf",
+   "expected": "MATCH",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-append-undeclared",
+   "expected": "FINDING a.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-edit-undeclared",
+   "expected": "FINDING a.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-self-declared-only",
+   "expected": "FINDING a.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-delete-undeclared",
+   "expected": "FINDING a.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-second-file-undeclared",
+   "expected": "FINDING b.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-renumber-undeclared",
+   "expected": "FINDING a.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-declaration-names-other-path",
+   "expected": "FINDING a.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-declaration-outside-ledger",
+   "expected": "FINDING a.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-sealed-ledger-self-declares",
+   "expected": "FINDING ledger/l.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "p-declaration-names-nothing",
+   "expected": "FINDING a.md",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 1,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "n-append-declared",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "n-renumber-declared",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_2",
+   "case": "n-sealed-ledger-declared-elsewhere",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_3",
+   "case": "p-case-variant",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-deep-header-changed",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-header-inserted",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-header-removed",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-header-renumbered",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-header-text-modified",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-headers-and-content",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-multiple-removed",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-numbering-reset",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "p-section-three-to-four",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "n-append-only-after-final",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "n-content-modified-headers-same",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_3",
+   "case": "n-identical-unchanged",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "ledger/k1a-k1-3-fixture-defect.md: single files, check needs before/after"
+  },
+  {
+   "check": "k1_4",
+   "case": "p-blob-39",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-commit-6",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-commit-8",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-freeze-hash-63",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-gist-31",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-gist-33",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-gist-prefix-14",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-sha256-31",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-sha256-63",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "p-sha256-65",
+   "expected": "FINDING",
+   "got": "QUIET",
+   "verdict": "FAIL",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "n-commit-40",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "n-gist-32",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_4",
+   "case": "n-sha256-64",
+   "expected": "SILENT",
+   "got": "QUIET",
+   "verdict": "PASS",
+   "n_findings": 0,
+   "exit": 0
+  },
+  {
+   "check": "k1_5",
+   "case": "p-all-three-same",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "p-consecutive-dups",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "p-dup-at-manifest-end",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "p-dup-mid-manifest",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "p-many-unique-then-dup",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "p-mix-of-duplicates",
+   "expected": "FINDING",
+   "got": "FIRE",
+   "verdict": "PASS",
+   "n_findings": 2,
+   "exit": 0
+  },
+  {
+   "check": "k1_5",
+   "case": "p-triple-dup-one-hash",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "p-two-duplicate-pairs",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "p-two-paths-same-hash",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "p-unsorted-dupes",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "n-eight-distinct-hashes",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "n-five-all-unique",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_5",
+   "case": "n-single-entry",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "non-hex placeholder in sha256sum-format manifest; check regex requires hex (section 2 sha256sum format)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-json-comment",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-json-missing-brace",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-json-single",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-json-trailing-comma",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-json-unclosed-string",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-json-unquoted",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-yaml-bad-indent",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-yaml-multi-dash",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-yaml-tab-char",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "p-yaml-unclosed-flow",
+   "expected": "FINDING",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "n-empty",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "n-valid-json",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  },
+  {
+   "check": "k1_6",
+   "case": "n-valid-yaml",
+   "expected": "SILENT",
+   "got": "UNTESTABLE-FIXTURE-DEFECT",
+   "verdict": "UNTESTABLE",
+   "note": "sealed fixtures are .txt; check scope is .yaml/.yml/.json (section 2)"
+  }
+ ],
+ "properties": [
+  {
+   "check": "c1",
+   "property": "same_value_rendered_two_ways",
+   "examples": 200,
+   "violations": 31,
+   "verdict": "FAIL",
+   "sample": [
+    {
+     "input": "strip edge is -7.6.\n\n| label | value |\n|---|---|\n| strip edge | -7.56 |\n",
+     "findings": [
+      {
+       "prose_location": "case.md",
+       "table_location": "case.md",
+       "prose_value": "-7.6",
+       "table_value": "-7.56",
+       "unit": "",
+       "prose_rounded": "-7.60",
+       "table_rounded": "-7.56",
+       "reason": "value mismatch after rounding"
+      }
+     ]
+    },
+    {
+     "input": "lambda-second is -0.023.\n\n| label | value |\n|---|---|\n| lambda-second | -0.0227 |\n",
+     "findings": [
+      {
+       "prose_location": "case.md",
+       "table_location": "case.md",
+       "prose_value": "-0.023",
+       "table_value": "-0.0227",
+       "unit": "",
+       "prose_rounded": "-0.023000",
+       "table_rounded": "-0.022700",
+       "reason": "value mismatch after rounding"
+      }
+     ]
+    },
+    {
+     "input": "manifest files is -0.0676.\n\n| label | value |\n|---|---|\n| manifest files | -0.06764 |\n",
+     "findings": [
+      {
+       "prose_location": "case.md",
+       "table_location": "case.md",
+       "prose_value": "-0.0676",
+       "table_value": "-0.06764",
+       "unit": "",
+       "prose_rounded": "-0.0676000",
+       "table_rounded": "-0.0676400",
+       "reason": "value mismatch after rounding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "check": "c1",
+   "property": "identical_strings",
+   "examples": 200,
+   "violations": 123,
+   "verdict": "FAIL",
+   "sample": [
+    {
+     "input": "runtime is -112.66 s.\n\n| label | value | unit |\n|---|---|---|\n| runtime | -112.66 | s |\n",
+     "findings": [
+      {
+       "prose_location": "case.md",
+       "table_location": "case.md",
+       "prose_value": "-112.66",
+       "prose_unit": "s",
+       "table_value": "-112.66",
+       "table_unit": "",
+       "reason": "unit mismatch"
+      }
+     ]
+    },
+    {
+     "input": "strip edge is -30.176 ms.\n\n| label | value | unit |\n|---|---|---|\n| strip edge | -30.176 | ms |\n",
+     "findings": [
+      {
+       "prose_location": "case.md",
+       "table_location": "case.md",
+       "prose_value": "-30.176",
+       "prose_unit": "ms",
+       "table_value": "-30.176",
+       "table_unit": "",
+       "reason": "unit mismatch"
+      }
+     ]
+    },
+    {
+     "input": "runtime is 1741.3556 s.\n\n| label | value | unit |\n|---|---|---|\n| runtime | 1741.3556 | s |\n",
+     "findings": [
+      {
+       "prose_location": "case.md",
+       "table_location": "case.md",
+       "prose_value": "1741.3556",
+       "prose_unit": "s",
+       "table_value": "1741.3556",
+       "table_unit": "",
+       "reason": "unit mismatch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "check": "k1_1",
+   "property": "exact_quote",
+   "examples": 200,
+   "violations": 0,
+   "verdict": "PASS-VACUOUS",
+   "sample": [],
+   "note": "check produced no finding on any positive; property cannot discriminate"
+  },
+  {
+   "check": "k1_1",
+   "property": "derived_any",
+   "examples": 200,
+   "violations": 0,
+   "verdict": "PASS-VACUOUS",
+   "sample": [],
+   "note": "check produced no finding on any positive; property cannot discriminate"
+  },
+  {
+   "check": "k1_2",
+   "property": "all_same",
+   "examples": 200,
+   "violations": 0,
+   "verdict": "PASS",
+   "sample": []
+  },
+  {
+   "check": "k1_2",
+   "property": "append_declared",
+   "examples": 200,
+   "violations": 0,
+   "verdict": "PASS",
+   "sample": []
+  },
+  {
+   "check": "k1_3",
+   "property": "(none)",
+   "verdict": "NO-PROPERTIES-FILE"
+  },
+  {
+   "check": "k1_4",
+   "property": "(module)",
+   "verdict": "VACUOUS-PROPERTY",
+   "note": "properties.py defines no PROPERTIES strategies and never invokes the check; its own tests assert facts about generated strings"
+  },
+  {
+   "check": "k1_5",
+   "property": "(module)",
+   "verdict": "VACUOUS-PROPERTY",
+   "note": "properties.py defines no PROPERTIES strategies and never invokes the check; its own tests assert facts about generated strings"
+  },
+  {
+   "check": "k1_6",
+   "property": "(none)",
+   "verdict": "NO-PROPERTIES-FILE"
+  }
+ ]
+}

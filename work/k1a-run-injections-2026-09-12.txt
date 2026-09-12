@@ -1,0 +1,104 @@
+check | case | expected | got | verdict
+c1 | p-phi-at-large-L | FINDING | FIRE | PASS
+c1 | p-counts-called-identical | FINDING | FIRE | PASS
+c1 | p-digit-transposition | FINDING | FIRE | PASS
+c1 | p-rounds-apart | FINDING | FIRE | PASS
+c1 | p-half-up-boundary | FINDING | FIRE | PASS
+c1 | p-one-sig-digit | FINDING | FIRE | PASS
+c1 | p-sign-dropped | FINDING | FIRE | PASS
+c1 | p-unit-mismatch | FINDING | FIRE | PASS
+c1 | p-manifest-count | FINDING | FIRE | PASS
+c1 | p-sci-notation-swap | FINDING | FIRE | PASS
+c1 | n-rounds-together | SILENT | QUIET | PASS
+c1 | n-half-up-other-side | SILENT | QUIET | PASS
+c1 | n-notation-differs | SILENT | QUIET | PASS
+k1_1 | p-indent-flattened | MISMATCH | QUIET | FAIL
+k1_1 | p-trailing-newline-dropped | MISMATCH | QUIET | FAIL
+k1_1 | p-line-omitted | MISMATCH | QUIET | FAIL
+k1_1 | p-condensed | MISMATCH | QUIET | FAIL
+k1_1 | p-crlf | MISMATCH | QUIET | FAIL
+k1_1 | p-one-char-changed | MISMATCH | QUIET | FAIL
+k1_1 | p-stray-line-inside | MISMATCH | QUIET | FAIL
+k1_1 | p-lines-reordered | MISMATCH | QUIET | FAIL
+k1_1 | p-spaces-collapsed | MISMATCH | QUIET | FAIL
+k1_1 | p-verbatim-claim-wrong-revision | MISMATCH | QUIET | FAIL
+k1_1 | n-exact | MATCH | QUIET | PASS
+k1_1 | n-derived-flattened | DERIVED (skip) | QUIET | PASS
+k1_1 | n-both-crlf | MATCH | QUIET | PASS
+k1_2 | p-append-undeclared | FINDING a.md | FIRE | PASS
+k1_2 | p-edit-undeclared | FINDING a.md | FIRE | PASS
+k1_2 | p-self-declared-only | FINDING a.md | FIRE | PASS
+k1_2 | p-delete-undeclared | FINDING a.md | FIRE | PASS
+k1_2 | p-second-file-undeclared | FINDING b.md | FIRE | PASS
+k1_2 | p-renumber-undeclared | FINDING a.md | FIRE | PASS
+k1_2 | p-declaration-names-other-path | FINDING a.md | FIRE | PASS
+k1_2 | p-declaration-outside-ledger | FINDING a.md | FIRE | PASS
+k1_2 | p-sealed-ledger-self-declares | FINDING ledger/l.md | FIRE | PASS
+k1_2 | p-declaration-names-nothing | FINDING a.md | FIRE | PASS
+k1_2 | n-append-declared | SILENT | QUIET | PASS
+k1_2 | n-renumber-declared | SILENT | QUIET | PASS
+k1_2 | n-sealed-ledger-declared-elsewhere | SILENT | QUIET | PASS
+k1_3 | p-case-variant | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-deep-header-changed | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-header-inserted | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-header-removed | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-header-renumbered | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-header-text-modified | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-headers-and-content | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-multiple-removed | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-numbering-reset | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | p-section-three-to-four | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | n-append-only-after-final | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | n-content-modified-headers-same | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_3 | n-identical-unchanged | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_4 | p-blob-39 | FINDING | QUIET | FAIL
+k1_4 | p-commit-6 | FINDING | QUIET | FAIL
+k1_4 | p-commit-8 | FINDING | QUIET | FAIL
+k1_4 | p-freeze-hash-63 | FINDING | QUIET | FAIL
+k1_4 | p-gist-31 | FINDING | QUIET | FAIL
+k1_4 | p-gist-33 | FINDING | QUIET | FAIL
+k1_4 | p-gist-prefix-14 | FINDING | QUIET | FAIL
+k1_4 | p-sha256-31 | FINDING | QUIET | FAIL
+k1_4 | p-sha256-63 | FINDING | QUIET | FAIL
+k1_4 | p-sha256-65 | FINDING | QUIET | FAIL
+k1_4 | n-commit-40 | SILENT | QUIET | PASS
+k1_4 | n-gist-32 | SILENT | QUIET | PASS
+k1_4 | n-sha256-64 | SILENT | QUIET | PASS
+k1_5 | p-all-three-same | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | p-consecutive-dups | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | p-dup-at-manifest-end | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | p-dup-mid-manifest | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | p-many-unique-then-dup | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | p-mix-of-duplicates | FINDING | FIRE | PASS
+k1_5 | p-triple-dup-one-hash | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | p-two-duplicate-pairs | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | p-two-paths-same-hash | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | p-unsorted-dupes | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | n-eight-distinct-hashes | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | n-five-all-unique | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_5 | n-single-entry | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-json-comment | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-json-missing-brace | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-json-single | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-json-trailing-comma | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-json-unclosed-string | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-json-unquoted | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-yaml-bad-indent | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-yaml-multi-dash | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-yaml-tab-char | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | p-yaml-unclosed-flow | FINDING | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | n-empty | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | n-valid-json | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+k1_6 | n-valid-yaml | SILENT | UNTESTABLE-FIXTURE-DEFECT | UNTESTABLE
+
+check | property | examples | violations | verdict
+c1 | same_value_rendered_two_ways | 200 | 31 | FAIL
+c1 | identical_strings | 200 | 123 | FAIL
+k1_1 | exact_quote | 200 | 0 | PASS-VACUOUS
+k1_1 | derived_any | 200 | 0 | PASS-VACUOUS
+k1_2 | all_same | 200 | 0 | PASS
+k1_2 | append_declared | 200 | 0 | PASS
+k1_3 | (none) | - | - | NO-PROPERTIES-FILE
+k1_4 | (module) | - | - | VACUOUS-PROPERTY
+k1_5 | (module) | - | - | VACUOUS-PROPERTY
+k1_6 | (none) | - | - | NO-PROPERTIES-FILE

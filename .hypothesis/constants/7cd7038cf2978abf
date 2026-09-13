@@ -1,0 +1,4 @@
+# file: /Users/brukendale/ol/repo/harness/lint/check_derandomize.py
+# hypothesis_version: 6.168.0
+
+['*.py', '__main__', 'derandomize', 'given', 'harness', 'ol', 'settings', 'tests']

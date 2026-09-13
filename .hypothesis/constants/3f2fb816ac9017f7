@@ -1,0 +1,4 @@
+# file: /Users/brukendale/ol/repo/harness/ci/seal_check.py
+# hypothesis_version: 6.168.0
+
+['--base-ref', '--format=%cI', '--gist-revision-time', '--head-ref', '--reverse', 'HEAD', 'RETRODICTION', '__main__', 'gist_revision_time', 'git', 'label', 'log', 'origin/main']

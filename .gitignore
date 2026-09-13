@@ -6,4 +6,4 @@ scratch/
 __pycache__/
 *.pyc
 .venv/
-venv/
+venv/data/

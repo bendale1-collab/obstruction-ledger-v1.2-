@@ -1,0 +1,15 @@
+{
+  "cases": [
+    {
+      "class": "negative",
+      "content_hash": "36de34f1d88b8e9fb1590b7c2e7678a2851dbb96c3eb92b0d70d788bd2d6c69a",
+      "name": "neg-01"
+    },
+    {
+      "class": "positive",
+      "content_hash": "7199ff068924036450ec521069bbf54af3b5c83a51fec71724123e358d64b72b",
+      "name": "pos-01"
+    }
+  ],
+  "check_id": "_selftest"
+}

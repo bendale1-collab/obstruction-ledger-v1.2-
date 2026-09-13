@@ -82,5 +82,5 @@ def fixtures_for(name: str) -> list[Path]:
     ]
     for directory in candidates:
         if directory.is_dir():
-            return sorted(p for p in directory.iterdir() if p.is_file())
+            return sorted(p for p in directory.iterdir() if p.is_file() and p.name != "index.json")
     return []

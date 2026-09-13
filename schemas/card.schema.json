@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obstruction-ledger/schemas/card.schema.json",
+  "title": "Task card",
+  "description": "agent-runbook.md §2. Every field is required; there is no free-text notes field.",
+  "type": "object",
+  "required": [
+    "id",
+    "phase",
+    "depends_on",
+    "role",
+    "inputs",
+    "cmd",
+    "output",
+    "accept_cmd",
+    "gate",
+    "max_attempts",
+    "budget",
+    "halt_if"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[A-Za-z0-9-]+$" },
+    "phase": { "type": "string", "minLength": 1 },
+    "depends_on": { "type": "array", "items": { "type": "string" } },
+    "role": { "enum": ["operator", "author-A", "author-B", "adjudicator", "harness"] },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    },
+    "cmd": { "type": "string", "minLength": 1 },
+    "output": { "type": "string", "minLength": 1 },
+    "accept_cmd": { "type": "string", "minLength": 1 },
+    "gate": { "type": "boolean" },
+    "max_attempts": { "type": "integer", "minimum": 1 },
+    "budget": {
+      "type": "object",
+      "required": ["usd", "minutes"],
+      "additionalProperties": false,
+      "properties": {
+        "usd": { "type": "number", "minimum": 0 },
+        "minutes": { "type": "number", "minimum": 0 }
+      }
+    },
+    "halt_if": { "type": "array", "items": { "type": "string" } }
+  }
+}

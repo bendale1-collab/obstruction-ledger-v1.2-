@@ -40,6 +40,13 @@ disallow_any_generics = true
 module = "inspect_ai.*"
 ignore_missing_imports = true
 
+[[tool.mypy.overrides]]
+# inspect_ai's @task decorator does not preserve callable signatures under
+# mypy --strict; the decorator itself is fully typed upstream, so this is
+# scoped to the wiring module rather than disabled project-wide.
+module = "harness.audit_tasks.tasks"
+disallow_untyped_decorators = false
+
 [tool.radon]
 cc_min = "B"
 

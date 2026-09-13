@@ -17,7 +17,7 @@ repos:
     hooks:
       - id: mypy
         args: [--strict]
-        additional_dependencies: []
+        additional_dependencies: ["inspect-ai", "hypothesis", "pytest"]
         files: ^(harness|tests|ol)/
 
   - repo: https://github.com/pre-commit/pre-commit-hooks

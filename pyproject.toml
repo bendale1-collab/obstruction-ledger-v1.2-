@@ -54,5 +54,10 @@ cc_min = "B"
 addopts = "-p no:cacheprovider"
 pythonpath = ["."]
 
+[tool.mutmut]
+source_paths = ["ol"]
+also_copy = ["harness"]
+pytest_add_cli_args_test_selection = ["tests/unit"]
+
 [tool.uv]
 package = false

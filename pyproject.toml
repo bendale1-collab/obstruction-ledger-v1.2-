@@ -41,6 +41,14 @@ module = ["inspect_ai.*", "jsonschema.*"]
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
+# Lets the B1-01 red commit (test written before ol/audit/classes.py
+# exists) pass the strict mypy hook. Once the module is a real local
+# file, mypy resolves and type-checks it directly; this override only
+# covers the not-yet-resolvable case and has no effect afterward.
+module = "ol.audit.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
 # inspect_ai's @task decorator does not preserve callable signatures under
 # mypy --strict; the decorator itself is fully typed upstream, so this is
 # scoped to the wiring module rather than disabled project-wide.

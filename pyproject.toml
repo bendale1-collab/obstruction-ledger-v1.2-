@@ -1,0 +1,50 @@
+[project]
+name = "obstruction-ledger-harness"
+version = "0.1.0"
+requires-python = "==3.11.9"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "hypothesis>=6.100",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "radon>=6.0",
+    "pre-commit>=3.8",
+    "detect-secrets>=1.5",
+    "check-jsonschema>=0.29",
+    "inspect-ai>=0.3",
+    "mutmut>=3.2",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "SIM", "ARG", "PTH", "ERA", "PL", "RUF"]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["PLR2004"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+disallow_any_generics = true
+
+[[tool.mypy.overrides]]
+module = "inspect_ai.*"
+ignore_missing_imports = true
+
+[tool.radon]
+cc_min = "B"
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+
+[tool.uv]
+package = false

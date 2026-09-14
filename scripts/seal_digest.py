@@ -2,7 +2,8 @@
 """Seal digest over the audit code and the pre-registration it implements.
 
 sha256 of the sorted (path, git blob sha) pairs for every tracked file under
-ol/audit/ plus prereg/K1-five-experiments-v0.2.md. Coverage comes from
+ol/audit/, prereg/K1-five-experiments-v0.2.md, and the sealed task splits
+prereg/tw-split-{A,B}.txt. Coverage comes from
 `git ls-files`, so a new audit file cannot escape the seal by not being listed.
 Blob shas come from the index, so the digest describes committed content.
 
@@ -18,6 +19,7 @@ from pathlib import Path
 
 AUDIT_DIR = "ol/audit"
 PREREG = "prereg/K1-five-experiments-v0.2.md"
+SPLITS = ("prereg/tw-split-A.txt", "prereg/tw-split-B.txt")
 
 
 def _git(repo: Path, *args: str) -> str:
@@ -30,6 +32,7 @@ def entries(repo: Path) -> list[tuple[str, str]]:
     """Sorted (path, blob sha) for the sealed set."""
     paths = [p for p in _git(repo, "ls-files", AUDIT_DIR).split() if p]
     paths.append(PREREG)
+    paths.extend(SPLITS)
     rows = [(path, _git(repo, "hash-object", path).strip()) for path in sorted(paths)]
     return rows
 

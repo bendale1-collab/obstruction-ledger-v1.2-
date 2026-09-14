@@ -1,0 +1,4 @@
+# file: /Users/brukendale/ol/repo/harness/selftest_check.py
+# hypothesis_version: 6.168.0
+
+['.selftest', '__main__', '_selftest', 'path', 'positive', 'selftest_check', 'text']

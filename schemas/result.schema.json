@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obstruction-ledger/schemas/result.schema.json",
+  "title": "Result file",
+  "description": "Every results/*.json (operational-standards.md §17h): every number ships with its denominator and producing command.",
+  "type": "object",
+  "required": ["numerator", "denominator", "ci_low", "ci_high", "producing_cmd"],
+  "additionalProperties": true,
+  "properties": {
+    "numerator": { "type": "integer", "minimum": 0 },
+    "denominator": { "type": "integer", "minimum": 1 },
+    "ci_low": { "type": "number", "minimum": 0, "maximum": 1 },
+    "ci_high": { "type": "number", "minimum": 0, "maximum": 1 },
+    "producing_cmd": { "type": "string", "minLength": 1 }
+  }
+}

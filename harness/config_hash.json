@@ -1,0 +1,5 @@
+{
+  ".pre-commit-config.yaml": "ffce90ad4fefe032a5416a833930494a205147aa4a16c0050251d0e775a4d914",
+  "producing_cmd": "python harness/gen_config_hash.py",
+  "pyproject.toml": "c99052a85ade44927a0bb07a7e53f42ff0c9e92f0642522a876dbb57353915ad"
+}

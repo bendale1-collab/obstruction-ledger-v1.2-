@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://obstruction-ledger/schemas/manifest.schema.json",
+  "title": "Manifest",
+  "description": "operational-standards.md §17h: authors, models (with source), datasets (with sha + license_sha).",
+  "type": "object",
+  "required": ["freeze_hash", "authors", "models", "datasets"],
+  "additionalProperties": true,
+  "properties": {
+    "freeze_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "authors": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "models": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["slug", "source"],
+        "properties": {
+          "slug": { "type": "string", "minLength": 1 },
+          "source": { "enum": ["config", "api"] }
+        }
+      }
+    },
+    "datasets": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["sha", "license_sha"],
+        "properties": {
+          "sha": { "type": "string", "pattern": "^[0-9a-f]{40}$|^[0-9a-f]{64}$" },
+          "license_sha": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    }
+  }
+}

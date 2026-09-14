@@ -1,0 +1,78 @@
+[project]
+name = "obstruction-ledger-harness"
+version = "0.1.0"
+requires-python = "==3.11.9"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "hypothesis>=6.100",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "radon>=6.0",
+    "pre-commit>=3.8",
+    "detect-secrets>=1.5",
+    "check-jsonschema>=0.29",
+    "inspect-ai>=0.3",
+    "mutmut>=3.2",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "SIM", "ARG", "PTH", "ERA", "PL", "RUF"]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["PLR2004"]
+
+[tool.ruff.lint.isort]
+# Without this, isort classifies an ol.* module that does not exist yet as
+# third-party, so import order churns between a red commit and its green.
+known-first-party = ["ol", "harness", "scripts"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+disallow_any_generics = true
+explicit_package_bases = true
+mypy_path = "."
+
+[[tool.mypy.overrides]]
+module = ["inspect_ai.*", "jsonschema.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+# Lets a red commit (test written before the ol module it imports
+# exists) pass the strict mypy hook. Once the module is a real local
+# file, mypy resolves and type-checks it directly; this override only
+# covers the not-yet-resolvable case and has no effect afterward.
+module = ["ol.*", "scripts.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+# inspect_ai's @task decorator does not preserve callable signatures under
+# mypy --strict; the decorator itself is fully typed upstream, so this is
+# scoped to the wiring module rather than disabled project-wide.
+module = "harness.audit_tasks.tasks"
+disallow_untyped_decorators = false
+
+[tool.radon]
+cc_min = "B"
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+pythonpath = ["."]
+
+[tool.mutmut]
+source_paths = ["ol"]
+also_copy = ["harness"]
+pytest_add_cli_args_test_selection = ["tests/unit"]
+
+[tool.uv]
+package = false

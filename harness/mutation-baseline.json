@@ -1,0 +1,7 @@
+{
+  "kill_rate": null,
+  "mutants_killed": 0,
+  "mutants_total": 0,
+  "producing_cmd": "mutmut run (via harness/gen_mutation_baseline.py)",
+  "threshold": 0.7
+}

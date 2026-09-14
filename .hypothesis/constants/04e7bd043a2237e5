@@ -1,0 +1,4 @@
+# file: /Users/brukendale/ol/repo/harness/ci/red_green_check.py
+# hypothesis_version: 6.168.0
+
+['--format=%s', '--reverse', 'HEAD', '__main__', 'card', 'git', 'kind', 'log', 'red', 'test']

@@ -1,0 +1,57 @@
+# Scope: this config governs the P0 harness scaffold (harness/, tests/, schemas/,
+# ol/audit/, .github/) added on top of a pre-existing research repo. Everything
+# else in the repo predates this scaffold and is out of its edit boundary.
+files: ^(harness/(?!p1_battery\.py)|tests/|schemas/|ol/|\.github/|pyproject\.toml$|\.pre-commit-config\.yaml$|uv\.lock$|Dockerfile$)
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.7
+    hooks:
+      - id: ruff
+        args: [--target-version, py311]
+      - id: ruff-format
+        args: [--check]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.11.2
+    hooks:
+      - id: mypy
+        args: [--strict]
+        additional_dependencies: ["inspect-ai", "hypothesis", "pytest", "jsonschema"]
+        files: ^(harness|tests|ol)/
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-json
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: [--baseline, .secrets.baseline]
+
+  - repo: local
+    hooks:
+      - id: check-ignore-audit
+        name: check-ignore audit (required paths not gitignored)
+        entry: python harness/lint/check_ignore_audit.py
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: radon-cc
+        name: radon cyclomatic complexity <= 10
+        entry: python harness/lint/check_radon.py
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      - id: derandomize-hypothesis
+        name: every @given has derandomize=True
+        entry: python harness/lint/check_derandomize.py
+        language: system
+        pass_filenames: false
+        always_run: true

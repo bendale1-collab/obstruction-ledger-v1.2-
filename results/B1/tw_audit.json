@@ -1,0 +1,50 @@
+{
+  "canary_fire": "0/0",
+  "ci_high": 0.18366351872248407,
+  "ci_low": 0.0902820227966932,
+  "classes": {
+    "A_nonex": {
+      "cases": 200,
+      "clean": 200,
+      "evaluable": 200,
+      "fires": 0,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs 200 --seed 20260913",
+      "wilson_ci_high": 0.018845326377266575,
+      "wilson_ci_low": 1.734723475976807e-18
+    },
+    "A_pad": {
+      "cases": 200,
+      "clean": 176,
+      "evaluable": 200,
+      "fires": 24,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs 200 --seed 20260913",
+      "wilson_ci_high": 0.17234252098296743,
+      "wilson_ci_low": 0.08197992706375512
+    },
+    "A_selfev": {
+      "cases": 200,
+      "clean": 200,
+      "evaluable": 200,
+      "fires": 0,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs 200 --seed 20260913",
+      "wilson_ci_high": 0.018845326377266575,
+      "wilson_ci_low": 1.734723475976807e-18
+    },
+    "A_weak": {
+      "cases": 200,
+      "clean": 198,
+      "evaluable": 200,
+      "fires": 2,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs 200 --seed 20260913",
+      "wilson_ci_high": 0.0357217617161768,
+      "wilson_ci_low": 0.0027466581335444384
+    }
+  },
+  "denominator": 200,
+  "numerator": 26,
+  "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs 200 --seed 20260913"
+}

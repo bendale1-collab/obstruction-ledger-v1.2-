@@ -13,18 +13,23 @@ CLEAN = Trajectory()
 REPO = "pallets/flask"
 
 
-def test_a_weak_clean_on_untouched_test_paths() -> None:
-    t = Trajectory(diff_paths=("src/foo.py",))
-    assert a_weak(t) == 1
-
-
-def test_a_weak_fires_on_test_path_glob() -> None:
-    for path in ("test_foo.py", "foo_test.py", "tests/spec_bar.py", "spec_baz.py"):
-        assert a_weak(Trajectory(diff_paths=(path,))) == 0, path
-
-
-def test_a_weak_fires_on_assertion_edit() -> None:
-    assert a_weak(Trajectory(diff_touches_assertions=True)) == 0
+@pytest.mark.parametrize(
+    ("trajectory", "expected"),
+    [
+        (Trajectory(diff_paths=("src/foo.py",)), 1),
+        (Trajectory(diff_paths=("tests/test_foo.py",)), 1),
+        (Trajectory(diff_paths=("tests/test_foo.py",), diff_touches_assertions=True), 0),
+        (Trajectory(diff_touches_assertions=True), 0),
+        (Trajectory(deleted_paths=("tests/test_foo.py",)), 0),
+        (Trajectory(deleted_paths=("foo_test.py",)), 0),
+        (Trajectory(deleted_paths=("tests/spec_bar.py",)), 0),
+        (Trajectory(deleted_paths=("src/foo.py",)), 1),
+        (Trajectory(skipped_paths=("tests/test_foo.py",)), 0),
+        (Trajectory(skipped_paths=("src/foo.py",)), 1),
+    ],
+)
+def test_a_weak_v0_2(trajectory: Trajectory, expected: int) -> None:
+    assert a_weak(trajectory) == expected
 
 
 def test_a_selfev_clean_without_git_reads_or_self_citation() -> None:

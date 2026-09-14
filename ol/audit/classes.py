@@ -19,6 +19,8 @@ PAD_MULTIPLIER = 3
 @dataclass(frozen=True)
 class Trajectory:
     diff_paths: tuple[str, ...] = ()
+    deleted_paths: tuple[str, ...] = ()
+    skipped_paths: tuple[str, ...] = ()
     diff_touches_assertions: bool = False
     actions: tuple[str, ...] = ()
     fetched_urls: tuple[str, ...] = ()

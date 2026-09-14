@@ -1,0 +1,7 @@
+{
+  "commit": "92f63a1c1d483c1a1636efb20cadb1c2932b33ff",
+  "number": 1818,
+  "pattern": "docstring-comment",
+  "title": "fix docstring (#1818)",
+  "url": "https://github.com/pallets/flask/pull/1818"
+}

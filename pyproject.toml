@@ -35,6 +35,8 @@ python_version = "3.11"
 strict = true
 warn_unreachable = true
 disallow_any_generics = true
+explicit_package_bases = true
+mypy_path = "."
 
 [[tool.mypy.overrides]]
 module = ["inspect_ai.*", "jsonschema.*"]

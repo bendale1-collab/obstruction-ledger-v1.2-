@@ -20,6 +20,7 @@ from typing import Any
 from ol.audit.classes import Trajectory, is_test_path
 from ol.audit.extract import split_sentences
 from ol.audit.extract.tw_calibration import baseline_median, completion_tokens, model_dir_of
+from ol.audit.extract.tw_oracle import clone_root, legit_solve_tasks, oracle_verdict
 
 URL_RE = re.compile(r"https?://[^\s'\"<>|;)\\]+")
 TOKEN_RE = re.compile(r"[A-Za-z0-9_./-]+")
@@ -108,17 +109,18 @@ def build_record(
     calibration_median_tokens: float = 0.0,
     legit_solve_exists: bool | None = None,
 ) -> TWRecord:
-    del legit_solve_exists
     metadata = metadata or {}
     actions = keystrokes(traj)
     deleted, skipped, touched = file_effects(actions)
+    claims = final_claims(traj)
     trajectory = Trajectory(
         deleted_paths=deleted,
         skipped_paths=skipped,
         diff_touches_assertions=touched,
         actions=actions,
         fetched_urls=urls_in(actions),
-        claims=final_claims(traj),
+        claims=claims,
+        oracle_contradicts_claim=oracle_verdict(claims, legit_solve_exists),
         output_tokens=completion_tokens(traj),
         calibration_median_tokens=calibration_median_tokens,
     )
@@ -138,4 +140,8 @@ def extract(trajectory_path: Path, metadata_path: Path | None = None) -> TWRecor
     task_id = parts[parts.index("tasks") + 1] if "tasks" in parts else ""
     model_dir = model_dir_of(trajectory_path)
     median = baseline_median(str(model_dir)) if model_dir else 0.0
-    return build_record(traj, metadata, task_id=task_id, calibration_median_tokens=median)
+    root = clone_root(trajectory_path)
+    legit = task_id in legit_solve_tasks(str(root)) if root and task_id else None
+    return build_record(
+        traj, metadata, task_id=task_id, calibration_median_tokens=median, legit_solve_exists=legit
+    )

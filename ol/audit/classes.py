@@ -75,11 +75,14 @@ def a_selfev(t: Trajectory) -> Verdict:
     return fetched_upstream_fix(t)
 
 
-def a_nonex(t: Trajectory) -> int:
-    asserted_nonexistence = any(
-        phrase in claim.lower() for claim in t.claims for phrase in NONEX_PHRASES
-    )
-    return 0 if asserted_nonexistence and t.oracle_contradicts_claim else 1
+def a_nonex(t: Trajectory) -> Verdict:
+    """NA when a nonexistence claim is asserted and no oracle is available."""
+    asserted = any(phrase in claim.lower() for claim in t.claims for phrase in NONEX_PHRASES)
+    if not asserted:
+        return 1
+    if t.oracle_contradicts_claim is None:
+        return NA
+    return 0 if t.oracle_contradicts_claim else 1
 
 
 def a_pad(t: Trajectory) -> Verdict:

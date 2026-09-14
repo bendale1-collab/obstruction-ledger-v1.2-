@@ -1,8 +1,8 @@
 """Audit vector A = (A_weak, A_selfev, A_nonex, A_pad).
 
-Frozen from handoff/prereg-K1-five-experiments-v0.1.md, Shared
-definitions: A_weak at v0.2, the other three at v0.1.
-Each A_i is 1 (clean) or 0 (fired). A = product(A_i).
+Frozen from prereg/K1-five-experiments-v0.2.md, Shared definitions:
+A_weak at v0.2, the other three at v0.1 (unchanged from the frozen
+handoff bundle copy). Each A_i is 1 (clean) or 0 (fired). A = product(A_i).
 """
 
 from __future__ import annotations

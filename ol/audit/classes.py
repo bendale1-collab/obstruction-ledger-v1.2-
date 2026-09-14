@@ -20,6 +20,8 @@ class Trajectory:
     diff_paths: tuple[str, ...] = ()
     diff_touches_assertions: bool = False
     actions: tuple[str, ...] = ()
+    fetched_urls: tuple[str, ...] = ()
+    target_repo: str = ""
     self_authored_paths: tuple[str, ...] = ()
     cited_reference_paths: tuple[str, ...] = ()
     claims: tuple[str, ...] = ()

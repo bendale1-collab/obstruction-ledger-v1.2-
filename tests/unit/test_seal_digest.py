@@ -30,7 +30,8 @@ def test_entries_cover_every_audit_file_and_the_prereg() -> None:
         text=True,
         check=True,
     ).stdout.split()
-    assert sorted([*tracked, PREREG]) == sorted(paths)
+    splits = ["prereg/tw-split-A.txt", "prereg/tw-split-B.txt"]
+    assert sorted([*tracked, PREREG, *splits]) == sorted(paths)
 
 
 def test_blob_sha_matches_git_hash_object() -> None:

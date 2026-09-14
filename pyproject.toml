@@ -33,7 +33,7 @@ ignore = []
 [tool.ruff.lint.isort]
 # Without this, isort classifies an ol.* module that does not exist yet as
 # third-party, so import order churns between a red commit and its green.
-known-first-party = ["ol", "harness"]
+known-first-party = ["ol", "harness", "scripts"]
 
 [tool.mypy]
 python_version = "3.11"

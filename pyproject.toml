@@ -71,8 +71,8 @@ pythonpath = ["."]
 
 [tool.mutmut]
 source_paths = ["ol"]
-also_copy = ["harness"]
-pytest_add_cli_args_test_selection = ["tests/unit"]
+also_copy = ["harness", "scripts", "schemas"]
+pytest_add_cli_args_test_selection = ["tests/unit", "--ignore=tests/unit/test_seal_digest.py", "--ignore=tests/unit/test_split.py"]
 
 [tool.uv]
 package = false

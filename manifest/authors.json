@@ -1,1 +1,25 @@
-{"mahamara":{"email":"mahamara@ol.local","profile_dir":"~/.hermes/profiles/mahamara","role":"operator"}}
+{
+  "freeze_hash": "c36dc95240637db26046d8ca7c989aa54c97138ff13963550807c805f5a64b9b",
+  "authors": {
+    "mahamara": "mahamara@ol.local"
+  },
+  "models": {
+    "operator": {"slug": "deepseek/deepseek-v4-flash", "source": "config"},
+    "author-a": {"slug": "z-ai/glm-5.2", "source": "config"},
+    "author-b": {"slug": "deepseek/deepseek-v4-flash", "source": "config"}
+  },
+  "datasets": {
+    "terminal-wrench": {
+      "sha": "d8a29613235a0ef56a8b70b3142626a533da28c2",
+      "license_sha": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    "flask": {
+      "sha": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+      "license_sha": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+    },
+    "mathlib4": {
+      "sha": "8d52ea9a145a9255c4d301c0d1a1b8bf6e59305a",
+      "license_sha": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    }
+  }
+}

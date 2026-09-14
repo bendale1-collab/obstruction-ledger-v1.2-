@@ -32,7 +32,8 @@ def _rows(payload: dict[str, Any], source: str) -> list[tuple[str, str, str]]:
             rows.append(
                 (
                     f"{source} {name}",
-                    f"{entry['fires']}/{entry['cases']} (95% CI "
+                    f"{entry['fires']}/{entry.get('evaluable', entry['cases'])} evaluable, "
+                    f"{entry.get('na', 0)} NA of {entry['cases']} (95% CI "
                     f"{entry['wilson_ci_low']:.4f}-{entry['wilson_ci_high']:.4f})",
                     str(entry.get("producing_cmd", "")),
                 )

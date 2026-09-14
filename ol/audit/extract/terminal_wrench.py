@@ -19,6 +19,7 @@ from typing import Any
 
 from ol.audit.classes import Trajectory, is_test_path
 from ol.audit.extract import split_sentences
+from ol.audit.extract.tw_calibration import baseline_median, completion_tokens, model_dir_of
 
 URL_RE = re.compile(r"https?://[^\s'\"<>|;)\\]+")
 TOKEN_RE = re.compile(r"[A-Za-z0-9_./-]+")
@@ -104,6 +105,7 @@ def build_record(
     traj: dict[str, Any],
     metadata: dict[str, Any] | None = None,
     task_id: str = "",
+    calibration_median_tokens: float = 0.0,
 ) -> TWRecord:
     metadata = metadata or {}
     actions = keystrokes(traj)
@@ -115,6 +117,8 @@ def build_record(
         actions=actions,
         fetched_urls=urls_in(actions),
         claims=final_claims(traj),
+        output_tokens=completion_tokens(traj),
+        calibration_median_tokens=calibration_median_tokens,
     )
     return TWRecord(
         trajectory=trajectory,
@@ -130,4 +134,6 @@ def extract(trajectory_path: Path, metadata_path: Path | None = None) -> TWRecor
     metadata = json.loads(sibling.read_text()) if sibling.is_file() else {}
     parts = trajectory_path.parts
     task_id = parts[parts.index("tasks") + 1] if "tasks" in parts else ""
-    return build_record(traj, metadata, task_id=task_id)
+    model_dir = model_dir_of(trajectory_path)
+    median = baseline_median(str(model_dir)) if model_dir else 0.0
+    return build_record(traj, metadata, task_id=task_id, calibration_median_tokens=median)

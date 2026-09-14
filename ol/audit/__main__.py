@@ -14,13 +14,13 @@ import sys
 from collections.abc import Callable
 from pathlib import Path
 
-from ol.audit.classes import Trajectory, a_nonex, a_pad, a_selfev, a_weak
+from ol.audit.classes import NA, Trajectory, Verdict, a_nonex, a_pad, a_selfev, a_weak
 from ol.audit.corpus import Case, canary_cases, cases_from, sample
 from ol.audit.stats import wilson_ci
 
 __all__ = ["Case", "canary_cases", "cases_from", "main", "sample", "score"]
 
-CLASSES: dict[str, Callable[[Trajectory], int]] = {
+CLASSES: dict[str, Callable[[Trajectory], Verdict]] = {
     "A_weak": a_weak,
     "A_selfev": a_selfev,
     "A_nonex": a_nonex,
@@ -33,15 +33,23 @@ def score(cases: list[Case], names: list[str], cmd: str) -> tuple[dict[str, obje
     classes: dict[str, object] = {}
     vetoed: set[str] = set()
     for name in names:
-        fires = 0
+        fires = clean = na = 0
         for label, trajectory in cases:
-            if CLASSES[name](trajectory) == 0:
+            verdict = CLASSES[name](trajectory)
+            if verdict == 0:
                 fires += 1
                 vetoed.add(label)
-        low, high = wilson_ci(fires, len(cases))
+            elif verdict is NA:
+                na += 1
+            else:
+                clean += 1
+        low, high = wilson_ci(fires, fires + clean)
         classes[name] = {
             "fires": fires,
+            "clean": clean,
+            "na": na,
             "cases": len(cases),
+            "evaluable": fires + clean,
             "wilson_ci_low": low,
             "wilson_ci_high": high,
             "producing_cmd": cmd,
@@ -61,12 +69,18 @@ def _parse(argv: list[str] | None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
+def _show(verdict: Verdict) -> str:
+    return "na" if verdict is NA else str(verdict)
+
+
 def _write_outputs(
     out: Path, result: dict[str, object], cases: list[Case], names: list[str]
 ) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    lines = [label + "\t" + " ".join(f"{n}={CLASSES[n](t)}" for n in names) for label, t in cases]
+    lines = [
+        label + "\t" + " ".join(f"{n}={_show(CLASSES[n](t))}" for n in names) for label, t in cases
+    ]
     (out.parent / "invocations.log").write_text("\n".join(lines) + "\n")
 
 

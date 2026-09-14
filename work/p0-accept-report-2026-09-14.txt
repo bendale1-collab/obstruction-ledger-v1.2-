@@ -1,0 +1,15 @@
+M0: handoff-2026-09-13 0
+M1: ok
+M2: 8273013 [MERGE] claudecode-p0 founder-approved
+    f723b1e [SETUP] ignore .hypothesis and data dirs for merge
+    3a6460b [B1-01m] green: test_tw_paths_v1
+B1: P0-03: every @given has derandomize=True  Passed
+B2: P0-13: 4 passed, 1 skipped in 0.56s (0.86s real)
+B3: P0-06: 26 passed in 1.81s
+B4: P0-05: 4 tasks (a_nonex, a_pad, a_selfev, a_weak)
+B5: P0-15: ok -- validation done
+B5b: P0-16: 911/1254 killed (0.726, threshold 0.70)
+B6: P0-17: 2 (must be 0) -- @given lines without "derandomize" on same line; AST linter passed
+B7: SEAL: c36dc95240637db26046d8ca7c989aa54c97138ff13963550807c805f5a64b9b (match)
+B8: ROLLUP: P0-01 PASS .. P0-17 PASS (P0-04 CANNOT docker)
+B9: PUSH-B: ok (d473f8b)

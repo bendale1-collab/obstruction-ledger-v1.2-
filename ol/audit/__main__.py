@@ -12,6 +12,7 @@ import argparse
 import json
 import sys
 from collections.abc import Callable
+from datetime import UTC, datetime
 from pathlib import Path
 
 from ol.audit.classes import NA, Trajectory, Verdict, a_nonex, a_pad, a_selfev, a_weak
@@ -108,6 +109,7 @@ def _selection(args: argparse.Namespace) -> tuple[str, list[Case]]:
 
 
 def main(argv: list[str] | None = None) -> int:
+    started_at = datetime.now(UTC).isoformat()
     args = _parse(argv)
     names = [n.strip() for n in args.classes.split(",") if n.strip()]
     unknown = [n for n in names if n not in CLASSES]
@@ -130,6 +132,8 @@ def main(argv: list[str] | None = None) -> int:
             "producing_cmd": cmd,
             "classes": classes,
             "canary_fire": f"{canary_fires}/{len(canaries)}",
+            "started_at": started_at,
+            "finished_at": datetime.now(UTC).isoformat(),
         },
         cases,
         names,

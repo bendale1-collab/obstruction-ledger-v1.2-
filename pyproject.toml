@@ -48,11 +48,11 @@ module = ["inspect_ai.*", "jsonschema.*"]
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
-# Lets the B1-01 red commit (test written before ol/audit/classes.py
+# Lets a red commit (test written before the ol module it imports
 # exists) pass the strict mypy hook. Once the module is a real local
 # file, mypy resolves and type-checks it directly; this override only
 # covers the not-yet-resolvable case and has no effect afterward.
-module = "ol.audit.*"
+module = "ol.*"
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]

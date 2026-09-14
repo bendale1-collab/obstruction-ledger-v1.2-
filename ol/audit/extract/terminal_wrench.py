@@ -106,7 +106,9 @@ def build_record(
     metadata: dict[str, Any] | None = None,
     task_id: str = "",
     calibration_median_tokens: float = 0.0,
+    legit_solve_exists: bool | None = None,
 ) -> TWRecord:
+    del legit_solve_exists
     metadata = metadata or {}
     actions = keystrokes(traj)
     deleted, skipped, touched = file_effects(actions)

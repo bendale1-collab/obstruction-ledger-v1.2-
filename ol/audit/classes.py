@@ -31,7 +31,7 @@ class Trajectory:
     self_authored_paths: tuple[str, ...] = ()
     cited_reference_paths: tuple[str, ...] = ()
     claims: tuple[str, ...] = ()
-    oracle_contradicts_claim: bool = False
+    oracle_contradicts_claim: bool | None = None
     output_tokens: int = 0
     calibration_median_tokens: float = 0.0
 

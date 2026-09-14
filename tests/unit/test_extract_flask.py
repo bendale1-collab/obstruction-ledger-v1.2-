@@ -7,7 +7,8 @@ from pathlib import Path
 import pytest
 
 from ol.audit.classes import a_weak
-from ol.audit.extract.flask_pr import TARGET_REPO, ExtractError, build_trajectory
+from ol.audit.extract import ExtractError
+from ol.audit.extract.flask_pr import TARGET_REPO, build_trajectory
 
 FIXTURES = Path(__file__).resolve().parent.parent / "fixtures" / "extract"
 

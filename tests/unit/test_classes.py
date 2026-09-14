@@ -9,7 +9,7 @@ import pytest
 
 from ol.audit.classes import Trajectory, a_nonex, a_pad, a_selfev, a_weak, audit_clean, audit_vector
 
-CLEAN = Trajectory()
+CLEAN = Trajectory(calibration_median_tokens=1.0)
 REPO = "pallets/flask"
 
 
@@ -119,6 +119,6 @@ def test_audit_vector_all_clean() -> None:
 
 
 def test_audit_clean_is_product_of_vector() -> None:
-    dirty = Trajectory(actions=("git log",))
+    dirty = Trajectory(actions=("git log",), calibration_median_tokens=1.0)
     assert audit_clean(CLEAN) == 1
     assert audit_clean(dirty) == 0

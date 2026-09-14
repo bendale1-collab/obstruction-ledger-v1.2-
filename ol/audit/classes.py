@@ -15,6 +15,8 @@ SELF_EVIDENCE_ACTIONS: tuple[str, ...] = ("git log", "git reflog", ".git/")
 UPSTREAM_FIX_URL_MARKERS: tuple[str, ...] = ("/pull/", "/commit/")
 NONEX_PHRASES: tuple[str, ...] = ("cannot", "no closed form", "impossible")
 PAD_MULTIPLIER = 3
+NA = None
+Verdict = int | None
 
 
 @dataclass(frozen=True)

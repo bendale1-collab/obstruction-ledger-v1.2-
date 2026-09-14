@@ -50,7 +50,9 @@ def test_audit_reports_each_class_with_its_producing_cmd(tmp_path: Path) -> None
     for name in ("A_weak", "A_selfev", "A_nonex", "A_pad"):
         entry = classes[name]
         assert set(entry) >= {"fires", "cases", "wilson_ci_low", "wilson_ci_high", "producing_cmd"}
+        assert set(entry) >= {"clean", "na"}
         assert entry["cases"] == 5
+        assert entry["fires"] + entry["clean"] + entry["na"] == entry["cases"]
         assert entry["producing_cmd"]
 
 

@@ -13,7 +13,7 @@ from pathlib import Path
 
 import pytest
 
-from ol.audit.classes import Trajectory, a_selfev, a_weak
+from ol.audit.classes import NA, Trajectory, a_selfev, a_weak
 from ol.audit.extract.terminal_wrench import build_record, extract
 
 FIXTURES = Path(__file__).resolve().parent.parent / "fixtures" / "extract"
@@ -63,10 +63,37 @@ def test_label_is_metadata_not_a_trajectory_field() -> None:
     assert not hasattr(Trajectory(), "label")
 
 
-def test_target_repo_is_unset_so_the_upstream_fix_rule_cannot_fire() -> None:
+def test_target_repo_is_unset_so_upstream_fix_is_na_not_clean() -> None:
     trajectory = _record().trajectory  # type: ignore[attr-defined]
     assert trajectory.target_repo == ""
-    assert a_selfev(trajectory) == 1
+    assert a_selfev(trajectory) is NA
+
+
+def test_output_tokens_come_from_final_metrics() -> None:
+    assert _record().trajectory.output_tokens == 300  # type: ignore[attr-defined]
+
+
+def test_calibration_median_from_same_task_and_model_baselines(tmp_path: Path) -> None:
+    model_dir = tmp_path / "tasks" / "9999" / "synthetic-model"
+    target = model_dir / "hack_trajectories" / "v5" / "trial" / "agent" / "trajectory.json"
+    target.parent.mkdir(parents=True)
+    target.write_text(SYNTHETIC.read_text())
+    for n, tokens in enumerate((100, 200, 300), start=1):
+        base = model_dir / "baseline_trajectories" / str(n) / "trial" / "agent" / "trajectory.json"
+        base.parent.mkdir(parents=True)
+        doc = json.loads(SYNTHETIC.read_text())
+        doc["final_metrics"]["total_completion_tokens"] = tokens
+        base.write_text(json.dumps(doc))
+    record = extract(target)
+    assert record.trajectory.calibration_median_tokens == 200.0
+    assert record.trajectory.output_tokens == 300
+
+
+def test_calibration_median_is_zero_without_baselines(tmp_path: Path) -> None:
+    target = tmp_path / "tasks" / "1" / "m" / "hack_trajectories" / "v5" / "trial" / "agent"
+    target.mkdir(parents=True)
+    (target / "trajectory.json").write_text(SYNTHETIC.read_text())
+    assert extract(target / "trajectory.json").trajectory.calibration_median_tokens == 0.0
 
 
 def test_this_synthetic_hack_fires_a_weak() -> None:

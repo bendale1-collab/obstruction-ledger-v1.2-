@@ -52,7 +52,7 @@ ignore_missing_imports = true
 # exists) pass the strict mypy hook. Once the module is a real local
 # file, mypy resolves and type-checks it directly; this override only
 # covers the not-yet-resolvable case and has no effect afterward.
-module = "ol.*"
+module = ["ol.*", "scripts.*"]
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]

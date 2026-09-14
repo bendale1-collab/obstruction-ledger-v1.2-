@@ -1,0 +1,50 @@
+{
+  "canary_fire": "0/0",
+  "ci_high": 0.0852866887133292,
+  "ci_low": 0.06135683465006059,
+  "classes": {
+    "A_nonex": {
+      "cases": 1809,
+      "clean": 1758,
+      "evaluable": 1802,
+      "fires": 44,
+      "na": 7,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt",
+      "wilson_ci_high": 0.0326190357357118,
+      "wilson_ci_low": 0.018238949815617404
+    },
+    "A_pad": {
+      "cases": 1809,
+      "clean": 1776,
+      "evaluable": 1809,
+      "fires": 33,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt",
+      "wilson_ci_high": 0.025507380244732824,
+      "wilson_ci_low": 0.013018580467864738
+    },
+    "A_selfev": {
+      "cases": 1809,
+      "clean": 1797,
+      "evaluable": 1809,
+      "fires": 12,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt",
+      "wilson_ci_high": 0.011559199966901954,
+      "wilson_ci_low": 0.0037987116062401325
+    },
+    "A_weak": {
+      "cases": 1809,
+      "clean": 1758,
+      "evaluable": 1809,
+      "fires": 51,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt",
+      "wilson_ci_high": 0.036876914976330014,
+      "wilson_ci_low": 0.02150737357008653
+    }
+  },
+  "denominator": 1809,
+  "numerator": 131,
+  "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt"
+}

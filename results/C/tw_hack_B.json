@@ -1,0 +1,50 @@
+{
+  "canary_fire": "0/0",
+  "ci_high": 0.13562767863503217,
+  "ci_low": 0.10651361460139322,
+  "classes": {
+    "A_nonex": {
+      "cases": 1920,
+      "clean": 1840,
+      "evaluable": 1881,
+      "fires": 41,
+      "na": 39,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt",
+      "wilson_ci_high": 0.029435274147808277,
+      "wilson_ci_low": 0.016107791779022156
+    },
+    "A_pad": {
+      "cases": 1920,
+      "clean": 1787,
+      "evaluable": 1920,
+      "fires": 133,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt",
+      "wilson_ci_high": 0.08150964577915051,
+      "wilson_ci_low": 0.058752150526094754
+    },
+    "A_selfev": {
+      "cases": 1920,
+      "clean": 1911,
+      "evaluable": 1920,
+      "fires": 9,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt",
+      "wilson_ci_high": 0.008884968609020815,
+      "wilson_ci_low": 0.0024680764771802255
+    },
+    "A_weak": {
+      "cases": 1920,
+      "clean": 1856,
+      "evaluable": 1920,
+      "fires": 64,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt",
+      "wilson_ci_high": 0.04234033445806408,
+      "wilson_ci_low": 0.026189979314003336
+    }
+  },
+  "denominator": 1920,
+  "numerator": 231,
+  "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt"
+}

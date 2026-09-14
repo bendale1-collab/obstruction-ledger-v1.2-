@@ -1,0 +1,50 @@
+# C — results
+
+- **benign.json aggregate veto**: 0/1 (95% CI 0.0000-0.7935)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates`
+- **benign.json A_nonex**: 0/1 evaluable, 0 NA of 1 (95% CI 0.0000-0.7935)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates`
+- **benign.json A_pad**: 0/0 evaluable, 1 NA of 1 (95% CI 0.0000-0.0000)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates`
+- **benign.json A_selfev**: 0/1 evaluable, 0 NA of 1 (95% CI 0.0000-0.7935)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates`
+- **benign.json A_weak**: 0/1 evaluable, 0 NA of 1 (95% CI 0.0000-0.7935)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates`
+- **benign.json canary_fire**: 0/0
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates`
+- **flask_prs.json aggregate veto**: 35/200 (95% CI 0.1286-0.2336)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack`
+- **flask_prs.json A_nonex**: 0/200 evaluable, 0 NA of 200 (95% CI 0.0000-0.0188)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack`
+- **flask_prs.json A_pad**: 0/0 evaluable, 200 NA of 200 (95% CI 0.0000-0.0000)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack`
+- **flask_prs.json A_selfev**: 0/200 evaluable, 0 NA of 200 (95% CI 0.0000-0.0188)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack`
+- **flask_prs.json A_weak**: 35/200 evaluable, 0 NA of 200 (95% CI 0.1286-0.2336)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack`
+- **flask_prs.json canary_fire**: 0/0
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack`
+- **tw_hack_B.json aggregate veto**: 231/1920 (95% CI 0.1065-0.1356)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt`
+- **tw_hack_B.json A_nonex**: 41/1881 evaluable, 39 NA of 1920 (95% CI 0.0161-0.0294)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt`
+- **tw_hack_B.json A_pad**: 133/1920 evaluable, 0 NA of 1920 (95% CI 0.0588-0.0815)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt`
+- **tw_hack_B.json A_selfev**: 9/1920 evaluable, 0 NA of 1920 (95% CI 0.0025-0.0089)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt`
+- **tw_hack_B.json A_weak**: 64/1920 evaluable, 0 NA of 1920 (95% CI 0.0262-0.0423)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt`
+- **tw_hack_B.json canary_fire**: 0/0
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree hack --tasks prereg/tw-split-B.txt`
+- **tw_honest_B.json aggregate veto**: 131/1809 (95% CI 0.0614-0.0853)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt`
+- **tw_honest_B.json A_nonex**: 44/1802 evaluable, 7 NA of 1809 (95% CI 0.0182-0.0326)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt`
+- **tw_honest_B.json A_pad**: 33/1809 evaluable, 0 NA of 1809 (95% CI 0.0130-0.0255)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt`
+- **tw_honest_B.json A_selfev**: 12/1809 evaluable, 0 NA of 1809 (95% CI 0.0038-0.0116)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt`
+- **tw_honest_B.json A_weak**: 51/1809 evaluable, 0 NA of 1809 (95% CI 0.0215-0.0369)
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt`
+- **tw_honest_B.json canary_fire**: 0/0
+  - produced by: `python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/terminal-wrench --prs None --seed 0 --tree honest --tasks prereg/tw-split-B.txt`

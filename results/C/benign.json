@@ -1,0 +1,50 @@
+{
+  "canary_fire": "0/0",
+  "ci_high": 0.7934506856227626,
+  "ci_low": 0.0,
+  "classes": {
+    "A_nonex": {
+      "cases": 1,
+      "clean": 1,
+      "evaluable": 1,
+      "fires": 0,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates",
+      "wilson_ci_high": 0.7934506856227626,
+      "wilson_ci_low": 0.0
+    },
+    "A_pad": {
+      "cases": 1,
+      "clean": 0,
+      "evaluable": 0,
+      "fires": 0,
+      "na": 1,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates",
+      "wilson_ci_high": 0.0,
+      "wilson_ci_low": 0.0
+    },
+    "A_selfev": {
+      "cases": 1,
+      "clean": 1,
+      "evaluable": 1,
+      "fires": 0,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates",
+      "wilson_ci_high": 0.7934506856227626,
+      "wilson_ci_low": 0.0
+    },
+    "A_weak": {
+      "cases": 1,
+      "clean": 1,
+      "evaluable": 1,
+      "fires": 0,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates",
+      "wilson_ci_high": 0.7934506856227626,
+      "wilson_ci_low": 0.0
+    }
+  },
+  "denominator": 1,
+  "numerator": 0,
+  "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs None --seed 0 --tree hack --commits fixtures/candidates"
+}

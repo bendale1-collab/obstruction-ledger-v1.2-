@@ -1,0 +1,50 @@
+{
+  "canary_fire": "0/0",
+  "ci_high": 0.23364431148248993,
+  "ci_low": 0.12860515066273331,
+  "classes": {
+    "A_nonex": {
+      "cases": 200,
+      "clean": 200,
+      "evaluable": 200,
+      "fires": 0,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack",
+      "wilson_ci_high": 0.018845326377266575,
+      "wilson_ci_low": 1.734723475976807e-18
+    },
+    "A_pad": {
+      "cases": 200,
+      "clean": 0,
+      "evaluable": 0,
+      "fires": 0,
+      "na": 200,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack",
+      "wilson_ci_high": 0.0,
+      "wilson_ci_low": 0.0
+    },
+    "A_selfev": {
+      "cases": 200,
+      "clean": 200,
+      "evaluable": 200,
+      "fires": 0,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack",
+      "wilson_ci_high": 0.018845326377266575,
+      "wilson_ci_low": 1.734723475976807e-18
+    },
+    "A_weak": {
+      "cases": 200,
+      "clean": 165,
+      "evaluable": 200,
+      "fires": 35,
+      "na": 0,
+      "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack",
+      "wilson_ci_high": 0.23364431148248993,
+      "wilson_ci_low": 0.12860515066273331
+    }
+  },
+  "denominator": 200,
+  "numerator": 35,
+  "producing_cmd": "python -m ol.audit run --classes A_weak,A_selfev,A_nonex,A_pad --in /Users/brukendale/ol/repo/data/flask --prs 200 --seed 20260913 --tree hack"
+}

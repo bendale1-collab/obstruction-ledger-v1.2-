@@ -60,3 +60,14 @@ append-only rule.
   Recorded, not adopted.
 - Defect filed: INTERPRETATION-AMBIGUITY — sealed bands did not state whether
   recall is computed over retained classes only. Future pre-registrations must.
+
+## Note on the counting commands (appended 2026-09-14)
+
+Counting commands above cite /tmp/retained/invocations.log (ephemeral).
+Durable copy: results/C/replay-20260914/replay.invocations.log. Recount from
+the durable path yields 174.
+
+- `awk -F'\t' '$2 ~ /A_pad=0/ || $2 ~ /A_nonex=0/ || $2 ~ /A_selfev=0/' results/C/replay-20260914/replay.invocations.log | wc -l` -> 174
+- the file is 1920 lines, one per trajectory: `wc -l < results/C/replay-20260914/replay.invocations.log`
+- it was named `invocations.log` when the commands above were written; renamed
+  in e00b756 so runs sharing a directory stop overwriting each other

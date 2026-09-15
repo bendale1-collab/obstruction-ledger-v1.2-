@@ -41,3 +41,21 @@
   that matches is the evidence that the adjudication rests on the anchored
   numbers and not on a re-measurement. Vectors at
   `results/C/replay-20260914/`.
+
+## 2026-09-14, appended after the log-naming fix
+
+- IGNORE-NEGATION-BRITTLE — the negation `!results/**/invocations.log` did not
+  match the renamed `<stem>.invocations.log`, so changing the filename would
+  have silently re-created PHASE-C-MISSING-INVOCATIONS-LOG. Caught by the
+  author before the commit landed and widened to
+  `!results/**/*invocations.log` in e00b756; the B1-01p hook would have caught
+  it afterwards. A negation pinned to an exact filename breaks whenever the
+  file is renamed, which is the same brittleness as the original `*.log`.
+
+### Correct behaviour
+
+- CORRECT-REFUSAL — the adjudicator attributed
+  PHASE-C-MISSING-INVOCATIONS-LOG to operator omission. The author identified
+  `.gitignore:5 *.log` as the cause, filed it that way over the instruction,
+  and fixed it. Recorded per operational-standards.md §7k, which gives a
+  correct refusal the same weight as a defect entry.

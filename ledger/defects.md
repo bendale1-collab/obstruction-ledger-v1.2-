@@ -17,3 +17,7 @@
 - SEAL-INDEX-NOT-WORKTREE — `scripts/seal_digest.py` hashes blob shas from
   the git index rather than the worktree. No commit B1-01o exists on any
   branch in this repository, so no fix is recorded here.
+- INTERPRETATION-AMBIGUITY — the sealed interpretation bands did not state
+  whether recall is computed over retained classes only. Adjudicated
+  2026-09-14 in `ledger/B1-verdict.md`: retired classes do not count.
+  Future pre-registrations must state it.

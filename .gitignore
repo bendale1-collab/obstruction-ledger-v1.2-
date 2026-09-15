@@ -5,7 +5,7 @@ scratch/
 *.log
 # invocations.log is per-case evidence, not noise: a run whose log is
 # missing cannot be checked. Kept tracked under results/.
-!results/**/invocations.log
+!results/**/*invocations.log
 __pycache__/
 *.pyc
 .venv/

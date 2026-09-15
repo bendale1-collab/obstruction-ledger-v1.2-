@@ -86,7 +86,7 @@ def _write_outputs(
     lines = [
         label + "\t" + " ".join(f"{n}={_show(CLASSES[n](t))}" for n in names) for label, t in cases
     ]
-    (out.parent / "invocations.log").write_text("\n".join(lines) + "\n")
+    out.with_suffix(".invocations.log").write_text("\n".join(lines) + "\n")
 
 
 def _selection(args: argparse.Namespace) -> tuple[str, list[Case]]:

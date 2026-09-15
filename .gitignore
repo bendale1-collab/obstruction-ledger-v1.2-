@@ -3,9 +3,12 @@ env/.env.*
 scratch/
 .env
 *.log
-# invocations.log is per-case evidence, not noise: a run whose log is
-# missing cannot be checked. Kept tracked under results/.
-!results/**/*invocations.log
+# results/ holds per-case evidence: a run whose log is missing cannot be
+# checked. The rule is path-shaped, not filename-shaped — un-ignoring one
+# filename breaks on the next rename (IGNORE-NEGATION-BRITTLE). Caches are
+# re-ignored by the rules below, which is intended.
+!results/
+!results/**
 __pycache__/
 *.pyc
 .venv/

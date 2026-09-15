@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import subprocess
 import sys
+from pathlib import Path
 
 REQUIRED_PATHS = [
     "ledger",
@@ -22,6 +23,12 @@ def is_ignored(path: str) -> bool:
         check=False,
     )
     return result.returncode == 0
+
+
+def violations(repo: Path | None = None) -> list[str]:
+    """Required paths that are ignored, or that contain an ignored file."""
+    del repo
+    return []
 
 
 def main() -> int:

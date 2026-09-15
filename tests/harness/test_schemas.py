@@ -43,6 +43,8 @@ def test_result_schema_accepts_valid_and_rejects_invalid() -> None:
         "ci_low": 0.1,
         "ci_high": 0.5,
         "producing_cmd": "python -m ol.audit run",
+        "started_at": "2026-09-14T10:00:00+00:00",
+        "finished_at": "2026-09-14T10:00:05+00:00",
     }
     jsonschema.validate(valid, schema)
     with pytest.raises(jsonschema.ValidationError):

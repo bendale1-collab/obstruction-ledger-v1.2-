@@ -2,15 +2,50 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://obstruction-ledger/schemas/result.schema.json",
   "title": "Result file",
-  "description": "Every results/*.json (operational-standards.md §17h): every number ships with its denominator and producing command.",
+  "description": "Every results/*.json (operational-standards.md \u00a717h): every number ships with its denominator and producing command, and the run carries its UTC start and finish.",
   "type": "object",
-  "required": ["numerator", "denominator", "ci_low", "ci_high", "producing_cmd"],
+  "required": [
+    "numerator",
+    "denominator",
+    "ci_low",
+    "ci_high",
+    "producing_cmd",
+    "started_at",
+    "finished_at"
+  ],
   "additionalProperties": true,
   "properties": {
-    "numerator": { "type": "integer", "minimum": 0 },
-    "denominator": { "type": "integer", "minimum": 1 },
-    "ci_low": { "type": "number", "minimum": 0, "maximum": 1 },
-    "ci_high": { "type": "number", "minimum": 0, "maximum": 1 },
-    "producing_cmd": { "type": "string", "minLength": 1 }
+    "numerator": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "denominator": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "ci_low": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "ci_high": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "producing_cmd": {
+      "type": "string",
+      "minLength": 1
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|\\+00:00)$"
+    },
+    "finished_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|\\+00:00)$"
+    }
   }
 }

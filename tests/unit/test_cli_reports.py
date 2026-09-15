@@ -59,7 +59,7 @@ def test_audit_reports_each_class_with_its_producing_cmd(tmp_path: Path) -> None
 @pytest.mark.skipif(not CLONE.is_dir(), reason="terminal-wrench clone not present")
 def test_audit_writes_one_invocation_line_per_case(tmp_path: Path) -> None:
     _run_audit(tmp_path, ["--prs", "4", "--seed", "3"])
-    lines = (tmp_path / "invocations.log").read_text().splitlines()
+    lines = (tmp_path / "result.invocations.log").read_text().splitlines()
     assert len(lines) == 4
 
 

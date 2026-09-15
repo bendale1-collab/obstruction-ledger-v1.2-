@@ -52,6 +52,12 @@
   it afterwards. A negation pinned to an exact filename breaks whenever the
   file is renamed, which is the same brittleness as the original `*.log`.
 
+- APPEND-TARGETS-SECTION-NOT-FILE — a plain append to this file would have
+  filed a defect under the trailing "Correct behaviour" heading, because the
+  last section of a ledger is not always the section an entry belongs to.
+  Appends must name their target section. Filed while appending
+  IGNORE-NEGATION-BRITTLE, which hit exactly this.
+
 ### Correct behaviour
 
 - CORRECT-REFUSAL — the adjudicator attributed
